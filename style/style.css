@@ -1,0 +1,89 @@
+@import url("./dashboard.css");
+@import url("./weatherView.css");
+@import url("./animation.css");
+
+@font-face {
+  font-family: "Gmarket";
+  src: url("./GmarketSansTTF/GmarketSansTTFLight.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "GmarketBold";
+  src: url("./GmarketSansTTF/GmarketSansTTFBold.ttf") format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: "Gmarket";
+  overflow: hidden;
+}
+
+.section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-image: radial-gradient(
+    circle farthest-corner at 12.3% 19.3%,
+    rgba(85, 88, 218, 1) 0%,
+    rgba(95, 209, 249, 1) 100.2%
+  ); */
+  /* background-image: radial-gradient(
+    circle farthest-corner at 10% 20%,
+    rgba(163, 175, 243, 1) 0%,
+    rgba(220, 182, 232, 1) 100.2%
+  ); */
+  /* background-image: radial-gradient(
+    circle farthest-corner at -4% -12.9%,
+    rgba(74, 98, 110, 1) 0.3%,
+    rgba(30, 33, 48, 1) 90.2%
+  ); */
+  background-image: linear-gradient(
+    112.1deg,
+    rgba(32, 38, 57, 1) 11.4%,
+    rgba(63, 76, 119, 1) 70.2%
+  );
+  position: relative;
+}
+
+.main {
+  position: absolute;
+  width: 1224px;
+  min-height: 850px;
+  background: rgba(255, 255, 255, 0.1);
+  /* box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1); */
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(25px);
+  border-radius: 40px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  z-index: 1000;
+
+  flex: 1;
+  color: #fafafa;
+  overflow: hidden;
+}
+
+.sun {
+  position: absolute;
+  top: -100px;
+  right: -50px;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background-color: rgb(255, 244, 182);
+  z-index: 0;
+  box-shadow: 0 0 0 20px rgba(255, 244, 182, 0.5),
+    0 0 0 40px rgba(255, 244, 182, 0.5), 0 0 0 80px rgba(255, 244, 182, 0.3),
+    0 0 0 220px rgba(255, 244, 182, 0.2), 0 0 0 340px rgba(255, 244, 182, 0.2),
+    0 0 0 400px rgba(255, 244, 182, 0.1);
+}
