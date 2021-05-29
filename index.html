@@ -20,45 +20,47 @@
       <div class="main">
         <div class="dashboard">
           <div class="searchbar">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="searchicon"
-              viewBox="0 0 122.4 121.33"
-            >
-              <defs>
-                <style>
-                  .cls-1,
-                  .cls-2 {
-                    fill: none;
-                    stroke: #fafafa;
-                    stroke-miterlimit: 10;
-                    stroke-width: 9px;
-                  }
-                  .cls-2 {
-                    stroke-linecap: round;
-                  }
-                </style>
-              </defs>
-              <g id="Layer_2" data-name="Layer 2">
-                <g id="Layer_1-2" data-name="Layer 1">
-                  <circle class="cls-1" cx="55.95" cy="55.95" r="52.45" />
-                  <line
-                    class="cls-2"
-                    x1="93.56"
-                    y1="92.48"
-                    x2="118.9"
-                    y2="117.83"
-                  />
-                </g>
-              </g>
-            </svg>
-            <input
-              type="text"
-              placeholder="Search for places.."
-              id="searchbar"
-              autocomplete="off"
-              name="name"
-            />
+			<form class="search" onsubmit="return false">
+				<svg
+	              xmlns="http://www.w3.org/2000/svg"
+	              class="searchicon"
+	              viewBox="0 0 122.4 121.33"
+	            >
+	              <defs>
+	                <style>
+	                  .cls-1,
+	                  .cls-2 {
+	                    fill: none;
+	                    stroke: #fafafa;
+	                    stroke-miterlimit: 10;
+	                    stroke-width: 9px;
+	                  }
+	                  .cls-2 {
+	                    stroke-linecap: round;
+	                  }
+	                </style>
+	              </defs>
+	              <g id="Layer_2" data-name="Layer 2">
+	                <g id="Layer_1-2" data-name="Layer 1">
+	                  <circle class="cls-1" cx="55.95" cy="55.95" r="52.45" />
+	                  <line
+	                    class="cls-2"
+	                    x1="93.56"
+	                    y1="92.48"
+	                    x2="118.9"
+	                    y2="117.83"
+	                  />
+	                </g>
+	              </g>
+	            </svg>
+				<input
+	              type="text"
+	              placeholder="Search for places.."
+	              id="searchbar"
+	              autocomplete="off"
+	              name="name"
+	            />
+			</form>
           </div>
           <div class="weathericon">
             <img src="./image/sun.png" class="weather-icon" />
@@ -161,5 +163,6 @@
       </div>
     </section>
     <script src="./app.js"></script>
+	<script src="./assets/recommend.js" charset="utf-8"></script>
   </body>
 </html>
