@@ -1,0 +1,16 @@
+[
+	{
+		"name": "돈까스",
+		"hot": true,
+		"mild": true,
+		"cold": true,
+		"sunny": true
+	},
+	{
+		"name": "동파육",
+		"hot": true,
+		"mild": true,
+		"cold": true,
+		"rainny": true
+	}
+]
