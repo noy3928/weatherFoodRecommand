@@ -7,11 +7,21 @@
 	.then(response => response.json())
 	.then(data => data)
 
-	// 2. create recommend function
-	const recommend = await (function() {
-		const previousResults = []
+	function randomSelect(arr, n = 3) {
+		console.log(n)
+		return arr
+	}
 
+	// 2. Creates recommend function
+	const recommend = await (function() {
+
+		/*
+		previous search results should be stroed in localStorage.
+		*/
 		return function () {
+			function condition(food) {
+				return true
+			}
 			const location = document.querySelector('.city-name').innerText
 			const weather = ''//getWeather(location)
 			console.log('검색 값이 입력되었습니다.')
@@ -21,13 +31,14 @@
 			console.log('검색된 입력값의 날씨 정보입니다.')
 			console.table(weather)
 
-			function condition(food) {
-				return true
-			}
-
 			const selectedFoods = foods.filter(condition)
 			console.log('음식 db 중 날씨 조건에 해당하는 항목입니다.')
 			console.table(selectedFoods)
+
+			// 2.1 Returns randomly selected n elements. Default n is 3.
+			const result = randomSelect(selectedFoods, undefined)
+
+			return result
 		}
 	})()
 
