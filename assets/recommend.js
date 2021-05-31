@@ -46,6 +46,6 @@
   })();
 
   // 3. attach to HTML
-    const searchForm = document.getElementById("form.search");
-    searchForm.addEventListener("submit", recommend);
+  const searchForm = document.querySelector("form.search");
+  searchForm.addEventListener("submit", recommend);
 })();
