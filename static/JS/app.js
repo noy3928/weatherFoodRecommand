@@ -78,7 +78,7 @@ var mainweather = bodymovin.loadAnimation({
   renderer: "svg",
   loop: true,
   autoplay: true,
-  path: "./JS/icon-sunshower.json",
+  path: "./static/JS/icon-sunshower.json",
 });
 
 var descWeather = bodymovin.loadAnimation({
@@ -86,5 +86,5 @@ var descWeather = bodymovin.loadAnimation({
   renderer: "svg",
   loop: true,
   autoplay: true,
-  path: "./JS/icon-sunshower.json",
+  path: "./static/JS/icon-sunshower.json",
 });
