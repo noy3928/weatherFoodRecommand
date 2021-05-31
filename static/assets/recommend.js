@@ -3,7 +3,7 @@
 	// Initiating recommend function
 
 	// 1. Initializes food database
-	const foods = await fetch('assets/foodData.json')
+	const foods = await fetch('../static/assets/foodData.json')
 	.then(response => response.json())
 	.then(data => data)
 
