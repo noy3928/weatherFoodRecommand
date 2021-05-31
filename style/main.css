@@ -1,0 +1,53 @@
+.main {
+  position: absolute;
+  width: 1066px;
+  height: 768px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  z-index: 10;
+  backdrop-filter: blur(25px);
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.main-container {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: #fafafa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-blob {
+  top: 30px;
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  animation: wave 12s ease-in-out infinite;
+  background-color: #9ba9ff;
+  z-index: 11;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes wave {
+  0%,
+  100% {
+    border-radius: 66% 34% 37% 63%/ 57% 31% 69% 43%;
+  }
+  50% {
+    border-radius: 26% 74% 51% 49% / 22% 53% 47% 78%;
+  }
+}
+
+.food-image {
+  width: auto;
+  height: auto;
+  max-width: 150px;
+  max-height: 150px;
+}
