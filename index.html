@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-AU-compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="./style/style.css" />
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
@@ -17,68 +18,175 @@
   <body>
     <div class="main-container">
       <div class="main">
-        <div class="main-blob">
-          <!-- <img src="./SVG/Asset 12.svg" class="food-image" /> -->
+        <div class="dashboard">
+          <div class="searchbar">
+            <form class="search" onsubmit="return false">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="searchicon"
+                viewBox="0 0 122.4 121.33"
+                onclick="searchCity() "
+              >
+                <defs>
+                  <style>
+                    .cls-1,
+                    .cls-2 {
+                      fill: none;
+                      stroke: #424242;
+                      stroke-miterlimit: 10;
+                      stroke-width: 9px;
+                    }
+                    .cls-2 {
+                      stroke-linecap: round;
+                    }
+                  </style>
+                </defs>
+                <g id="Layer_2" data-name="Layer 2">
+                  <g id="Layer_1-2" data-name="Layer 1">
+                    <circle class="cls-1" cx="55.95" cy="55.95" r="52.45" />
+                    <line
+                      class="cls-2"
+                      x1="93.56"
+                      y1="92.48"
+                      x2="118.9"
+                      y2="117.83"
+                    />
+                  </g>
+                </g>
+              </svg>
+              <input
+                type="text"
+                placeholder="Search for places.."
+                id="searchbar"
+                autocomplete="off"
+                name="name"
+              />
+            </form>
+          </div>
+          <div class="weather-icon-box">
+          <div class="weathericon">
+            <div class="weather-icon"></div>
+          </div>
         </div>
+          <div class="tmp">28°</div>
+          <div class="day_box">
+            <div class="day">일요일, 16:00</div>
+          </div>
+          <div class="weatherdesc">
+            <div class="desc-icon-box">
+            <div class="desc-icon"></div>
+          </div>
+            <p>오늘의 날씨는 대체로 맑음 :)</p>
+          </div>
+          <div class="img_box">
+            <div class="cityImage">
+              <div class="city-name">NEWYORK, USA</div>
+            </div>
+          </div>
+        </div>
+        <div class="weatherview">
+          <div class="page-change">
+            <p class="weather-change-button">Weather</p>
+            <p class="Food-change-button">Food</p>
+          </div>
+          <div class="week-weather">
+            <div class="weekly-weather-box sunday">
+              <div class="weekly-day">일</div>
+              <img
+                src="./style/image/CLOUDINESS.svg"
+                class="weakly-icon"
+              />
+              <div class="weakly-tmp">28°</div>
+            </div>
+            <div class="weekly-weather-box monday">
+              <div class="weekly-day">월</div>
+              <img
+                src="./style/image/CLOUDY.svg"
+                class="weakly-icon"
+              />
+              <div class="weakly-tmp">23°</div>
+            </div>
+            <div class="weekly-weather-box tuesday">
+              <div class="weekly-day">화</div>
+              <img
+                src="./style/image/DRIZZLE.svg"
+                class="weakly-icon"
+              />
+              <div class="weakly-tmp">28°</div>
+            </div>
+            <div class="weekly-weather-box Wednesday">
+              <div class="weekly-day">수</div>
+              <img
+                src="./style/image/FOGGY.svg"
+                class="weakly-icon"
+              />
+              <div class="weakly-tmp">22°</div>
+            </div>
+            <div class="weekly-weather-box thursday">
+              <div class="weekly-day">목</div>
+              <img
+                src="./style/image/MOON.svg"
+                class="weakly-icon"
+              />
+              <div class="weakly-tmp">24°</div>
+            </div>
+            <div class="weekly-weather-box friday">
+              <div class="weekly-day">금</div>
+              <img
+                src="./style/image/CLOUDY.svg"
+                class="weakly-icon"
+              />
+              <div class="weakly-tmp">20°</div>
+            </div>
+            <div class="weekly-weather-box saturday">
+              <div class="weekly-day">토</div>
+              <img
+                src="./style/image/FOGGY.svg"
+                class="weakly-icon"
+              />
+              <div class="weakly-tmp">19°</div>
+            </div>
+          </div>
+          <div class="food-recomandation">
+            <div class="rec-title">오늘의 추천메뉴</div>
+            <div class="menus">
+              <div class="menu menu-one">
+
+              </div>
+              <div class="menu menu-two"></div>
+              <div class="menu menu-three"></div>
+              <div class="menu menu-four"></div>
+              <div class="menu menu-five"></div>
+              <div class="menu menu-six"></div>
+            </div>
+          </div>
+        </div>
+      </div>
       </div>
     </div>
 
     <div class="scene">
-      <form class="search" onsubmit="return false">
-      <div class="searchbar">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="searchicon"
-          viewBox="0 0 122.4 121.33"
-        >
-          <defs>
-            <style>
-              .cls-1,
-              .cls-2 {
-                fill: none;
-                stroke: #616161;
-                stroke-miterlimit: 10;
-                stroke-width: 9px;
-              }
-              .cls-2 {
-                stroke-linecap: round;
-              }
-            </style>
-          </defs>
-          <g id="Layer_2" data-name="Layer 2">
-            <g id="Layer_1-2" data-name="Layer 1">
-              <circle class="cls-1" cx="55.95" cy="55.95" r="52.45" />
-              <line
-                class="cls-2"
-                x1="93.56"
-                y1="92.48"
-                x2="118.9"
-                y2="117.83"
-              />
-            </g>
-          </g>
-        </svg>
-        <input
-          type="text"
-          placeholder="Search for places.."
-          id="searchbar"
-          autocomplete="off"
-          name="name"
-        />
-      </form>
-      </div>
+
       <div class="menu-bar">
         <img src="./style/image/menu.svg" id="menu-bar" />
       </div>
+      <div class="shape">
+
+      </div>
       <div class="shape"></div>
       <div class="shape"></div>
       <div class="shape"></div>
       <div class="shape"></div>
-      <div class="shape"></div>
+      <div style="position:absolute; top: calc(50vh - 112.5px); left: calc(50% - 150px);">
+        <lottie-player th:src="@{./data.json}" background="transparent" style="width: 300px; height: 225px;" speed="1" loop autoplay>
+        </lottie-player>
+      </div>
+
       <img src="./style/image/Choice of food 2020.png" class="person" />
       <img src="./style/image/Pizza Deliveryman 2020.png" class="persen2" />
     </div>
-    <script src="./JS/app.js"></script>
+    <script src="./static/JS/lottie.js"></script>
+    <script src="./static/JS/app.js"></script>
     <script src="./static/assets/recommend.js" charset="utf-8"></script>
     <script src="./static/assets/showResult.js" charset="utf-8"></script>
   </body>

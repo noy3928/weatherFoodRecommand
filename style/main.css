@@ -1,14 +1,14 @@
 .main {
   position: absolute;
-  width: 1066px;
-  height: 768px;
+  width: 1280px;
+  height: 900px;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 30px;
   z-index: 10;
   backdrop-filter: blur(25px);
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
   padding: 10px;
 }
 
@@ -16,12 +16,12 @@
   position: absolute;
   width: 100%;
   height: 100vh;
-  background-color: #fafafa;
+  background-color: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
+/* 
 .main-blob {
   top: 30px;
   position: absolute;
@@ -33,7 +33,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 
 @keyframes wave {
   0%,
