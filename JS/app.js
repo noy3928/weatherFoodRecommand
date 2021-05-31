@@ -72,3 +72,19 @@ function listing() {
     },
   });
 }
+
+var mainweather = bodymovin.loadAnimation({
+  container: document.querySelector(".weather-icon"),
+  renderer: "svg",
+  loop: true,
+  autoplay: true,
+  path: "./JS/icon-sunshower.json",
+});
+
+var descWeather = bodymovin.loadAnimation({
+  container: document.querySelector(".desc-icon"),
+  renderer: "svg",
+  loop: true,
+  autoplay: true,
+  path: "./JS/icon-sunshower.json",
+});

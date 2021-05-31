@@ -1,5 +1,17 @@
 @import url("./scene.css");
 @import url("./main.css");
+@import url("./dashboard.css");
+@import url("./weatherView.css");
+
+@font-face {
+  font-family: "GmarketL";
+  src: url("./GmarketSansTTF/GmarketSansTTFLight.ttf");
+}
+
+@font-face {
+  font-family: "GmarketB";
+  src: url("./GmarketSansTTF/GmarketSansTTFBold.ttf");
+}
 
 * {
   padding: 0;
@@ -9,6 +21,7 @@
 
 body {
   position: relative;
-  background-color: #fafafa;
+  background-color: #ffffff;
   overflow: hidden;
+  font-family: "GmarketL";
 }
