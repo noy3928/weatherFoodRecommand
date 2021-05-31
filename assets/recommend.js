@@ -22,7 +22,7 @@
 		*/
 
     return function () {
-      //   const location = document.querySelector(".city-name").textContent;
+      // const location = document.querySelector(".city-name").textContent;
       const weather = ""; //getWeather(location)
       console.log("검색이 감지되었습니다.");
       console.log(
