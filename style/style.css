@@ -1,0 +1,14 @@
+@import url("./scene.css");
+@import url("./main.css");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  background-color: #fafafa;
+  overflow: hidden;
+}
