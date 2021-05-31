@@ -9,10 +9,17 @@
 
 	// 2. Filter
 	const condition = function (food) {
-		return true
+		return false
 	}
 
 	function selectRandom(arr, n = 3) {
+		let result = []
+		if (arr.length < n) {
+			throw "Number of required random foods exceeds number of stored foods"
+		}
+		while (result.length < n) {
+
+		}
 		return
 	}
 
@@ -36,10 +43,18 @@
 			console.log('조건에 맞는 음식 목록입니다.')
 			console.table(filteredFoods)
 
+
 			// selects default three elements from the array
-			const result = selectRandom(filteredFoods, undefined)
-			console.log('결과입니다.')
-			console.table(result)
+			try {
+				const result = selectRandom(filteredFoods, undefined)
+				console.log('결과입니다.')
+				console.table(result)
+			}
+			catch (e) {
+
+				console.error(e)
+			}
+
 
 		}
 	})()
