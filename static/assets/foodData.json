@@ -14,10 +14,10 @@
 		"rainy": true
 	},
 	{
-			"name": "양꼬치",
-			"hot": true,
-			"mild": true,
-			"cold": true,
-			"rainy": true
+		"name": "양꼬치",
+		"hot": true,
+		"mild": true,
+		"cold": true,
+		"rainy": true
 	}
 ]
