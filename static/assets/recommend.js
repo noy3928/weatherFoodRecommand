@@ -1,15 +1,26 @@
 (async function () {
 
-	// Initiate recommend function
+	// Initiating recommend function
 
-	// 1. initialize food database
+	// 1. Initializes food database
 	const foods = await fetch('assets/foodData.json')
 	.then(response => response.json())
 	.then(data => data)
 
-	// 2. create recommend function
+	// 2. Filter
+	const condition = function (food) {
+		return true
+	}
+
+	function selectRandom(arr, n = 3) {
+		return
+	}
+
+	// 2. Creates recommend function
 	const recommend = await (function() {
-		const previousResults = []
+		/*
+		previous search results should be saved in localStorage
+		*/
 
 		return function () {
 			const location = document.querySelector('.city-name').innerText
@@ -20,6 +31,16 @@
 			console.table(foods)
 			console.log('검색된 입력값의 날씨 정보입니다.')
 			console.table(weather)
+
+			const filteredFoods = foods.filter(condition)
+			console.log('조건에 맞는 음식 목록입니다.')
+			console.table(filteredFoods)
+
+			// selects default three elements from the array
+			const result = selectRandom(filteredFoods, undefined)
+			console.log('결과입니다.')
+			console.table(result)
+
 		}
 	})()
 
