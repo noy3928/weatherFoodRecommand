@@ -15,7 +15,6 @@ function showResult (cityName, weather, foods) {
 			const menusDiv = document.querySelector('.menus')
 			console.log(menusDiv)
 			document.querySelector('.menus').appendChild(result)
-
 		}
 		try {
 			showCity()
