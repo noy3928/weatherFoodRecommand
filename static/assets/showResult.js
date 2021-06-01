@@ -1,5 +1,6 @@
 function showResult (cityName, weather, foods) {
 	// 안녕하세요!
+	//네  저도 안녕하세요
 	const $ = document.querySelector.bind(document)
 	// Commonly used DOM elements.
 	const $menus = document.querySelector('.menus')
