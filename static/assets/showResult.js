@@ -13,7 +13,7 @@ function showResult (cityName, weather, foods) {
 		//const $imgBox = document.querySelector('.img_box')
 		//const $cityImage = document.querySelector('.city-image')
 		const $cityName = document.querySelector('.city-name')
-		cityName = 'New York, USA' // Temporary
+		//cityName = 'New York, USA' // Temporary
 		$cityName.textContent = cityName
 	}
 
@@ -57,7 +57,7 @@ function showResult (cityName, weather, foods) {
 
 	try {
 		clearPreviousResults()
-		showCity()
+		showCity(cityName)
 		showWeather()
 		//showFoods()
 		showTime()
