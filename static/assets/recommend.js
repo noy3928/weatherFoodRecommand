@@ -5,8 +5,8 @@
 
 	// 1. Initializes food database
 	const foods = await fetch('./static/assets/foodData.json')
-	.then((response) => response.json())
-	.then((data) => data)
+	.then(response => response.json())
+	.then(data => data)
 
 	// 2. Filter
 	const condition = function (food) {
