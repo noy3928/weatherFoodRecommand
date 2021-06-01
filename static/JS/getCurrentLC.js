@@ -18,6 +18,7 @@ function getCurrentLocation() {
         tmp = String(json.main.temp).slice(0, -1);
         plc = json.name + ", " + json.sys.country;
         console.log(tmp, plc);
+		//posToKor(lat, lon)
 		showResult(plc) //여기에 한국어로 변환된 지명을 넣어주세요!
       });
   }
