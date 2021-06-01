@@ -3,7 +3,7 @@ function showResult (cityName, weather, foods) {
 	// Commonly used DOM elements.
 	const $menus = document.querySelector('.menus')
 	function clearPreviousResults() {
-		$menus.innerHTML = ''
+		//$menus.innerHTML = ''
 	}
 
 	function showCity(cityName) {
