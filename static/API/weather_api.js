@@ -1,12 +1,5 @@
-<html>
-<head>
-    <title>Weather</title>
-    <meta charSet="utf-8">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-</head>
 
-<script>
     // 각 도시별 api id 변수 선언
     let 독산리 = 1832008
     let 가능이동 = 6801953
@@ -250,7 +243,6 @@
     condition = response['weather'][0]['main']
 
     return weather_dic = [{
-    "name": name,
     "temp": temp,
     "condition": condition
 }]
@@ -258,4 +250,3 @@
 })
 }
 
-</script>
