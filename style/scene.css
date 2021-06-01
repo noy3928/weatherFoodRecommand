@@ -56,7 +56,7 @@
 
 .person {
   position: absolute;
-  top: 450px;
+  bottom: 10px;
   right: -60px;
   width: auto;
   height: auto;

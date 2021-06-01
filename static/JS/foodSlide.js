@@ -14,10 +14,10 @@ var positions = {
 };
 
 function setUpSlides() {
-  TweenMax.set(slides, { top: positions.DOWN });
-  TweenMax.set(slides[active], { top: positions.ACTIVE });
-  TweenMax.set(slides[next], { top: positions.NEXT });
-  TweenMax.set(slides[prev], { top: positions.PREV });
+  TweenMax.set(slides, { left: positions.DOWN });
+  TweenMax.set(slides[active], { left: positions.ACTIVE });
+  TweenMax.set(slides[next], { left: positions.NEXT });
+  TweenMax.set(slides[prev], { left: positions.PREV });
 }
 
 function animateSlides(isNext) {
@@ -32,7 +32,7 @@ function animateSlides(isNext) {
       slides[next],
       slides[onDeck],
     ];
-    TweenMax.set(slides[onDeck], { top: positions.DOWN });
+    TweenMax.set(slides[onDeck], { left: positions.DOWN });
   } else {
     onDeck = prev - 1 < 0 ? slides.length - 1 : prev - 1;
     currentSlides = [
@@ -41,7 +41,7 @@ function animateSlides(isNext) {
       slides[prev],
       slides[onDeck],
     ];
-    TweenMax.set(slides[onDeck], { top: positions.UP });
+    TweenMax.set(slides[onDeck], { left: positions.UP });
   }
 
   for (var i = 0; i < currentSlides.length; i++) {
@@ -83,10 +83,10 @@ function animateSlides(isNext) {
 
 setUpSlides();
 
-$(".next").on("click", function () {
+$(".button-left").on("click", function () {
   animateSlides(true);
 });
 
-$(".prev").on("click", function () {
+$(".button-right").on("click", function () {
   animateSlides(false);
 });

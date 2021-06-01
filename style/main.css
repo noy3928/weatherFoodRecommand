@@ -2,11 +2,12 @@
   position: absolute;
   width: 1280px;
   height: 900px;
-  background: rgba(255, 255, 255, 0.1);
+  background: #f7f8f2;
   border-radius: 30px;
   z-index: 10;
   backdrop-filter: blur(25px);
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5),
+    10px 10px 15px rgba(70, 70, 70, 0.12);
   display: grid;
   grid-template-columns: 1fr 2fr;
   padding: 0px;
@@ -17,7 +18,7 @@
   position: absolute;
   width: 100%;
   height: 100vh;
-  background-color: #ffffff;
+  background-color: #f7f8f2;
   display: flex;
   justify-content: center;
   align-items: center;
