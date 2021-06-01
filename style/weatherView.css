@@ -6,7 +6,7 @@
   font-family: "GmarketB";
   display: flex;
   font-size: 25px;
-  margin-bottom: 70px;
+  margin-bottom: 30px;
 }
 
 .weather-change-button {
@@ -14,20 +14,28 @@
   opacity: 0.5;
   cursor: pointer;
   transition: ease-in-out 0.5s;
+  padding: 15px;
+  border-radius: 15px;
+}
+
+.weather-change-button:hover {
+  box-shadow: inset -10px -10px 15px rgba(255, 255, 255, 0.7),
+    inset 10px 10px 15px rgba(70, 70, 70, 0.4);
 }
 
 .Food-change-button {
   opacity: 0.5;
   cursor: pointer;
-  transition: ease-in-out 0.5s;
-}
-
-.weather-change-button:hover {
-  opacity: 1;
+  transition: 0.5s ease-in-out;
+  padding: 15px;
+  border-radius: 15px;
+  /* box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.7),
+    10px 10px 15px rgba(70, 70, 70, 0.2); */
 }
 
 .Food-change-button:hover {
-  opacity: 1;
+  box-shadow: inset -10px -10px 15px rgba(255, 255, 255, 0.7),
+    inset 10px 10px 15px rgba(70, 70, 70, 0.4);
 }
 
 .week-weather {
@@ -41,8 +49,8 @@
 
 .weekly-weather-box {
   background: #f7f8f2;
-  border-right: 1px solid rgba(255, 255, 255, 0.3);
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  /* border-right: 1px solid rgba(255, 255, 255, 0.3);
+  border-top: 1px solid rgba(255, 255, 255, 0.3); */
   border-radius: 10px;
   display: flex;
   justify-content: center;
@@ -51,6 +59,12 @@
   padding: 0;
   box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.7),
     6px 6px 10px rgba(70, 70, 70, 0.12);
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+
+.weekly-weather-box:hover {
+  transform: translateY(-5px);
 }
 
 .weakly-icon {
@@ -71,39 +85,41 @@
 }
 
 .menus {
-  /* height: 550px; */
   width: 100%;
   display: grid;
-  /* justify-content: center; */
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
-  /* grid-row-gap: 10px;
-  grid-column-gap: 10px; */
 }
 
 .menu {
-  position: relative;
-  /* overflow: hidden; */
-  min-height: 300px;
-  min-width: 300px;
   padding: 50px;
-  /* max-height: 550px;
-  max-width: 550px; */
   display: flex;
-  /* justify-content: center; */
-  /* align-items: center; */
 }
 
 .menu-one {
   background: #f7f8f2;
-  box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5),
-    10px 10px 15px rgba(70, 70, 70, 0.12);
-  border-radius: 50px;
+  box-shadow: -10px -10px 10px rgba(255, 255, 255, 0.7),
+    10px 10px 15px rgba(70, 70, 70, 0.4);
   cursor: pointer;
-  /* position: absolute; */
-  width: 300px;
-  height: 300px;
-  /* position: absolute; */
+  width: 370px;
+  height: 370px;
+  border-radius: 57% 31% 69% 43%;
+  padding: 10px;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-one img {
+  width: 350px;
+  height: 350px;
+  border-radius: 57% 31% 69% 43%;
+  max-width: 170%;
+  max-height: 170%;
+  width: auto;
+  height: auto;
 }
 
 .button {
@@ -127,6 +143,17 @@
   cursor: pointer;
   padding: 15px;
   border-radius: 10px;
+  transition: 0.5s ease-in-out;
+}
+
+.button-left:hover {
+  box-shadow: inset -10px -10px 15px rgba(255, 255, 255, 0.7),
+    inset 7px 7px 15px rgba(70, 70, 70, 0.2);
+}
+
+.button-right:hover {
+  box-shadow: inset -10px -10px 15px rgba(255, 255, 255, 0.7),
+    inset 7px 7px 15px rgba(70, 70, 70, 0.2);
 }
 
 #leftbutton {
@@ -142,7 +169,7 @@
 
 .show-circle {
   margin-top: 20px;
-  border: 1px solid black;
+  border: 1px solid #7d7d7c;
   width: 15px;
   height: 15px;
   border-radius: 50%;
@@ -154,5 +181,5 @@
 }
 
 .left-circle {
-  background-color: black;
+  background-color: #7d7d7c;
 }
