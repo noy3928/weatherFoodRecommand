@@ -124,11 +124,11 @@ input:focus {
   margin-right: 10px;
 }
 
-.img_box {
+.img-box {
   padding-left: 50px;
 }
 
-.cityImage {
+.city-image {
   width: 310px;
   height: 140px;
   overflow: hidden;
