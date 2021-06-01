@@ -53,7 +53,7 @@ function showResult (cityName, weather, foods) {
 		clearPreviousResults()
 		showCity()
 		showWeather()
-		showFoods()
+		//showFoods()
 		showTime()
 		return true
 	}
