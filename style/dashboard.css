@@ -53,6 +53,7 @@ input:focus {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #7d7d7b;
 }
 
 .tmp {
@@ -66,6 +67,7 @@ input:focus {
 .weather-icon-box {
   display: flex;
   justify-content: center;
+  padding: 0px 50px;
 }
 
 .weathericon {
@@ -73,9 +75,12 @@ input:focus {
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
-  width: 200px;
-  height: 200px;
+  width: 100%;
+  height: 250px;
   overflow: hidden;
+  border-radius: 30px;
+  box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5),
+    10px 10px 15px rgba(70, 70, 70, 0.12);
   /* background-color: black; */
   position: relative;
 }
@@ -105,6 +110,7 @@ input:focus {
   display: flex;
   align-items: center;
   margin-bottom: 30px;
+  color: #7d7d7b;
 }
 
 .desc-icon-box {
