@@ -25,6 +25,7 @@ function showResult (cityName, weather, foods) {
 		// 3. Weather Desc
 
 		// 4. Week Weather
+		$weekWeather = $('week-weather')
 	}
 
 	function showFoods(foods) {

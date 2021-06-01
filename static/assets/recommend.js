@@ -52,23 +52,23 @@
 			console.log("검색된 입력값의 날씨 정보입니다.")
 			console.table(weather)
 
-      const filteredFoods = foods.filter(condition);
-      console.log("조건에 맞는 음식 목록입니다.");
-      console.table(filteredFoods);
+			const filteredFoods = foods.filter(condition)
+			console.log("조건에 맞는 음식 목록입니다.")
+			console.table(filteredFoods)
 
-      // selects default three elements from the array
-      try {
-        const result = selectRandom(filteredFoods, 3); //수정해야함
-        console.log("결과입니다.");
-        console.table(result);
-        showResult();
-      } catch (e) {
-        console.error(e);
-      }
-    };
-  })();
+			// selects default three elements from the array
+			try {
+				const result = selectRandom(filteredFoods, 3) //수정해야함
+				console.log("결과입니다.")
+				console.table(result)
+				showResult()
+			} catch (e) {
+				console.error(e)
+			}
+		}
+	})()
 
-  // 3. attach to HTML
-  const searchForm = document.querySelector("form.search");
-  searchForm.addEventListener("submit", recommend);
-})();
+	// 3. attach to HTML
+	const searchForm = document.querySelector("form.search")
+	searchForm.addEventListener("submit", recommend)
+})()
