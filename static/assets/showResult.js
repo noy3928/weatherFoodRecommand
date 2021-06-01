@@ -1,5 +1,5 @@
 function showResult (cityName, weather, foods) {
-	//const $ = document.querySelector.bind(document)
+	const $ = document.querySelector.bind(document)
 	// Commonly used DOM elements.
 	const $menus = document.querySelector('.menus')
 	function clearPreviousResults() {
@@ -38,7 +38,15 @@ function showResult (cityName, weather, foods) {
 	}
 
 	function showTime() {
-		const $dayBox = document.querySelector('day-box')
+		const $dayBox = document.querySelector('.day-box')
+		const $day = $('.day')
+
+		const daysKR = ['일', '월', '화', '수', '목', '금', '토']
+		const now = new Date()
+		const day = daysKR[now.getDay()] + '요일'
+		const time = `${now.getHours()}:${now.getMinutes()}`
+
+		$day.textContent = `${day}, ${time}`
 	}
 
 	try {
