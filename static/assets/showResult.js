@@ -48,7 +48,9 @@ function showResult (cityName, weather, foods) {
 		const daysKR = ['일', '월', '화', '수', '목', '금', '토']
 		const now = new Date()
 		const day = daysKR[now.getDay()] + '요일'
-		const time = `${now.getHours()}:${now.getMinutes()}`
+		const hours = now.getHours() < 10 ? '0' + now.getHours() : now.getHours()
+		const minutes = now.getMinutes() < 10 ? '0' + now.getMinutes() : now.getMinutes()
+		const time = `${hours}:${minutes}`
 
 		$day.textContent = `${day}, ${time}`
 	}
