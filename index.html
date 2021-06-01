@@ -14,6 +14,7 @@
       integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
       crossorigin="anonymous"
     ></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
   </head>
   <body>
     <div class="main-container">
@@ -150,10 +151,22 @@
           <div class="food-recomandation">
             <div class="rec-title">오늘의 추천메뉴</div>
             <div class="menus">
-              <div class="menu menu-one"></div>
-              <div class="menu menu-two"></div>
-              <div class="menu menu-three"></div>
-
+              <div class="button">
+                <div class="button-left"><img src="./style/image/play.svg" id="leftbutton"></div>
+              </div>
+              <div class="menu">
+                <div class="menu-one"></div>
+              </div>
+              <div class="button">
+                <div class="button-right">
+                  <img src="./style/image/play.svg" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="show-change">
+              <div class="show-circle left-circle"></div>
+              <div class="show-circle center-cirle"></div>
+              <div class="show-circle right-circle"></div>
             </div>
           </div>
         </div>
