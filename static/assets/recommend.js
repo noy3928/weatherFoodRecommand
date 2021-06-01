@@ -1,4 +1,5 @@
 (async function () {
+	const consoleTitleStyle = 'background: #222; color: #bada55; font-size: large;'
 	// Initiating recommend function
 
 	// 1. Initializes food database
@@ -27,11 +28,19 @@
 		return result
 	}
 
-  // 2. Creates recommend function
-  const recommend = await (function () {
-    /*
-		previous search results should be saved in localStorage
-		*/
+	// 4. Creates recommend function
+	const recommend = await (function () {
+		console.log('%c 이전 검색 결과 안내입니다.', consoleTitleStyle)
+		const previousSearchResult = localStorage.getItem('previousSearchResult')
+		if (previousSearchResult) {
+			console.log('이전 검색 기록 있음')
+		}
+		else {
+			console.log('이전 검색 기록 없음')
+		}
+	/*
+	previous search results should be saved in localStorage
+	*/
 
     return function () {
       const location = document.querySelector(".city-name").textContent;
