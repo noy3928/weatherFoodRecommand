@@ -19,9 +19,9 @@ function showResult (cityName, weather, foods) {
 	function showFoods(foods) {
 		const result = new DocumentFragment()
 		for (let i = 0; i < 3; i++) {
-			const menuDiv = document.createElement('div')
-			menuDiv.setAttribute('class', 'menu')
-			result.appendChild(menuDiv)
+			const $menu = document.createElement('div')
+			$menu.setAttribute('class', 'menu')
+			result.appendChild($menu)
 		}
 
 		// Returns empty divs if there's no foods to show. Else continue.
