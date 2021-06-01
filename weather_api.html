@@ -236,10 +236,14 @@
     let 후평 = 6794156
     let 흐엉전 = 1844088
     let 흥해 = 1832015
-
+    // "lon": 127.0,
+    //         "lat": 37.583328
+// "api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+lon+"&appid=b0641107a6d807bd0a87e9c615a68c99&units=metric"
 // 힘수 선언 한글 도시명 입력시 도시영문 명, 기온, 날씨상태 반환
-    function weather_info(city) {
-        var apiurl = "http://api.openweathermap.org/data/2.5/weather?id=" + city + "&appid=b0641107a6d807bd0a87e9c615a68c99&units=metric"
+//     "http://api.openweathermap.org/data/2.5/weather?id=" + city + "&appid=b0641107a6d807bd0a87e9c615a68c99&units=metric"
+    function weather_info(lat,lon) {
+
+        var apiurl = "api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+lon+"&appid=b0641107a6d807bd0a87e9c615a68c99&units=metric"
         $.ajax({
             type: "GET",
             url: apiurl,
@@ -261,7 +265,7 @@
 </script>
 <body>
 
-<button onclick="weather_info()">업데이트</button>
+<button onclick="weather_info(37.583328,127.0)">업데이트</button>
 <!-- HTML -->
 </body>
 </html>
