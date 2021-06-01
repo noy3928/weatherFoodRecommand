@@ -1,21 +1,20 @@
 (async function () {
   // Initiating recommend function
-  console.log(window.location.pathname);
 
   // 1. Initializes food database
-  const foods = await fetch("./static/assets/foodData.json")
+  const foods = await fetch('./static/assets/foodData.json')
     .then((response) => response.json())
-    .then((data) => data);
+    .then((data) => data)
 
   // 2. Filter
   const condition = function (food) {
-    return true;
-  };
+    return true
+  }
 
   function selectRandom(arr, n = 3) {
-    let result = [];
+    let result = []
     if (arr.length < n) {
-      throw "Number of required random foods exceeds number of stored foods";
+      throw 'Number of required random foods exceeds number of stored foods'
     }
 
     return;
