@@ -1,19 +1,27 @@
 function showResult (cityName, weather, foods) {
-
+	//const $ = document.querySelector.bind(document)
 	// Commonly used DOM elements.
 	const $menus = document.querySelector('.menus')
 	function clearPreviousResults() {
 		$menus.innerHTML = ''
 	}
 
-	function showCity() {
-		const $imgBox = document.querySelector('.img_box')
-		const $cityImage = document.querySelector('.city-image')
+	function showCity(cityName) {
+		//const $imgBox = document.querySelector('.img_box')
+		//const $cityImage = document.querySelector('.city-image')
 		const $cityName = document.querySelector('.city-name')
+		cityName = 'New York, USA' // Temporary
+		$cityName.textContent = cityName
 	}
 
 	function showWeather() {
+		// 1. Weather Icon Box
 
+		// 2. Tmp
+
+		// 3. Weather Desc
+
+		// 4. Week Weather
 	}
 
 	function showFoods(foods) {
@@ -28,11 +36,17 @@ function showResult (cityName, weather, foods) {
 		if (foods === undefined) $menus.appendChild(result)
 
 	}
+
+	function showTime() {
+		const $dayBox = document.querySelector('day-box')
+	}
+
 	try {
 		clearPreviousResults()
 		showCity()
 		showWeather()
 		showFoods()
+		showTime()
 		return true
 	}
 	catch (e) {
