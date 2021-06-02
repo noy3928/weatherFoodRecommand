@@ -31,6 +31,7 @@
 
 	// 4. Creates recommend function
 	const recommend = await (function () {
+		/*
 		console.log('%c이전 검색 결과 안내입니다.', consoleTitleStyle)
 		const previousSearchResult = localStorage.getItem('previousSearchResult')
 		if (previousSearchResult) {
@@ -39,11 +40,12 @@
 		else {
 			console.log('이전 검색 기록 없음')
 		}
+		*/
 
 		return function (event) {
 			console.clear()
 			console.log('%c추천 함수가 호출되었습니다.', consoleTitleStyle)
-			
+
 			if (!event) {
 
 				// 1. If page is loaded, automatically shows info of current location. (by window.onload)
