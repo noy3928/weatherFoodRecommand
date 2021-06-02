@@ -10,11 +10,6 @@ function sol() {
       Authorization: "KakaoAK 01c0cbd4fde85e34af273552852f8ebe",
     },
   }).done(function (msg) {
-    console.log(msg);
-    // result = msg.documents[0].address.region_1depth_name + msg.documents[0].address.region_2depth_name
-  });
-
-  //   console.log(weatherLcInfo.condition, weatherLcInfo.plc, weatherLcInfo.tmp);
+	  result = msg.documents[0].address.region_1depth_name + msg.documents[0].address.region_2depth_name
+  })
 }
-
-sol();

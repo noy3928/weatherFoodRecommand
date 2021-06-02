@@ -69,8 +69,6 @@
         console.log("현재 날씨입니다.", weather);
       });
 
-      const location = $(".city-name").textContent;
-
       const weather = "";
       //getWeather(location)
 
