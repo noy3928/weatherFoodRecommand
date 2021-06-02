@@ -35,8 +35,4 @@ const weatherInfo = [800, 800, 800, 800, 800, 800, 800];
 weatherInfo.forEach((a, i) => {
   activeWeatherIcon(a, i);
 });
-<<<<<<< HEAD
-=======
-
-showResult();
->>>>>>> upstream/main
+// showResult();
