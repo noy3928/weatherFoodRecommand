@@ -1,83 +1,36 @@
-function getCurrentLocation() {
-  const API_KEY = "d0a4465b7d153b885b025b667926fff2";
-  const COORDS = "coords";
+function getCurrentCoords() {
+	const API_KEY = "d0a4465b7d153b885b025b667926fff2"
+	const COORDS = "coords"
 
+	function loadCoords() {
+		const loadedCords = localStorage.getItem(COORDS) ??	(function() {
+			return navigator.geolocation.getCurrentPosition(position => { // handleGeoSucees
+				const {latitude, longitude} = position.coords
+				const coordsObj = {latitude, longitude}
+				localStorage.setItem(COORDS, JSON.stringify(coordsObj))
+				return coordsObj
+			},
+			() => { // handleGeoError
+				console.error("Can't access geo location.")
+			})
+		})()
+		return loadedCords
+	}
+	return loadCoords()
   let weatherLcInfo = {
     tmp: "",
     plc: "",
     condition: "",
   };
 
-  function getWeather(lat, lon) {
-    // const weather = document.querySelector(".city-name");
-    // const cityName = document.querySelector(".");
 
-    createKakaoMap(lat, lon);
 
-    fetch(
-      `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`
-    )
-      .then(function (response) {
-        return response.json();
-      })
-      .then(function (json) {
-        weatherLcInfo.tmp = String(json.main.temp).slice(0, -1);
-        weatherLcInfo.plc = json.name + ", " + json.sys.country;
-        weatherLcInfo.condition = json.weather["0"].id;
 
-        // 현재 위치의 위도와 경도로 한글로된 지명 불러오기.
-        $.ajax({
-          method: "GET",
-          url: `https://dapi.kakao.com/v2/local/geo/coord2address.json?x=${lat}&y=${lon}&input_coord=WGS84`,
-          // url: `https://dapi.kakao.com/v2/local/geo/coord2address.json?x=127.423084873712&y=37.0789561558879&input_coord=WGS84`,
-          data: {},
-          headers: {
-            Authorization: "KakaoAK 01c0cbd4fde85e34af273552852f8ebe",
-          },
-        }).done(function (msg) {
-          console.log(msg);
-        });
 
-        console.log(
-          weatherLcInfo.condition,
-          weatherLcInfo.plc,
-          weatherLcInfo.tmp
-        );
-      });
-  }
 
-  function saveCoords(coordsObj) {
-    localStorage.setItem(COORDS, JSON.stringify(coordsObj));
-  }
 
-  function handleGeoSucees(position) {
-    const latitude = position.coords.latitude;
-    const longitude = position.coords.longitude;
-    const coordsObj = {
-      latitude,
-      longitude,
-    };
-    saveCoords(coordsObj);
-    getWeather(latitude, longitude);
-  }
 
-  function handleGeoError() {
-    console.log("Cant access geo location");
-  }
 
-  function askForCoords() {
-    navigator.geolocation.getCurrentPosition(handleGeoSucees, handleGeoError);
-  }
-
-  function loadCoords() {
-    const loadedCords = localStorage.getItem(COORDS);
-    if (loadedCords === null) {
-      askForCoords();
-    } else {
-      const parseCoords = JSON.parse(loadedCords);
-      getWeather(parseCoords.latitude, parseCoords.longitude);
-    }
-  }
   loadCoords();
 
   showResult(weatherLcInfo.plc);
@@ -123,4 +76,3 @@ function createKakaoMap(lat, lon) {
 }
 
 getLatLonbyKeyword();
-getCurrentLocation();
