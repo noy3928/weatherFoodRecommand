@@ -106,8 +106,8 @@ input:focus {
 .weather-icon {
   position: absolute;
 
-  width: 700px;
-  height: 700px;
+  width: 200px;
+  height: 200px;
   /* filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.2)); */
 }
 
