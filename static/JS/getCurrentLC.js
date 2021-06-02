@@ -1,8 +1,12 @@
 function getCurrentLocation() {
   const API_KEY = "d0a4465b7d153b885b025b667926fff2";
   const COORDS = "coords";
-  let tmp = "";
-  let plc = "";
+
+  let weatherLcInfo = {
+    tmp: "",
+    plc: "",
+    condition: "",
+  };
 
   function getWeather(lat, lon) {
     // const weather = document.querySelector(".city-name");
@@ -15,9 +19,15 @@ function getCurrentLocation() {
         return response.json();
       })
       .then(function (json) {
-        tmp = String(json.main.temp).slice(0, -1);
-        plc = json.name + ", " + json.sys.country;
-        console.log(tmp, plc);
+        weatherLcInfo.tmp = String(json.main.temp).slice(0, -1);
+        weatherLcInfo.plc = json.name + ", " + json.sys.country;
+        weatherLcInfo.condition = json.weather["0"].id;
+
+        console.log(
+          weatherLcInfo.condition,
+          weatherLcInfo.plc,
+          weatherLcInfo.tmp
+        );
       });
   }
 
@@ -55,7 +65,7 @@ function getCurrentLocation() {
   }
   loadCoords();
 
-  showResult(plc);
+  showResult(weatherLcInfo.plc);
 }
 
 getCurrentLocation();
