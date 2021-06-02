@@ -24,7 +24,6 @@
           <div class="dashboard-real">
           <div class="searchbar">
             <form class="search" onsubmit="return false">
-
               <input
                 type="text"
                 placeholder="Search for places.."
@@ -57,6 +56,11 @@
             <div class="city-image">
               <div class="city-name">
                 NEWYORK, USA</div>
+            </div>
+            <div class="map">
+              <div class="map-box">
+                <div class="kakao-map"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -157,26 +161,15 @@
     </div>
 
     <div class="scene">
-
       <div class="menu-bar">
         <img src="./style/image/menu.svg" id="menu-bar" />
       </div>
-      <div class="shape">
-
-      </div>
       <div class="shape"></div>
-      <div class="shape"></div>
-      <div class="shape"></div>
-      <div class="shape"></div>
-      <div style="position:absolute; top: calc(50vh - 112.5px); left: calc(50% - 150px);">
-        <lottie-player th:src="@{./data.json}" background="transparent" style="width: 300px; height: 225px;" speed="1" loop autoplay>
-        </lottie-player>
-      </div>
-
       <img src="./style/image/Choice of food 2020.png" class="person" />
       <img src="./style/image/Pizza Deliveryman 2020.png" class="persen2" />
     </div>
 
+    <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=97cf6b9d942d05f21bee9ee745eeca55"></script>
     <script src="./static/JS/lottie.js"></script>
     <script src="./static/assets/recommend.js" charset="utf-8"></script>
     <script src="./static/assets/showResult.js" charset="utf-8"></script>

@@ -11,7 +11,7 @@
   display: grid;
   grid-template-columns: 1fr 2fr;
   padding: 0px;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 .main-container {

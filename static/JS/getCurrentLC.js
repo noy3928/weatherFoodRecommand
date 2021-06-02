@@ -12,6 +12,8 @@ function getCurrentLocation() {
     // const weather = document.querySelector(".city-name");
     // const cityName = document.querySelector(".");
 
+    createKakaoMap(lat, lon);
+
     fetch(
       `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`
     )
@@ -81,8 +83,6 @@ function getCurrentLocation() {
   showResult(weatherLcInfo.plc);
 }
 
-getCurrentLocation();
-
 function getLatLonbyKeyword() {
   //키워드 입력시 위치 정보 불러오는 api
   const searchLatLon = function () {
@@ -104,4 +104,23 @@ function getLatLonbyKeyword() {
   searchForm.addEventListener("submit", searchLatLon);
 }
 
+function createKakaoMap(lat, lon) {
+  let mapContainer = document.querySelector(".kakao-map"), // 지도를 표시할 div
+    mapOption = {
+      center: new kakao.maps.LatLng(lat, lon), // 지도의 중심좌표
+      level: 3, // 지도의 확대 레벨
+      mapTypeId: kakao.maps.MapTypeId.ROADMAP, // 지도종류
+    };
+
+  // 지도를 생성한다
+  var map = new kakao.maps.Map(mapContainer, mapOption);
+
+  // 지도에 마커를 생성하고 표시한다
+  var marker = new kakao.maps.Marker({
+    position: new kakao.maps.LatLng(lat, lon), // 마커의 좌표
+    map: map, // 마커를 표시할 지도 객체
+  });
+}
+
 getLatLonbyKeyword();
+getCurrentLocation();
