@@ -88,5 +88,3 @@ var descWeather = bodymovin.loadAnimation({
   autoplay: true,
   path: "./static/JS/icon-sunshower.json",
 });
-
-showResult()
