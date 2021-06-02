@@ -41,7 +41,7 @@
 		}
 
 		return function () {
-			const location = document.querySelector(".city-name").textContent
+			const location = $('.city-name').textContent
 			const $searchbar = $('#searchbar')
 			const weather = ''
 			 //getWeather(location)
@@ -56,7 +56,7 @@
 			console.log("조건에 맞는 음식 목록입니다.")
 			console.table(filteredFoods)
 
-			// selects default three elements from the array
+			// Selects default three elements from the array
 			try {
 				const result = selectRandom(filteredFoods, 3) //수정해야함
 				console.log("결과입니다.")
