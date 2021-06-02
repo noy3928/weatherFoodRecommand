@@ -40,20 +40,28 @@
 			console.log('이전 검색 기록 없음')
 		}
 
-		return function (e) {
-
+		return function (event) {
 			console.log('%c추천 함수가 호출되었습니다.', consoleTitleStyle)
-			// 1. If page is loaded, automatically shows info of current location. (by window.onload)
-			console.log('페이지 초기 화면입니다. 현재 위치를 바탕으로 날씨를 보여주고 음식을 추천합니다.')
-			// 2. If a search is submitted, shows info according to the search result. (by searchForm)
-			console.log('검색결과 화면입니다. 검색된 위치를 바탕으로 날씨를 보여주고 음식을 추천합니다.')
+
+			if (!event) {
+
+				// 1. If page is loaded, automatically shows info of current location. (by window.onload)
+				console.log('페이지 초기 화면입니다. 현재 위치를 바탕으로 날씨를 보여주고 음식을 추천합니다.')
+			}
+			else {
+
+				// 2. If a search is submitted, shows info according to the search result. (by searchForm)
+				console.log('검색결과 화면입니다. 검색된 위치를 바탕으로 날씨를 보여주고 음식을 추천합니다.')
+				console.log('검색의 입력값은 다음과 같습니다.', $searchbar.value)
+			}
+
 
 			const location = $('.city-name').textContent
 			const $searchbar = $('#searchbar')
 			const weather = ''
 			 //getWeather(location)
 
-			console.log('검색의 입력값은 다음과 같습니다.', $searchbar.value)
+
 			console.log('현재 불러온 음식 db의 내용입니다.')
 			console.table(foods)
 			console.log('검색된 입력값의 날씨 정보입니다.')
