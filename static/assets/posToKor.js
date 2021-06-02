@@ -12,9 +12,7 @@ function posToKor(latitude, longtitude) {
 	const authKey = 'key=0CE9F6B1-5C54-3F7F-B416-F6B3A26D10AB'
 	const query = `?${service}&${request}&${version}&${crs}&${point}&${type}&${zipcode}&${simple}&${authKey}`
 
-	fetch(url + query, {
-		mode: 'no-cors'
-	})
+	fetch(url + query)
 	.then(response => {
 		console.log(response)
 		return response.json()
