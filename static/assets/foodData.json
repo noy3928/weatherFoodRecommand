@@ -19,5 +19,13 @@
 		"mild": true,
 		"cold": true,
 		"rainy": true
+	},
+	{
+		"name": "김치부침개",
+		"rainy": true
+	},
+	{
+		"name": "파전",
+		"rainy": true
 	}
 ]
