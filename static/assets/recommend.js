@@ -31,7 +31,7 @@
   };
 
   // 4. Creates recommend function
-  const recommend = await (function () {
+  const recommend = await (async function () {
     /*
 		console.log('%c이전 검색 결과 안내입니다.', consoleTitleStyle)
 		const previousSearchResult = localStorage.getItem('previousSearchResult')
