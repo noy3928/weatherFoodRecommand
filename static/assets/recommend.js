@@ -79,8 +79,6 @@
 
 			console.log('현재 불러온 음식 db의 내용입니다.')
 			console.table(foods)
-			console.log('검색된 입력값의 날씨 정보입니다.')
-			console.table(weather)
 
 			const filteredFoods = foods.filter(condition)
 			console.log('조건에 맞는 음식 목록입니다.')
