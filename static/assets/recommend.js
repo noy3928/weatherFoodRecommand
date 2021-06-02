@@ -46,14 +46,16 @@
 			console.clear()
 			console.log('%c추천 함수가 호출되었습니다.', consoleTitleStyle)
 
+			let coords = {}
 			if (!event) {
 
 				// 1. If page is loaded, automatically shows info of current location. (by window.onload)
 				console.log('페이지 초기 화면입니다. 현재 위치를 바탕으로 날씨를 보여주고 음식을 추천합니다.')
-				const coords = getCurrentCoords()
+				coords = getCurrentCoords()
 				console.log('현재 좌표입니다.', coords)
-				const weather = getWeather(coords)
-				console.log('현재 날씨입니다.', weather)
+
+
+
 			}
 			else {
 
@@ -61,7 +63,12 @@
 				console.log('검색결과 화면입니다. 검색된 위치를 바탕으로 날씨를 보여주고 음식을 추천합니다.')
 				const $searchbar = $('#searchbar')
 				console.log('검색의 입력값은 다음과 같습니다.', $searchbar.value)
+				//cords = 검색값의 좌표결과
 			}
+
+			getWeather(coords).then(weather => {
+				console.log('현재 날씨입니다.', weather)
+			})
 
 
 			const location = $('.city-name').textContent
