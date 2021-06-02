@@ -5,8 +5,6 @@ var slides = $(".menu-img").toArray(), //객체를 배열로 만들어주는 매
   activePosition = 43;
 spacing = 410;
 
-console.log(slides);
-
 var positions = {
   ACTIVE: activePosition,
   PREV: activePosition - spacing,
