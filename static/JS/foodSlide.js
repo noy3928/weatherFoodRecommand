@@ -1,9 +1,9 @@
-var slides = $(".menu").toArray(), //객체를 배열로 만들어주는 매서드.
+var slides = $(".menu-img").toArray(), //객체를 배열로 만들어주는 매서드.
   active = 0,
   next = 1,
   prev = slides.length - 1,
-  activePosition = 150;
-spacing = 210;
+  activePosition = 43;
+spacing = 410;
 
 var positions = {
   ACTIVE: activePosition,
@@ -64,7 +64,7 @@ function animateSlides(isNext) {
         break;
     }
     TweenMax.to(currentSlides[i], 1, {
-      top: top,
+      left: top,
       // ease: Strong.easeInOut,
       ease: Quint.easeInOut,
       delay: i * 0.1,

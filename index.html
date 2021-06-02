@@ -16,14 +16,15 @@
     ></script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
      <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=97cf6b9d942d05f21bee9ee745eeca55&libraries=services"></script>
   </head>
   <body>
     <div class="main-container">
       <div class="main">
         <div class="dashboard">
+          <div class="dashboard-real">
           <div class="searchbar">
             <form class="search" onsubmit="return false">
-              
               <input
                 type="text"
                 placeholder="Search for places.."
@@ -43,6 +44,9 @@
           <div class="day-box">
             <div class="day">일요일, 16:00</div>
           </div>
+          <div class="divide-box">
+          <div class="divide-line"></div>
+        </div>
           <div class="weatherdesc">
             <div class="desc-icon-box">
             <div class="desc-icon"></div>
@@ -51,12 +55,19 @@
           </div>
           <div class="img-box">
             <div class="city-image">
-              <div class="city-name">NEWYORK, USA</div>
+              <div class="city-name">
+                NEWYORK, USA</div>
+            </div>
+            <div class="map">
+              <div class="map-box">
+                <div class="kakao-map"></div>
+              </div>
             </div>
           </div>
-          
         </div>
-        
+        <div class="divide-weatherDashboard"></div>
+        </div>
+
         <div class="weatherview">
           <div class="page-change">
             <p class="weather-change-button">Weather</p>
@@ -65,58 +76,51 @@
           <div class="week-weather">
             <div class="weekly-weather-box sunday">
               <div class="weekly-day">일</div>
-              <img
-                src="./style/image/CLOUDINESS.svg"
-                class="weakly-icon"
-              />
+              <div class="weakly-icon-box">
+                <div class="weakly-icon"></div>
+              </div>
               <div class="weakly-tmp">28°</div>
             </div>
             <div class="weekly-weather-box monday">
               <div class="weekly-day">월</div>
-              <img
-                src="./style/image/CLOUDY.svg"
-                class="weakly-icon"
-              />
+              <div class="weakly-icon-box">
+                <div class="weakly-icon"></div>
+              </div>
               <div class="weakly-tmp">23°</div>
             </div>
             <div class="weekly-weather-box tuesday">
               <div class="weekly-day">화</div>
-              <img
-                src="./style/image/DRIZZLE.svg"
-                class="weakly-icon"
-              />
+              <div class="weakly-icon-box">
+                <div class="weakly-icon"></div>
+              </div>
               <div class="weakly-tmp">28°</div>
             </div>
             <div class="weekly-weather-box Wednesday">
               <div class="weekly-day">수</div>
-              <img
-                src="./style/image/FOGGY.svg"
-                class="weakly-icon"
-              />
+              <div class="weakly-icon-box">
+                <div class="weakly-icon"></div>
+              </div>
               <div class="weakly-tmp">22°</div>
             </div>
             <div class="weekly-weather-box thursday">
               <div class="weekly-day">목</div>
-              <img
-                src="./style/image/MOON.svg"
-                class="weakly-icon"
-              />
+              <div class="weakly-icon-box">
+                <div class="weakly-icon"></div>
+              </div>
               <div class="weakly-tmp">24°</div>
             </div>
             <div class="weekly-weather-box friday">
               <div class="weekly-day">금</div>
-              <img
-                src="./style/image/CLOUDY.svg"
-                class="weakly-icon"
-              />
+              <div class="weakly-icon-box">
+                <div class="weakly-icon"></div>
+              </div>
               <div class="weakly-tmp">20°</div>
             </div>
             <div class="weekly-weather-box saturday">
               <div class="weekly-day">토</div>
-              <img
-                src="./style/image/FOGGY.svg"
-                class="weakly-icon"
-              />
+              <div class="weakly-icon-box">
+                <div class="weakly-icon"></div>
+              </div>
               <div class="weakly-tmp">19°</div>
             </div>
           </div>
@@ -128,7 +132,9 @@
               </div>
               <div class="menu">
                 <div class="menu-one">
-                  <img src="./style/image/스테이크.jpg" alt="">
+                  <img src="./style/image/3x/rice, bowl, food, meal, dinner@3x.png" class="menu-img">
+                  <img src="./style/image/3x/egg, bacon, breakfast, plate, food, meal@3x.png" class="menu-img">
+                  <img src="./style/image/3x/noodles, spaghetti, fork, meal, dinner, plate@3x.png" class="menu-img">
                 </div>
               </div>
               <div class="button">
@@ -149,30 +155,21 @@
     </div>
 
     <div class="scene">
-
       <div class="menu-bar">
         <img src="./style/image/menu.svg" id="menu-bar" />
       </div>
-      <div class="shape">
-
-      </div>
       <div class="shape"></div>
-      <div class="shape"></div>
-      <div class="shape"></div>
-      <div class="shape"></div>
-      <div style="position:absolute; top: calc(50vh - 112.5px); left: calc(50% - 150px);">
-        <lottie-player th:src="@{./data.json}" background="transparent" style="width: 300px; height: 225px;" speed="1" loop autoplay>
-        </lottie-player>
-      </div>
-
       <img src="./style/image/Choice of food 2020.png" class="person" />
       <img src="./style/image/Pizza Deliveryman 2020.png" class="persen2" />
     </div>
-    
+
+    <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=97cf6b9d942d05f21bee9ee745eeca55"></script>
     <script src="./static/JS/lottie.js"></script>
     <script src="./static/assets/recommend.js" charset="utf-8"></script>
     <script src="./static/assets/showResult.js" charset="utf-8"></script>
 	<script src="./static/JS/app.js"></script>
+	<script src="./static/assets/posToKor.js" charset="utf-8"></script>
   <script src="./static/JS/getCurrentLC.js"></script>
+  <script src="./static/JS/foodSlide.js"></script>
   </body>
 </html>

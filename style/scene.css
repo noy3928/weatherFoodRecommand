@@ -33,7 +33,7 @@
   }
 }
 
-.shape:nth-child(2) {
+.shape {
   position: absolute;
   top: 600px;
   left: -250px;
