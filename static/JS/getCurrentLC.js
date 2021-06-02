@@ -1,9 +1,8 @@
 function getCurrentCoords() {
-	const API_KEY = "d0a4465b7d153b885b025b667926fff2"
 	const COORDS = "coords"
 
 	function loadCoords() {
-		const loadedCords = localStorage.getItem(COORDS) ??	(function() {
+		const loadedCords = JSON.parse(localStorage.getItem(COORDS)) ??	(function() {
 			return navigator.geolocation.getCurrentPosition(position => { // handleGeoSucees
 				const {latitude, longitude} = position.coords
 				const coordsObj = {latitude, longitude}
@@ -17,23 +16,6 @@ function getCurrentCoords() {
 		return loadedCords
 	}
 	return loadCoords()
-  let weatherLcInfo = {
-    tmp: "",
-    plc: "",
-    condition: "",
-  };
-
-
-
-
-
-
-
-
-
-  loadCoords();
-
-  showResult(weatherLcInfo.plc);
 }
 
 function getLatLonbyKeyword() {
