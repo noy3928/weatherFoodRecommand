@@ -1,12 +1,5 @@
 [
 	{
-		"name": "돈까스",
-		"hot": true,
-		"mild": true,
-		"cold": true,
-		"sunny": true
-	},
-	{
 		"name": "동파육",
 		"hot": true,
 		"mild": true,
@@ -27,5 +20,25 @@
 	{
 		"name": "파전",
 		"rainy": true
+	},
+	{
+		"name": "칼국수",
+		"rainy": true
+	},
+	{
+		"name": "산적꼬치",
+		"fileName": "barbeque, food, meal, dinner, meat@3x"
+	},
+	{
+		"name": "생일케이크",
+		"fileName": "birthday, cake, pastry, food, meal, candles@3x"
+	},
+	{
+		"name": "부리또",
+		"fileName": "boriito, sandwich, food, meal, take out, fast food, junk food@3x"
+	},
+	{
+		"name": "와인",
+		"fileName": "bottle, glass, drink, beverage, wine, alcohol@3x"
 	}
 ]
