@@ -94,7 +94,7 @@ input:focus {
   align-items: center;
   margin-bottom: 20px;
   width: 100%;
-  height: 250px;
+  height: 200px;
   overflow: hidden;
   border-radius: 30px;
   /* box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5),
@@ -159,7 +159,7 @@ input:focus {
   margin-right: 10px;
 }
 
-.img-box {
+/* .img-box {
   padding: 0px 50px;
 }
 
@@ -187,6 +187,31 @@ input:focus {
   height: auto;
   max-width: 35px;
   max-height: 35px;
+} */
+
+.map {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 50px;
+}
+
+.map-box {
+  width: 100%;
+  height: 200px;
+  box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.7),
+    10px 10px 15px rgba(70, 70, 70, 0.12);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+}
+
+.kakao-map {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
 }
 
 .divide-weatherDashboard {
