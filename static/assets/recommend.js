@@ -45,20 +45,13 @@
 		return function (event) {
 			console.clear()
 			console.log('%c추천 함수가 호출되었습니다.', consoleTitleStyle)
-
-			let coords = {}
 			if (!event) {
-
 				// 1. If page is loaded, automatically shows info of current location. (by window.onload)
 				console.log('페이지 초기 화면입니다. 현재 위치를 바탕으로 날씨를 보여주고 음식을 추천합니다.')
 				coords = getCurrentCoords()
 				console.log('현재 좌표입니다.', coords)
-
-
-
 			}
 			else {
-
 				// 2. If a search is submitted, shows info according to the search result. (by searchForm)
 				console.log('검색결과 화면입니다. 검색된 위치를 바탕으로 날씨를 보여주고 음식을 추천합니다.')
 				const $searchbar = $('#searchbar')
