@@ -47,19 +47,19 @@
 			 //getWeather(location)
 			console.log('%c검색이 감지되었습니다.', consoleTitleStyle)
 			console.log('검색의 입력값은 다음과 같습니다.', $searchbar.value)
-			console.log("현재 불러온 음식 db의 내용입니다.")
+			console.log('현재 불러온 음식 db의 내용입니다.')
 			console.table(foods)
-			console.log("검색된 입력값의 날씨 정보입니다.")
+			console.log('검색된 입력값의 날씨 정보입니다.')
 			console.table(weather)
 
 			const filteredFoods = foods.filter(condition)
-			console.log("조건에 맞는 음식 목록입니다.")
+			console.log('조건에 맞는 음식 목록입니다.')
 			console.table(filteredFoods)
 
 			// Selects default three elements from the array
 			try {
 				const result = selectRandom(filteredFoods, 3) //수정해야함
-				console.log("결과입니다.")
+				console.log('결과입니다.')
 				console.table(result)
 				showResult()
 			} catch (e) {
@@ -68,7 +68,7 @@
 		}
 	})()
 
-	// 3. attach to HTML
-	const searchForm = document.querySelector("form.search")
-	searchForm.addEventListener("submit", recommend)
+	// 5. attach to HTML
+	const searchForm = $('form.search')
+	searchForm.addEventListener('submit', recommend)
 })()
