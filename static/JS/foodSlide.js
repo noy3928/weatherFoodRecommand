@@ -4,6 +4,7 @@ var slides = $(".menu-img").toArray(), //객체를 배열로 만들어주는 매
   prev = slides.length - 1,
   activePosition = 43;
 spacing = 410;
+let activeNumber = 0;
 
 var positions = {
   ACTIVE: activePosition,
@@ -33,6 +34,7 @@ function animateSlides(isNext) {
       slides[onDeck],
     ];
     TweenMax.set(slides[onDeck], { left: positions.DOWN });
+    activeNumber++;
   } else {
     onDeck = prev - 1 < 0 ? slides.length - 1 : prev - 1;
     currentSlides = [
@@ -42,6 +44,7 @@ function animateSlides(isNext) {
       slides[onDeck],
     ];
     TweenMax.set(slides[onDeck], { left: positions.UP });
+    activeNumber--; //한칸씩 움직일때마다 -1씩.
   }
 
   for (var i = 0; i < currentSlides.length; i++) {
@@ -79,6 +82,22 @@ function animateSlides(isNext) {
     active = prev;
     prev = onDeck;
   }
+
+  function moveCircle() {
+    let allCircle = $(".show-circle").toArray();
+    const activeCircle = document.querySelector(".active-circle");
+    activeCircle.remove();
+    if (activeNumber > allCircle.length - 1) {
+      activeNumber = 0;
+      allCircle[activeNumber].append(activeCircle);
+    } else if (activeNumber < 0) {
+      activeNumber = 2;
+      allCircle[activeNumber].append(activeCircle);
+    } else {
+      allCircle[activeNumber].append(activeCircle);
+    }
+  }
+  moveCircle();
 }
 
 setUpSlides();
