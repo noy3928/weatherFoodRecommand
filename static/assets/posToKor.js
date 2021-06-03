@@ -14,5 +14,5 @@ function sol() {
 			return msg.documents[0].address.region_1depth_name + msg.documents[0].address.region_2depth_name
 		})
 		resolve(result)
-	}
-})
+	})
+}
