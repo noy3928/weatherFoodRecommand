@@ -45,8 +45,8 @@ function getLatLonbyKeyword() {
   searchForm.addEventListener("submit", searchLatLon);
 }
 
-function createKakaoMap(lat, lon) {
-  const { latitude, longitude } = getCurrentCoords();
+function createKakaoMap() {
+  let { latitude, longitude } = getCurrentCoords();
 
   let mapContainer = document.querySelector(".kakao-map"), // 지도를 표시할 div
     mapOption = {
@@ -65,4 +65,5 @@ function createKakaoMap(lat, lon) {
   });
 }
 
+createKakaoMap();
 getLatLonbyKeyword();
