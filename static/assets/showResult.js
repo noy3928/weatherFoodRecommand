@@ -64,7 +64,6 @@ function showResult (cityName, weather, foods) {
 		return true
 	}
 	catch (e) {
-		console.error(e)
 		return false
 	}
 }

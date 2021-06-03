@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-AU-compatible" content="ie=edge">
-    <title>Document</title>
+    <title>오늘 뭐먹지?</title>
     <link rel="stylesheet" href="./style/style.css" />
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -37,7 +37,8 @@
           </div>
           <div class="weather-icon-box">
           <div class="weathericon">
-            <div class="weather-icon"></div>
+            <img src="./style/image/nonAniIcon/SUNNY.png" class="weather-icon">
+
           </div>
         </div>
           <div class="tmp">28°</div>
@@ -54,10 +55,6 @@
             <p>오늘의 날씨는 대체로 맑음 :)</p>
           </div>
           <div class="img-box">
-            <div class="city-image">
-              <div class="city-name">
-                NEWYORK, USA</div>
-            </div>
             <div class="map">
               <div class="map-box">
                 <div class="kakao-map"></div>
@@ -77,49 +74,49 @@
             <div class="weekly-weather-box sunday">
               <div class="weekly-day">일</div>
               <div class="weakly-icon-box">
-                <div class="weakly-icon"></div>
+                <img src="./style/image/nonAniIcon/RAIN SHOWER.png" class="weakly-icon">
               </div>
               <div class="weakly-tmp">28°</div>
             </div>
             <div class="weekly-weather-box monday">
               <div class="weekly-day">월</div>
               <div class="weakly-icon-box">
-                <div class="weakly-icon"></div>
+                <img src="./style/image/nonAniIcon/WINDY.png" class="weakly-icon">
               </div>
               <div class="weakly-tmp">23°</div>
             </div>
             <div class="weekly-weather-box tuesday">
               <div class="weekly-day">화</div>
               <div class="weakly-icon-box">
-                <div class="weakly-icon"></div>
+                <img src="./style/image/nonAniIcon/DRIZZLE.png" class="weakly-icon">
               </div>
               <div class="weakly-tmp">28°</div>
             </div>
             <div class="weekly-weather-box Wednesday">
               <div class="weekly-day">수</div>
               <div class="weakly-icon-box">
-                <div class="weakly-icon"></div>
+                <img src="./style/image/nonAniIcon/RAINBOW.png" class="weakly-icon">
               </div>
               <div class="weakly-tmp">22°</div>
             </div>
             <div class="weekly-weather-box thursday">
               <div class="weekly-day">목</div>
               <div class="weakly-icon-box">
-                <div class="weakly-icon"></div>
+                <img src="./style/image/nonAniIcon/SUNNY.png" class="weakly-icon">
               </div>
               <div class="weakly-tmp">24°</div>
             </div>
             <div class="weekly-weather-box friday">
               <div class="weekly-day">금</div>
               <div class="weakly-icon-box">
-                <div class="weakly-icon"></div>
+                <img src="./style/image/nonAniIcon/CLOUDINESS.png" class="weakly-icon">
               </div>
               <div class="weakly-tmp">20°</div>
             </div>
             <div class="weekly-weather-box saturday">
               <div class="weekly-day">토</div>
               <div class="weakly-icon-box">
-                <div class="weakly-icon"></div>
+                <img src="./style/image/nonAniIcon/SNOWFALL.png" class="weakly-icon">
               </div>
               <div class="weakly-tmp">19°</div>
             </div>
@@ -131,7 +128,7 @@
                 <div class="button-left"><img src="./style/image/play.svg" id="leftbutton"></div>
               </div>
               <div class="menu">
-                <div class="menu-one">
+                <div class="menu-one"  onclick="geturl()">
                   <img src="./style/image/3x/rice, bowl, food, meal, dinner@3x.png" class="menu-img">
                   <img src="./style/image/3x/egg, bacon, breakfast, plate, food, meal@3x.png" class="menu-img">
                   <img src="./style/image/3x/noodles, spaghetti, fork, meal, dinner, plate@3x.png" class="menu-img">
@@ -144,9 +141,11 @@
               </div>
             </div>
             <div class="show-change">
-              <div class="show-circle left-circle"></div>
-              <div class="show-circle center-cirle"></div>
-              <div class="show-circle right-circle"></div>
+              <div class="show-circle">
+                <div class="active-circle"></div>
+              </div>
+              <div class="show-circle"></div>
+              <div class="show-circle"></div>
             </div>
           </div>
         </div>
@@ -167,11 +166,13 @@
     <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=97cf6b9d942d05f21bee9ee745eeca55"></script>
     <script src="./static/JS/lottie.js"></script>
 	<script src="./static/assets/coordsToKor.js" charset="utf-8"></script>
+	<script src="./static/assets/posToKor.js" charset="utf-8"></script>
     <script src="./static/assets/showResult.js" charset="utf-8"></script>
 	<script src="./static/JS/app.js"></script>
 	<script src="./static/JS/getCurrentLC.js"></script>
 	<script src="./static/JS/getWeather.js"></script>
 	<script src="./static/JS/foodSlide.js"></script>
+	<script src="./static/JS/search.js" charset="utf-8"></script>
 	<script src="./static/JS/init.js" charset="utf-8"></script>
 	<script src="./static/assets/recommend.js" charset="utf-8"></script>
   </body>

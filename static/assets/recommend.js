@@ -97,4 +97,4 @@
   const searchForm = $("form.search");
   searchForm.addEventListener("submit", recommend);
   window.onload = recommend();
-})();
+
