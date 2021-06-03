@@ -1,38 +1,9 @@
 "use strict";
-
-let mainweather = bodymovin.loadAnimation({
-  container: document.querySelector(".weather-icon"),
-  renderer: "svg",
-  loop: true,
-  autoplay: true,
-  path: "./static/JS/animatedIcon/500.json",
-});
-
-let descWeather = bodymovin.loadAnimation({
-  container: document.querySelector(".desc-icon"),
-  renderer: "svg",
-  loop: true,
-  autoplay: true,
-  path: "./static/JS/animatedIcon/500.json",
-});
-
-//해당되는 클래스를 배열로 만들어줌.
-const weaklyWeatherIcon = $(".weakly-icon").toArray();
-
-//애니메이션을 동작하게 하는 함수 표현 / 아이콘 넣는 함수.
-const activeWeatherIcon = function (weatherCondition, DayN) {
-  let weeklyWeather = bodymovin.loadAnimation({
-    container: weaklyWeatherIcon[DayN],
-    renderer: "svg",
-    loop: true,
-    autoplay: true,
-    path: `./static/JS/animatedIcon/${weatherCondition}.json`,
-  });
-};
-
-const weatherInfo = [800, 800, 800, 800, 800, 800, 800];
-
-weatherInfo.forEach((a, i) => {
-  activeWeatherIcon(a, i);
-});
-// showResult();
+const features =
+  "menubar=yes,location=yes,resizable=yes,scrollbars=yes,status=yes";
+// let plc = $("#searchbar").val();
+function geturl(place, food) {
+  // let url = `https://www.google.com/maps/search/${place}+${food}/@37.5037201,127.0150586,14z/data=!3m1!4b1`;
+  let url = `https://www.google.com/maps/search/%EC%A2%85%EB%A1%9C+%EB%8F%88%EA%B9%8C%EC%8A%A4/@37.5697172,126.9857489,17z/data=!3m1!4b1`;
+  let other = window.open(url, "_blank", features);
+}
