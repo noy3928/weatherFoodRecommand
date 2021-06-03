@@ -1,6 +1,11 @@
 async function search(e) {
-	console.log('function search start')
-	const coords = e ? null : getCurrentCoords()
+	console.log('function search starts')
+	console.log(e)
+
+	const coords = e?.type === 'submit'
+	? await korToCoords()
+	: getCurrentCoords()
+
 	console.log(coords)
-	console.log('function search end')
+	console.log('function search ends')
 }
