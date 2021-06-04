@@ -8,7 +8,7 @@ function showResult (weather, foods) {
 		foods.forEach(food => {
 			const $img = document.createElement('img')
 			$img.setAttribute('class', 'menu-img')
-			$img.setAttribute('src', `./style/image/3x/${fileName}.png`)
+			$img.setAttribute('src', `./style/image/3x/${food.fileName}.png`)
 			result.appendChild($img)
 		})
 		console.log(result)
