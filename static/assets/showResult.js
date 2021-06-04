@@ -37,17 +37,10 @@ function showResult (weather, foods) {
 		$day.textContent = `${day}, ${time}`
 	}
 
-	try {
-		clearPreviousResults()
-		showCity(cityName)
-		showWeather()
-		showFoods(foods)
-		showTime()
-		return true
-	}
-	catch (e) {
-		return false
-	}
+	showFoods(foods)
+	showWeather()
+	showTime()
+	return true
 }
 /*
 weather api test
