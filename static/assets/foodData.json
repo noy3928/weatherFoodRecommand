@@ -1,22 +1,11 @@
 [
 	{
-		"name": "파전",
-		"rainy": true
-	},
-	{
-		"name": "칼국수",
-		"rainy": true
-	},
-	{
 		"name": "산적꼬치",
 		"fileName": "barbeque, food, meal, dinner, meat@3x"
 	},
 	{
 		"name": "생일케이크",
-		"fileName": "birthday, cake, pastry, food, meal, candles@3x",
-		"hot": false,
-		"cold": true,
-		"mild": true,
+		"fileName": "birthday, cake, pastry, food, meal, candles@3x"
 	},
 	{
 		"name": "부리또",
@@ -49,5 +38,17 @@
 	{
 		"name": "아이스 아메리카노",
 		"fileName": "container, drink, beverage, coffee, take out, tea@3x"
+	},
+	{
+		"name": "콘도그",
+		"fileName": "corn dogs, food, meal, dinner, stick, fast food, junk food@3x"
+	},
+	{
+		"name": "크로와상",
+		"fileName": "croissant, food, meal, pastry, bakery@3x"
+	},
+	{
+		"name": "컵케익",
+		"fileName": "cupcake, food, pastry, bakery, dessert@3x"
 	}
 ]
