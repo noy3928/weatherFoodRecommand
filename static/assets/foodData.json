@@ -1,9 +1,5 @@
 [
 	{
-		"name": "김치부침개",
-		"rainy": true
-	},
-	{
 		"name": "파전",
 		"rainy": true
 	},
@@ -17,7 +13,10 @@
 	},
 	{
 		"name": "생일케이크",
-		"fileName": "birthday, cake, pastry, food, meal, candles@3x"
+		"fileName": "birthday, cake, pastry, food, meal, candles@3x",
+		"hot": false,
+		"cold": true,
+		"mild": true,
 	},
 	{
 		"name": "부리또",
@@ -38,5 +37,17 @@
 	{
 		"name": "치킨",
 		"fileNmae": "chicken, turkey, meat, food, meal, dinner@3x"
+	},
+	{
+		"name": "초콜릿",
+		"fileName": "chocolate, candy, sweet, dessert, wrapper@3x"
+	},
+	{
+		"name": "커피",
+		"fileName": "coffee, machine, drink, beverage, kitchen@3x"
+	},
+	{
+		"name": "아이스 아메리카노",
+		"fileName": "container, drink, beverage, coffee, take out, tea@3x"
 	}
 ]
