@@ -1,11 +1,18 @@
 function showResult (weather, foods) {
 	const $ = document.querySelector.bind(document)
 	// Commonly used DOM elements.
-	const $menus = document.querySelector('.menus')
-	function clearPreviousResults() {
-		//$menus.innerHTML = ''
+	function showFoods(foods) {
+		console.log('랜덤으로 뽑힌 음식 재확인', foods)
+		const result = new DocumentFragment()
+		foods.forEach(food => {
+			const $img = document.createElement('img')
+			$img.setAttribute('class', 'menu-img')
+			$img.setAttribute('src', `./style/image/3x/${food.fileName}.png`)
+			result.appendChild($img)
+		})
+		$('.menu-one').appendChild(result)
+		setUpSlides()
 	}
-
 	function showWeather() {
 		// 1. Weather Icon Box
 
@@ -17,16 +24,7 @@ function showResult (weather, foods) {
 		$weekWeather = $('week-weather')
 	}
 
-	function showFoods(foods) {
-		const result = new DocumentFragment()
-		foods.forEach(food => {
-			const $img = document.createElement('img')
-			$img.setAttribute('class', 'menu-img')
-			$img.setAttribute('src', `./style/image/3x/${fileName}.png`)
-			result.appendChild($img)
-		})
-		console.log(result)
-	}
+
 
 	function showTime() {
 		const $dayBox = document.querySelector('.day-box')
@@ -42,17 +40,10 @@ function showResult (weather, foods) {
 		$day.textContent = `${day}, ${time}`
 	}
 
-	try {
-		clearPreviousResults()
-		showCity(cityName)
-		showWeather()
-		showFoods()
-		showTime()
-		return true
-	}
-	catch (e) {
-		return false
-	}
+	showFoods(foods)
+	showWeather()
+	showTime()
+	return true
 }
 /*
 weather api test

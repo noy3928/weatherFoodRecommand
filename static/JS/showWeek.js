@@ -109,6 +109,8 @@ function showCurrentTmpCon(weatherInfo) {
       break;
   }
   tmpEl.textContent = tmp;
+
+  //시간대별로 아이콘을 바꿔주기. 밤일 경우와 낮일 경우.
   if (weatherId == 800) {
     hours < 7 || hours > 19
       ? (conEl.src = `./style/image/nonAniIcon/MOON.png`)

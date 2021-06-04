@@ -15,6 +15,7 @@ var positions = {
 };
 
 function setUpSlides() {
+	const slides = [...document.getElementsByClassName('menu-img')]
   TweenMax.set(slides, { left: positions.DOWN });
   TweenMax.set(slides[active], { left: positions.ACTIVE });
   TweenMax.set(slides[next], { left: positions.NEXT });
@@ -22,6 +23,7 @@ function setUpSlides() {
 }
 
 function animateSlides(isNext) {
+	const slides = [...document.getElementsByClassName('menu-img')]
   var onDeck,
     currentSlides = [];
 
@@ -100,7 +102,7 @@ function animateSlides(isNext) {
   moveCircle();
 }
 
-setUpSlides();
+//setUpSlides();
 
 $(".button-left").on("click", function () {
   animateSlides(true);
