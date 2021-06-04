@@ -13,12 +13,14 @@ async function search(e) {
   await console.log("음식 db입니다.");
   await console.table(foods);
 
-	const selectedFoods = await selectRandom(foods, 3)
-	console.log('랜덤으로 뽑힌 음식입니다.')
-	console.table(selectedFoods)
+  const selectedFoods = await selectRandom(foods, 3);
+  console.log("랜덤으로 뽑힌 음식입니다.");
+  console.table(selectedFoods);
+
 
 	await console.log('showResult 함수를 호출합니다.')
 	await showResult(weather, selectedFoods)
 
-	await console.log("function search ends")
+
+  await console.log("function search ends");
 }
