@@ -100,7 +100,7 @@ function animateSlides(isNext) {
   moveCircle();
 }
 
-setUpSlides();
+//setUpSlides();
 
 $(".button-left").on("click", function () {
   animateSlides(true);
