@@ -1,20 +1,9 @@
-function showResult (cityName, weather, foods) {
-	// 안녕하세요!
-	//네  저도 안녕하세요
-	// 저도 반가워요
+function showResult (weather, foods) {
 	const $ = document.querySelector.bind(document)
 	// Commonly used DOM elements.
 	const $menus = document.querySelector('.menus')
 	function clearPreviousResults() {
 		//$menus.innerHTML = ''
-	}
-
-	function showCity(cityName) {
-		//const $imgBox = document.querySelector('.img_box')
-		//const $cityImage = document.querySelector('.city-image')
-		const $cityName = document.querySelector('.city-name')
-		//cityName = 'New York, USA' // Temporary
-		$cityName.textContent = cityName
 	}
 
 	function showWeather() {
@@ -30,15 +19,13 @@ function showResult (cityName, weather, foods) {
 
 	function showFoods(foods) {
 		const result = new DocumentFragment()
-		for (let i = 0; i < 3; i++) {
-			const $menu = document.createElement('div')
-			$menu.setAttribute('class', 'menu')
-			result.appendChild($menu)
-		}
-
-		// Returns empty divs if there's no foods to show. Else continue.
-		if (foods === undefined) $menus.appendChild(result)
-
+		foods.forEach(food => {
+			const $img = document.createElement('img')
+			$img.setAttribute('class', 'menu-img')
+			$img.setAttribute('src', `./style/image/3x/${fileName}.png`)
+			result.appendChild($img)
+		})
+		console.log(result)
 	}
 
 	function showTime() {
@@ -59,7 +46,7 @@ function showResult (cityName, weather, foods) {
 		clearPreviousResults()
 		showCity(cityName)
 		showWeather()
-		//showFoods()
+		showFoods()
 		showTime()
 		return true
 	}
