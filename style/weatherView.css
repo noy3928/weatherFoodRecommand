@@ -67,7 +67,7 @@
   transform: translateY(-5px);
 }
 
-.weakly-icon-box {
+.weekly-icon-box {
   width: 50px;
   height: 50px;
   /* max-height: 100px;
@@ -79,7 +79,7 @@
   align-items: center;
 }
 
-.weakly-icon {
+.weekly-icon {
   position: absolute;
   width: 50px;
   height: 50px;
