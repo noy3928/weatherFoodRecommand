@@ -1,11 +1,6 @@
 function showResult (weather, foods) {
 	const $ = document.querySelector.bind(document)
 	// Commonly used DOM elements.
-	const $menus = document.querySelector('.menus')
-	function clearPreviousResults() {
-		//$menus.innerHTML = ''
-	}
-
 	function showWeather() {
 		// 1. Weather Icon Box
 
@@ -42,17 +37,10 @@ function showResult (weather, foods) {
 		$day.textContent = `${day}, ${time}`
 	}
 
-	try {
-		clearPreviousResults()
-		showCity(cityName)
-		showWeather()
-		showFoods()
-		showTime()
-		return true
-	}
-	catch (e) {
-		return false
-	}
+	showFoods(foods)
+	showWeather()
+	showTime()
+	return true
 }
 /*
 weather api test
