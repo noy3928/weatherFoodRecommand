@@ -14,6 +14,6 @@ async function search(e) {
 
 	const selectedFoods = await selectRandom(foods, 3)
 	console.log('랜덤으로 뽑힌 음식입니다.')
-	console.table(selectFoods)
+	console.table(selectedFoods)
 	await console.log("function search ends");
 }
