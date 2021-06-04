@@ -214,5 +214,22 @@
   margin-right: 10px;
 }
 
-.left-circle {
+@media screen and (max-width: 1250px) {
+  .divide-weatherDashboard-media {
+    height: 90%;
+    width: 7px;
+    border-radius: 10px;
+    box-shadow: inset -3px -3px 5px rgba(255, 255, 255, 0.9),
+      inset 2px 2px 6px rgba(70, 70, 70, 0.12);
+  }
+  .weatherview {
+    display: flex;
+    flex-direction: column;
+  }
+  .page-change {
+    margin-top: 50px;
+  }
+  .week-weather {
+    margin: 0px 5px 50px 5px;
+  }
 }

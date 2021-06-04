@@ -221,3 +221,24 @@ input:focus {
   box-shadow: inset -3px -3px 5px rgba(255, 255, 255, 0.9),
     inset 2px 2px 6px rgba(70, 70, 70, 0.12);
 }
+
+@media screen and (max-width: 1250px) {
+  .divide-weatherDashboard {
+    display: none;
+  }
+  .dashboard {
+    justify-content: center;
+  }
+  .dashboard-real {
+    width: 100%;
+  }
+  .search {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #searchbar {
+    width: 100%;
+  }
+}

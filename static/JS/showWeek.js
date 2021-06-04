@@ -14,7 +14,6 @@ function weekBox(weatherInfo) {
   //오늘로부터 7일간의 요일을 구하기
   for (let i = 0; i < daysKR.length; i++) {
     cycleN = today + i;
-    console.log(cycleN);
     if (cycleN > 5) today = -1;
     weeklyDay[i].textContent = daysKR[cycleN];
   }
@@ -57,7 +56,6 @@ function weekBox(weatherInfo) {
     weeklyWeatherIcon[i].src = `./style/image/nonAniIcon/${weatherId}.png`;
   });
 
-  //온도 적용하기.
   weeklyTmp.forEach((a, i) => {
     weeklyWeatherTmp[i].textContent = String(a).substr(0, 2) + "°";
   });
@@ -72,7 +70,6 @@ function showCurrentTmpCon(weatherInfo) {
   const now = new Date();
   const hours = now.getHours();
 
-  console.log("지금의 온도와 기상", tmp, con);
   switch (true) {
     case con < 300:
       weatherId = 200;
