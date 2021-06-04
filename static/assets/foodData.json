@@ -54,5 +54,9 @@
 	{
 		"name": "도넛",
 		"fileName": "doughnut, donut, pastry, bakery, food, sweets@3x"
+	},
+	{
+		"name": "소다",
+		"fileName": "drink, beverage, container, milkshake, soda, fast food, junk food@3x"
 	}
 ]

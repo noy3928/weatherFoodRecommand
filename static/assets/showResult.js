@@ -6,14 +6,6 @@ function showResult (weather, foods) {
 		//$menus.innerHTML = ''
 	}
 
-	function showCity(cityName) {
-		//const $imgBox = document.querySelector('.img_box')
-		//const $cityImage = document.querySelector('.city-image')
-		const $cityName = document.querySelector('.city-name')
-		//cityName = 'New York, USA' // Temporary
-		$cityName.textContent = cityName
-	}
-
 	function showWeather() {
 		// 1. Weather Icon Box
 
