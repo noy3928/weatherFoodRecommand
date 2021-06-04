@@ -40,7 +40,7 @@ async function getCurrentCoords() {
   }
 }
 
-window.onload = getCurrentCoords();
+// window.onload = getCurrentCoords(); 이미 search() 에서 불러옴
 
 function createKakaoMap(latitude, longitude) {
   let mapContainer = document.querySelector(".kakao-map"), // 지도를 표시할 div

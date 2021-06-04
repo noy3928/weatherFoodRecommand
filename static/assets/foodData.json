@@ -1,12 +1,5 @@
 [
 	{
-		"name": "동파육",
-		"hot": true,
-		"mild": true,
-		"cold": true,
-		"rainy": true
-	},
-	{
 		"name": "양꼬치",
 		"hot": true,
 		"mild": true,
@@ -40,5 +33,9 @@
 	{
 		"name": "와인",
 		"fileName": "bottle, glass, drink, beverage, wine, alcohol@3x"
+	},
+	{
+		"name": "식빵",
+		"fileName": "bread, pastry, food, meal, breakfast@3x"
 	}
 ]
