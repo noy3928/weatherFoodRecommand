@@ -159,16 +159,20 @@
   cursor: pointer;
   padding: 15px;
   border-radius: 10px;
-  transition: 0.5s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .button-left:hover {
-  box-shadow: inset -10px -10px 15px rgba(255, 255, 255, 0.7),
+  box-shadow: -10px -10px 15px rgba(255, 255, 255, 0),
+    7px 7px 15px rgba(70, 70, 70, 0),
+    inset -10px -10px 15px rgba(255, 255, 255, 0.7),
     inset 7px 7px 15px rgba(70, 70, 70, 0.2);
 }
 
 .button-right:hover {
-  box-shadow: inset -10px -10px 15px rgba(255, 255, 255, 0.7),
+  box-shadow: -10px -10px 15px rgba(255, 255, 255, 0),
+    7px 7px 15px rgba(70, 70, 70, 0),
+    inset -10px -10px 15px rgba(255, 255, 255, 0.7),
     inset 7px 7px 15px rgba(70, 70, 70, 0.2);
 }
 
@@ -184,12 +188,12 @@
 }
 
 .show-circle {
-  margin-top: 20px;
+  margin: 0px 7px 0px 7px;
   /* border: 1px solid #7d7d7c; */
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.9),
+  box-shadow: -6px -6px 10px rgba(255, 255, 255, 1),
     6px 6px 10px rgba(70, 70, 70, 0.3);
   padding: 3px;
   display: flex;
@@ -202,6 +206,7 @@
   height: 100%;
   background-color: #7d7d7c;
   border-radius: 50%;
+  transition: 1s ease-in-out;
 }
 
 .center-cirle {
