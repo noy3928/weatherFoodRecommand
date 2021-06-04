@@ -24,15 +24,13 @@
 //   return loadCoords();
 // }
 
-let map;
-
 async function getCurrentCoords() {
   if (navigator.geolocation) {
     await navigator.geolocation.getCurrentPosition(function (position) {
       let latitude = position.coords.latitude;
       let longitude = position.coords.longitude;
-
       let coordsObj = { latitude, longitude };
+      createKakaoMap(latitude, longitude);
       return coordsObj;
     });
   } else {
@@ -41,42 +39,6 @@ async function getCurrentCoords() {
 }
 
 // window.onload = getCurrentCoords(); 이미 search() 에서 불러옴
-
-function createKakaoMap(latitude, longitude) {
-  let mapContainer = document.querySelector(".kakao-map"), // 지도를 표시할 div
-    mapOption = {
-      center: new kakao.maps.LatLng(latitude, longitude), // 지도의 중심좌표
-      level: 4, // 지도의 확대 레벨
-      mapTypeId: kakao.maps.MapTypeId.ROADMAP, // 지도종류
-    };
-
-  // 지도를 생성한다
-  map = new kakao.maps.Map(mapContainer, mapOption);
-
-  // 지도에 마커를 생성하고 표시한다
-  var marker = new kakao.maps.Marker({
-    position: new kakao.maps.LatLng(latitude, longitude), // 마커의 좌표
-    map: map, // 마커를 표시할 지도 객체
-  });
-}
-
-function panTo(x, y) {
-  // let mapContainer = document.querySelector(".kakao-map"), // 지도를 표시할 div
-  //   mapOption = {
-  //     center: new kakao.maps.LatLng(x, y), // 지도의 중심좌표
-  //     level: 3, // 지도의 확대 레벨
-  //     mapTypeId: kakao.maps.MapTypeId.ROADMAP, // 지도종류
-  //   };
-
-  // // 지도를 생성한다
-  // var map = new kakao.maps.Map(mapContainer, mapOption);
-
-  var moveLatLon = new kakao.maps.LatLng(x, y);
-
-  // 지도 중심을 부드럽게 이동시킵니다
-  // 만약 이동할 거리가 지도 화면보다 크면 부드러운 효과 없이 이동합니다
-  map.panTo(moveLatLon);
-}
 
 function getLatLonbyKeyword() {
   //키워드 입력시 위치 정보 불러오는 api
