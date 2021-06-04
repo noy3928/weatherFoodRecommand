@@ -1,36 +1,10 @@
-// function getCurrentCoords() {
-//   const COORDS = "coords";
-
-//   function loadCoords() {
-//     const loadedCords =
-//       JSON.parse(localStorage.getItem(COORDS)) ??
-//       (function () {
-//         return navigator.geolocation.getCurrentPosition(
-//           (position) => {
-//             // handleGeoSucees
-//             const { latitude, longitude } = position.coords;
-//             const coordsObj = { latitude, longitude };
-//             localStorage.setItem(COORDS, JSON.stringify(coordsObj));
-//             return coordsObj;
-//           },
-//           () => {
-//             // handleGeoError
-//             console.error("Can't access geo location.");
-//           }
-//         );
-//       })();
-//     return loadedCords;
-//   }
-//   return loadCoords();
-// }
-
 async function getCurrentCoords() {
   if (navigator.geolocation) {
     await navigator.geolocation.getCurrentPosition(function (position) {
       let latitude = position.coords.latitude;
       let longitude = position.coords.longitude;
       let coordsObj = { latitude, longitude };
-      createKakaoMap(latitude, longitude);
+      // createKakaoMap(latitude, longitude); search() 로 이동
       return coordsObj;
     });
   } else {
