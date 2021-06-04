@@ -4,7 +4,7 @@ async function search(e) {
   const coords =
     e?.type === "submit" ? await korToCoords() : getCurrentCoords();
   await console.log("현재 좌표입니다.", coords);
-  await weather_7day(coords.latitude, coords.longitude);
+  await getWeatherInfo(coords.latitude, coords.longitude);
   await createKakaoMap(coords.latitude, coords.longitude);
   const weather = await getWeather(coords);
   await console.log("현재 날씨입니다.", weather);
