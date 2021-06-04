@@ -1,19 +1,5 @@
 [
 	{
-		"name": "동파육",
-		"hot": true,
-		"mild": true,
-		"cold": true,
-		"rainy": true
-	},
-	{
-		"name": "양꼬치",
-		"hot": true,
-		"mild": true,
-		"cold": true,
-		"rainy": true
-	},
-	{
 		"name": "김치부침개",
 		"rainy": true
 	},
@@ -40,5 +26,17 @@
 	{
 		"name": "와인",
 		"fileName": "bottle, glass, drink, beverage, wine, alcohol@3x"
+	},
+	{
+		"name": "식빵",
+		"fileName": "bread, pastry, food, meal, breakfast@3x"
+	},
+	{
+		"name": "조각 케이크",
+		"fileName": "cake, pastry, slice, cherry, food, dessert@3x"
+	},
+	{
+		"name": "치킨",
+		"fileNmae": "chicken, turkey, meat, food, meal, dinner@3x"
 	}
 ]
