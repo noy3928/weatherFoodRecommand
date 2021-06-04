@@ -22,4 +22,4 @@ function sol() {
   return result;
 }
 
-console.log(sol());
+//console.log(sol());
