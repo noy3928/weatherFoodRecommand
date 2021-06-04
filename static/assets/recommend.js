@@ -92,9 +92,3 @@
       }
     };
   })();
-
-  // 5. attach to HTML
-  const searchForm = $("form.search");
-  searchForm.addEventListener("submit", recommend);
-  window.onload = recommend();
-
