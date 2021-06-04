@@ -11,6 +11,7 @@ function showResult (weather, foods) {
 			result.appendChild($img)
 		})
 		$('.menu-one').appendChild(result)
+		setUpSlides()
 	}
 	function showWeather() {
 		// 1. Weather Icon Box
