@@ -1,4 +1,5 @@
 "use strict";
+
 const features =
   "menubar=yes,location=yes,resizable=yes,scrollbars=yes,status=yes";
 // let plc = $("#searchbar").val();

@@ -123,7 +123,10 @@
 }
 
 .menu-one:hover {
-  transform: scale(1.1);
+  box-shadow: -10px -10px 10px rgba(255, 255, 255, 0),
+    10px 10px 15px rgba(70, 70, 70, 0),
+    inset -10px -10px 10px rgba(255, 255, 255, 0.7),
+    inset 10px 10px 15px rgba(70, 70, 70, 0.4);
 }
 
 .menu-one img {
@@ -182,9 +185,22 @@
 
 .show-circle {
   margin-top: 20px;
-  border: 1px solid #7d7d7c;
-  width: 15px;
-  height: 15px;
+  /* border: 1px solid #7d7d7c; */
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.9),
+    6px 6px 10px rgba(70, 70, 70, 0.3);
+  padding: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.active-circle {
+  width: 100%;
+  height: 100%;
+  background-color: #7d7d7c;
   border-radius: 50%;
 }
 
@@ -194,5 +210,4 @@
 }
 
 .left-circle {
-  background-color: #7d7d7c;
 }

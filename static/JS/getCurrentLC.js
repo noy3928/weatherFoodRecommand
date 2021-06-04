@@ -1,27 +1,42 @@
-function getCurrentCoords() {
-  const COORDS = "coords";
+// function getCurrentCoords() {
+//   const COORDS = "coords";
 
-  function loadCoords() {
-    const loadedCords =
-      JSON.parse(localStorage.getItem(COORDS)) ??
-      (function () {
-        return navigator.geolocation.getCurrentPosition(
-          (position) => {
-            // handleGeoSucees
-            const { latitude, longitude } = position.coords;
-            const coordsObj = { latitude, longitude };
-            localStorage.setItem(COORDS, JSON.stringify(coordsObj));
-            return coordsObj;
-          },
-          () => {
-            // handleGeoError
-            console.error("Can't access geo location.");
-          }
-        );
-      })();
-    return loadedCords;
+//   function loadCoords() {
+//     const loadedCords =
+//       JSON.parse(localStorage.getItem(COORDS)) ??
+//       (function () {
+//         return navigator.geolocation.getCurrentPosition(
+//           (position) => {
+//             // handleGeoSucees
+//             const { latitude, longitude } = position.coords;
+//             const coordsObj = { latitude, longitude };
+//             localStorage.setItem(COORDS, JSON.stringify(coordsObj));
+//             return coordsObj;
+//           },
+//           () => {
+//             // handleGeoError
+//             console.error("Can't access geo location.");
+//           }
+//         );
+//       })();
+//     return loadedCords;
+//   }
+//   return loadCoords();
+// }
+
+async function getCurrentCoords() {
+  if (navigator.geolocation) {
+    await navigator.geolocation.getCurrentPosition(function (position) {
+      let { latitude, longitude } = position.coords;
+      let coordsObj = { latitude, longitude };
+      createKakaoMap(coordsObj.latitude, coordsObj.longitude);
+
+      console.log(coordsObj);
+      return coordsObj;
+    });
+  } else {
+    console.log("위치정보가 지원되지 않는 브라우저입니다.");
   }
-  return loadCoords();
 }
 
 function createKakaoMap(lat, lon) {
