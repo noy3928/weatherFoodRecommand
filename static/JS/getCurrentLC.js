@@ -5,6 +5,7 @@ async function getCurrentCoords() {
       let longitude = position.coords.longitude;
       let coordsObj = { latitude, longitude };
       createKakaoMap(latitude, longitude);
+	  console.log('test', coordsObj)
       return coordsObj;
     });
   } else {
