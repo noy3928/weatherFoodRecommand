@@ -2,10 +2,13 @@
 
 let weatherList = [800, 621, 732, 272, 372, 802, 505];
 
-function weekCondition() {
+function weekCondition(weatherInfo) {
   const weeklyWeatherIcon = $(".weekly-icon").toArray();
-  //   console.log(weeklyWeatherIcon);
-  weatherList.forEach((a, i) => {
+  const weatherCoditions = weatherInfo.id;
+
+  console.log("7일간의 날씨", weatherCoditions);
+
+  weatherCoditions.forEach((a, i) => {
     let weatherId = 0;
     switch (true) {
       case a < 300:
@@ -29,8 +32,11 @@ function weekCondition() {
       case a < 802:
         weatherId = 801;
         break;
-      case a < 805:
+      case a < 803:
         weatherId = 802;
+        break;
+      case a < 805:
+        weatherId = 803;
         break;
       default:
         console.log("이건 무슨 날씨?");
@@ -41,5 +47,3 @@ function weekCondition() {
   //   weeklyWeatherIcon[0].attr("src", "./style/image/nonAniIcon/800.png");
   //   console.log(weeklyWeatherIcon[0]);
 }
-
-weekCondition();
