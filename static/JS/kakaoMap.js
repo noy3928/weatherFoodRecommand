@@ -20,7 +20,9 @@ function createKakaoMap(latitude, longitude) {
 }
 
 //지도 이동함수
-function panTo(x, y) {
+function panTo(coords) {
+	const x = coords.latitude
+	const y = coords.longitude
   // let mapContainer = document.querySelector(".kakao-map"), // 지도를 표시할 div
   //   mapOption = {
   //     center: new kakao.maps.LatLng(x, y), // 지도의 중심좌표
