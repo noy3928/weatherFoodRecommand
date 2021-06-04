@@ -3,5 +3,5 @@ async function search(e) {
   const coords = e ? null : getCurrentCoords();
   console.log(coords);
   console.log("function search end");
-  createKakaoMap();
+  //   createKakaoMap();
 }
