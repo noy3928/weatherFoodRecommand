@@ -12,7 +12,7 @@ async function korToCoords() {
   const firstResult = result["documents"][0];
   const { x, y } = firstResult;
   const coords = { x, y };
-  panTo(coords);
+  // panTo(coords);
   return {
     latitude: Number(firstResult["y"]),
     longitude: Number(firstResult["x"]),
