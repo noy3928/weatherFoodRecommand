@@ -2,6 +2,7 @@ function showResult (weather, foods) {
 	const $ = document.querySelector.bind(document)
 	// Commonly used DOM elements.
 	function showFoods(foods) {
+		console.log('랜덤으로 뽑힌 음식 재확인', foods)
 		const result = new DocumentFragment()
 		foods.forEach(food => {
 			const $img = document.createElement('img')
@@ -9,7 +10,7 @@ function showResult (weather, foods) {
 			$img.setAttribute('src', `./style/image/3x/${food.fileName}.png`)
 			result.appendChild($img)
 		})
-		$('.menu').appendChild(result)
+		$('.menu-one').appendChild(result)
 	}
 	function showWeather() {
 		// 1. Weather Icon Box
