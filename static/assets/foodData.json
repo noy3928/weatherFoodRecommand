@@ -62,5 +62,9 @@
 	{
 		"name": "맥주",
 		"fileName": "drink, beverage, jug, glass, bottle, beer, alcohol@3x"
+	},
+	{
+		"name": "만두",
+		"fileName": "dumplings, food, meal, dinner, asian, take out@3x"
 	}
 ]
