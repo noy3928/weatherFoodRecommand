@@ -17,8 +17,10 @@ async function search(e) {
   console.log("랜덤으로 뽑힌 음식입니다.");
   console.table(selectedFoods);
 
-  await console.log("showResult 함수를 호출합니다.");
-  await showResult(weather, foods);
+
+	await console.log('showResult 함수를 호출합니다.')
+	await showResult(weather, selectedFoods)
+
 
   await console.log("function search ends");
 }
