@@ -2,7 +2,7 @@
 function showWeather()
   // { 1. Weather Icon Box
   // 예찬님이 쓰는
-    function weathericonbox(icon.svg) {
+    function weatherIconbox(icon.svg) {
       return 'icon.svg'
       }
     weathericonbox();
@@ -12,32 +12,15 @@ function showWeather()
 
   // // 3. Weather Desc
   // // 이 부분의 아이콘/문구가 같이 연동되게 만들어야함. 어떤 문장을 쓸 것인지 아직 안정함.
-    function WeatehrDesc() {
+    function weatherDesc() {
       for( var i = 0; i < 10;)
     }
   // // 4. Week Weather
   // // 예찬님 코드 복붙해봄.
-    function WeekWeather (weeklyDay) {
+    function weekWeather () {
       const weeklyWeatherIcon = $(".weekly-icon")
-          // function test () {
-          //   var arrayweekly = '[weeklyDay]'; {
-          //   arrayweekly.forEach(currentValue);}
-          $weeklyDay.textContent = weeklyDay
+      console.log(weeklyWeatherIcon);
+
       }
-        console.log(weeklyDay)
-        console.error("you can't find me")
-      // const $weeklyTmp = document.querySelectorAll('weekly-tmp')
-      //   // function test () {
-      //     // var arrayweekly = '[weeklyTmp]'; {
-      //     //   arrayweekly.forEach(currentValue);}
-      //   weeklyTmp = '[]'
-      //   $weeklyTmp.textContent = weeklyTmp
-      }
-      alert(WeekWeather);
-    //   const $weaklyicon = document.querySelectorAll('weakly-icon') {
-    //     var iconurl = "http://openweathermap.org/img/wn/" + i + "n@2x.png"
-    //       for (let i = 0; i =< 50; i++) {
-    //
-    //         }
-    //
-    // }
+      
+   
