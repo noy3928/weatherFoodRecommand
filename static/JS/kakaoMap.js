@@ -21,8 +21,8 @@ function createKakaoMap(latitude, longitude) {
 
 //지도 이동함수
 function panTo(coords) {
-	const x = coords.latitude
-	const y = coords.longitude
+  const x = coords.x;
+  const y = coords.y;
   // let mapContainer = document.querySelector(".kakao-map"), // 지도를 표시할 div
   //   mapOption = {
   //     center: new kakao.maps.LatLng(x, y), // 지도의 중심좌표
@@ -33,8 +33,8 @@ function panTo(coords) {
   // // 지도를 생성한다
   // var map = new kakao.maps.Map(mapContainer, mapOption);
 
-  var moveLatLon = new kakao.maps.LatLng(x, y);
-
+  var moveLatLon = new kakao.maps.LatLng(y, x);
+  console.log(moveLatLon);
   // 지도 중심을 부드럽게 이동시킵니다
   // 만약 이동할 거리가 지도 화면보다 크면 부드러운 효과 없이 이동합니다
   map.panTo(moveLatLon);
