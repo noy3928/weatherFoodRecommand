@@ -18,7 +18,7 @@ async function search(e) {
 	console.table(selectedFoods)
 
 	await console.log('showResult 함수를 호출합니다.')
-	await showResult(weather, foods)
+	await showResult(weather, selectedFoods)
 
 	await console.log("function search ends")
 }
