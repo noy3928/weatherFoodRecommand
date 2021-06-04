@@ -1,13 +1,25 @@
 "use strict";
 
-let weatherList = [800, 621, 732, 272, 372, 802, 505];
-
-function weekCondition(weatherInfo) {
+function weekBox(weatherInfo) {
   const weeklyWeatherIcon = $(".weekly-icon").toArray();
+  const weeklyWeatherTmp = $(".weekly-tmp").toArray();
+  const weeklyDay = $(".weekly-day").toArray();
   const weatherCoditions = weatherInfo.id;
+  const weeklyTmp = weatherInfo.temp;
+  const daysKR = ["일", "월", "화", "수", "목", "금", "토"];
+  const now = new Date();
+  let today = now.getDay();
+  let cycleN = 0;
 
-  console.log("7일간의 날씨", weatherCoditions);
+  //오늘로부터 7일간의 요일을 구하기
+  for (let i = 0; i < daysKR.length; i++) {
+    cycleN = today + i;
+    console.log(cycleN);
+    if (cycleN > 5) today = -1;
+    weeklyDay[i].textContent = daysKR[cycleN];
+  }
 
+  //날씨 적용하기.
   weatherCoditions.forEach((a, i) => {
     let weatherId = 0;
     switch (true) {
@@ -36,7 +48,7 @@ function weekCondition(weatherInfo) {
         weatherId = 802;
         break;
       case a < 805:
-        weatherId = 803;
+        weatherId = 802;
         break;
       default:
         console.log("이건 무슨 날씨?");
@@ -44,6 +56,68 @@ function weekCondition(weatherInfo) {
     }
     weeklyWeatherIcon[i].src = `./style/image/nonAniIcon/${weatherId}.png`;
   });
-  //   weeklyWeatherIcon[0].attr("src", "./style/image/nonAniIcon/800.png");
-  //   console.log(weeklyWeatherIcon[0]);
+
+  //온도 적용하기.
+  weeklyTmp.forEach((a, i) => {
+    weeklyWeatherTmp[i].textContent = String(a).substr(0, 2) + "°";
+  });
+}
+
+function showCurrentTmpCon(weatherInfo) {
+  let tmp = String(weatherInfo.temp).slice(0, -1) + "°";
+  let con = weatherInfo.id;
+  let tmpEl = document.querySelector(".tmp");
+  let conEl = document.querySelector(".weather-icon");
+  let weatherId = 0;
+  const now = new Date();
+  const hours = now.getHours();
+
+  console.log("지금의 온도와 기상", tmp, con);
+  switch (true) {
+    case con < 300:
+      weatherId = 200;
+      break;
+    case con < 400:
+      weatherId = 300;
+      break;
+    case con < 600:
+      weatherId = 500;
+      break;
+    case con < 700:
+      weatherId = 600;
+      break;
+    case con < 800:
+      weatherId = 741;
+      break;
+    case con == 721:
+      weatherId = 721;
+      break;
+    case con < 801:
+      weatherId = 800;
+      break;
+    case con < 802:
+      weatherId = 801;
+      break;
+    case con < 803:
+      weatherId = 802;
+      break;
+    case con < 805:
+      weatherId = 802;
+      break;
+    default:
+      console.log("이건 무슨 날씨?");
+      break;
+  }
+  tmpEl.textContent = tmp;
+  if (weatherId == 800) {
+    hours < 7 || hours > 19
+      ? (conEl.src = `./style/image/nonAniIcon/MOON.png`)
+      : (conEl.src = `./style/image/nonAniIcon/${weatherId}.png`);
+  } else if (weatherId == 801) {
+    hours < 7 || hours > 19
+      ? (conEl.src = `./style/image/nonAniIcon/CLOUDY NIGHT.png`)
+      : (conEl.src = `./style/image/nonAniIcon/${weatherId}.png`);
+  } else {
+    conEl.src = `./style/image/nonAniIcon/${weatherId}.png`;
+  }
 }
