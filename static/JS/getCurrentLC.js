@@ -33,8 +33,6 @@ async function getCurrentCoords() {
       let longitude = position.coords.longitude;
 
       let coordsObj = { latitude, longitude };
-      createKakaoMap(coordsObj.latitude, coordsObj.longitude);
-
       return coordsObj;
     });
   } else {
