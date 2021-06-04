@@ -29,9 +29,6 @@ async function getCurrentCoords() {
     await navigator.geolocation.getCurrentPosition(function (position) {
       let { latitude, longitude } = position.coords;
       let coordsObj = { latitude, longitude };
-      createKakaoMap(coordsObj.latitude, coordsObj.longitude);
-
-      console.log(coordsObj);
       return coordsObj;
     });
   } else {
