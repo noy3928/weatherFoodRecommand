@@ -1,11 +1,6 @@
 function showResult (weather, foods) {
 	const $ = document.querySelector.bind(document)
 	// Commonly used DOM elements.
-	const $menus = document.querySelector('.menus')
-	function clearPreviousResults() {
-		//$menus.innerHTML = ''
-	}
-
 	function showWeather() {
 		// 1. Weather Icon Box
 
@@ -46,7 +41,7 @@ function showResult (weather, foods) {
 		clearPreviousResults()
 		showCity(cityName)
 		showWeather()
-		showFoods()
+		showFoods(foods)
 		showTime()
 		return true
 	}

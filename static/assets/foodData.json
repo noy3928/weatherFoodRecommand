@@ -58,5 +58,9 @@
 	{
 		"name": "소다",
 		"fileName": "drink, beverage, container, milkshake, soda, fast food, junk food@3x"
+	},
+	{
+		"name": "맥주",
+		"fileName": "drink, beverage, jug, glass, bottle, beer, alcohol@3x"
 	}
 ]
