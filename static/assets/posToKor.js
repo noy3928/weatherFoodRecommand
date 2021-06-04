@@ -1,23 +1,21 @@
-function posToKor(latitude, longtitude) {
-	console.log(longtitude, latitude)
-	const url = 'http://api.vworld.kr/req/address'
-	const service = 'service=address'
-	const request = 'request=getAddress'
-	const version = 'version=2.0'
-	const crs = 'crs=epsg:4326'
-	const point = `point=${longtitude},${latitude}`
-	const type = 'type=both'
-	const zipcode = 'zipcode=false'
-	const simple = 'simple=false'
-	const authKey = 'key=0CE9F6B1-5C54-3F7F-B416-F6B3A26D10AB'
-	const query = `?${service}&${request}&${version}&${crs}&${point}&${type}&${zipcode}&${simple}&${authKey}`
+function sol() {
+  // 현재 위치의 위도와 경도로 한글로된 지명 불러오기.
 
-	fetch(url + query)
-	.then(response => {
-		console.log(response)
-		return response.json()
-	})
-	.then(data => {
-		console.log(data)
-	})
+  return new Promise((resolve, reject) => {
+    let result = $.ajax({
+      method: "GET",
+      // url: `https://dapi.kakao.com/v2/local/geo/coord2address.json?x=${lon}&y=${lat}&input_coord=WGS84`,
+      url: `https://dapi.kakao.com/v2/local/geo/coord2address.json?x=127.423084873712&y=37.0789561558879&input_coord=WGS84`,
+      data: {},
+      headers: {
+        Authorization: "KakaoAK 01c0cbd4fde85e34af273552852f8ebe",
+      },
+    }).done(function (msg) {
+      return (
+        msg.documents[0].address.region_1depth_name +
+        msg.documents[0].address.region_2depth_name
+      );
+    });
+    resolve(result);
+  });
 }

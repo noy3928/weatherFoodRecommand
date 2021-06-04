@@ -1,87 +1,18 @@
-function getCurrentLocation() {
-  const API_KEY = "d0a4465b7d153b885b025b667926fff2";
-  const COORDS = "coords";
-
-  let weatherLcInfo = {
-    tmp: "",
-    plc: "",
-    condition: "",
-  };
-
-  function getWeather(lat, lon) {
-    // const weather = document.querySelector(".city-name");
-    // const cityName = document.querySelector(".");
-
-    createKakaoMap(lat, lon);
-
-    fetch(
-      `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`
-    )
-      .then(function (response) {
-        return response.json();
-      })
-      .then(function (json) {
-        weatherLcInfo.tmp = String(json.main.temp).slice(0, -1);
-        weatherLcInfo.plc = json.name + ", " + json.sys.country;
-        weatherLcInfo.condition = json.weather["0"].id;
-
-        // 현재 위치의 위도와 경도로 한글로된 지명 불러오기.
-        $.ajax({
-          method: "GET",
-          url: `https://dapi.kakao.com/v2/local/geo/coord2address.json?x=${lat}&y=${lon}&input_coord=WGS84`,
-          // url: `https://dapi.kakao.com/v2/local/geo/coord2address.json?x=127.423084873712&y=37.0789561558879&input_coord=WGS84`,
-          data: {},
-          headers: {
-            Authorization: "KakaoAK 01c0cbd4fde85e34af273552852f8ebe",
-          },
-        }).done(function (msg) {
-          console.log(msg);
-        });
-
-        console.log(
-          weatherLcInfo.condition,
-          weatherLcInfo.plc,
-          weatherLcInfo.tmp
-        );
-      });
+async function getCurrentCoords() {
+  if (navigator.geolocation) {
+    await navigator.geolocation.getCurrentPosition(function (position) {
+      let latitude = position.coords.latitude;
+      let longitude = position.coords.longitude;
+      let coordsObj = { latitude, longitude };
+      // createKakaoMap(latitude, longitude); search() 로 이동
+      return coordsObj;
+    });
+  } else {
+    console.log("위치정보가 지원되지 않는 브라우저입니다.");
   }
-
-  function saveCoords(coordsObj) {
-    localStorage.setItem(COORDS, JSON.stringify(coordsObj));
-  }
-
-  function handleGeoSucees(position) {
-    const latitude = position.coords.latitude;
-    const longitude = position.coords.longitude;
-    const coordsObj = {
-      latitude,
-      longitude,
-    };
-    saveCoords(coordsObj);
-    getWeather(latitude, longitude);
-  }
-
-  function handleGeoError() {
-    console.log("Cant access geo location");
-  }
-
-  function askForCoords() {
-    navigator.geolocation.getCurrentPosition(handleGeoSucees, handleGeoError);
-  }
-
-  function loadCoords() {
-    const loadedCords = localStorage.getItem(COORDS);
-    if (loadedCords === null) {
-      askForCoords();
-    } else {
-      const parseCoords = JSON.parse(loadedCords);
-      getWeather(parseCoords.latitude, parseCoords.longitude);
-    }
-  }
-  loadCoords();
-
-  showResult(weatherLcInfo.plc);
 }
+
+// window.onload = getCurrentCoords(); 이미 search() 에서 불러옴
 
 function getLatLonbyKeyword() {
   //키워드 입력시 위치 정보 불러오는 api
@@ -96,7 +27,16 @@ function getLatLonbyKeyword() {
       },
     }).done(function (msg) {
       console.log(msg);
-      // console.log($("#searchbar").val());
+      // if (msg.documents[0].x !== undefined) {
+      //   let x = msg.documents[0].x;
+      //   let y = msg.documents[0].y;
+      //   if (x !== null && y !== null) {
+      //     panTo(y, x);
+      //   }
+      //   console.log(y, x);
+      // } else {
+      //   alert("조금 더 상세히 입력해주시겠어요?");
+      // }
     });
   };
 
@@ -104,23 +44,13 @@ function getLatLonbyKeyword() {
   searchForm.addEventListener("submit", searchLatLon);
 }
 
-function createKakaoMap(lat, lon) {
-  let mapContainer = document.querySelector(".kakao-map"), // 지도를 표시할 div
-    mapOption = {
-      center: new kakao.maps.LatLng(lat, lon), // 지도의 중심좌표
-      level: 3, // 지도의 확대 레벨
-      mapTypeId: kakao.maps.MapTypeId.ROADMAP, // 지도종류
-    };
-
-  // 지도를 생성한다
-  var map = new kakao.maps.Map(mapContainer, mapOption);
-
-  // 지도에 마커를 생성하고 표시한다
-  var marker = new kakao.maps.Marker({
-    position: new kakao.maps.LatLng(lat, lon), // 마커의 좌표
-    map: map, // 마커를 표시할 지도 객체
-  });
-}
-
 getLatLonbyKeyword();
-getCurrentLocation();
+
+function geturl(place, food) {
+  const features =
+    "menubar=yes,location=yes,resizable=yes,scrollbars=yes,status=yes";
+  // let plc = $("#searchbar").val();
+  // let url = `https://www.google.com/maps/search/${place}+${food}/@37.5037201,127.0150586,14z/data=!3m1!4b1`;
+  let url = `https://www.google.com/maps/search/%EC%A2%85%EB%A1%9C+%EB%8F%88%EA%B9%8C%EC%8A%A4/@37.5697172,126.9857489,17z/data=!3m1!4b1`;
+  let other = window.open(url, "_blank", features);
+}
