@@ -50,5 +50,13 @@
 	{
 		"name": "컵케익",
 		"fileName": "cupcake, food, pastry, bakery, dessert@3x"
+	},
+	{
+		"name": "도넛",
+		"fileName": "doughnut, donut, pastry, bakery, food, sweets@3x"
+	},
+	{
+		"name": "소다",
+		"fileName": "drink, beverage, container, milkshake, soda, fast food, junk food@3x"
 	}
 ]
