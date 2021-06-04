@@ -18,7 +18,7 @@ function showWeather()
   // // 4. Week Weather
   // // 예찬님 코드 복붙해봄.
     function WeekWeather (weeklyDay) {
-      const $weeklyDay = document.querySelectorAll('weekly-day')
+      const weeklyWeatherIcon = $(".weekly-icon")
           // function test () {
           //   var arrayweekly = '[weeklyDay]'; {
           //   arrayweekly.forEach(currentValue);}
