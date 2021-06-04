@@ -53,16 +53,16 @@ function getLatLonbyKeyword() {
       },
     }).done(function (msg) {
       console.log(msg);
-      // if (msg.documents[0].x !== undefined) {
-      //   let x = msg.documents[0].x;
-      //   let y = msg.documents[0].y;
-      //   if (x !== null && y !== null) {
-      //     panTo(y, x);
-      //   }
-      //   console.log(y, x);
-      // } else {
-      //   alert("조금 더 상세히 입력해주시겠어요?");
-      // }
+      if (msg.documents[0].x !== undefined) {
+        let x = msg.documents[0].x;
+        let y = msg.documents[0].y;
+        if (x !== null && y !== null) {
+          panTo(y, x);
+        }
+        console.log(y, x);
+      } else {
+        alert("조금 더 상세히 입력해주시겠어요?");
+      }
     });
   };
 
