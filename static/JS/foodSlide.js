@@ -2,7 +2,7 @@ var slides = $(".menu-img").toArray(), //객체를 배열로 만들어주는 매
   active = 0,
   next = 1,
   prev = slides.length - 1,
-  activePosition = 43;
+  activePosition = 15;
 spacing = 410;
 let activeNumber = 0;
 

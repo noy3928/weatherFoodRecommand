@@ -113,10 +113,12 @@ function showCurrentTmpCon(weatherInfo) {
     hours < 7 || hours > 19
       ? (conEl.src = `./style/image/nonAniIcon/MOON.png`)
       : (conEl.src = `./style/image/nonAniIcon/${weatherId}.png`);
+    console.log(hours, weatherId);
   } else if (weatherId == 801) {
     hours < 7 || hours > 19
       ? (conEl.src = `./style/image/nonAniIcon/CLOUDY NIGHT.png`)
       : (conEl.src = `./style/image/nonAniIcon/${weatherId}.png`);
+    console.log(hours, weatherId);
   } else {
     conEl.src = `./style/image/nonAniIcon/${weatherId}.png`;
   }
