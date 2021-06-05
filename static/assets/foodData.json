@@ -70,5 +70,9 @@
 	{
 		"name": "계란과 베이컨",
 		"fileName": "egg, bacon, breakfast, plate, food, meal@3x"
+	},
+	{
+		"name": "주먹밥",
+		"fileName": "food, meal, take out, sushi, dinner, asian@3x"
 	}
 ]
