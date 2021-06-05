@@ -52,15 +52,6 @@
   margin-right: 20px;
 }
 
-/* .searchicon {
-  width: auto;
-  height: auto;
-  max-width: 20px;
-  max-height: 20px;
-  margin-right: 10px;
-  cursor: pointer;
-} */
-
 input:focus {
   outline: none;
 }
@@ -97,18 +88,13 @@ input:focus {
   height: 200px;
   overflow: hidden;
   border-radius: 30px;
-  /* box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5),
-    10px 10px 15px rgba(70, 70, 70, 0.12); */
-  /* background-color: black; */
   position: relative;
 }
 
 .weather-icon {
   position: absolute;
-
   width: 200px;
   height: 200px;
-  /* filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.2)); */
 }
 
 .day-box {
@@ -152,42 +138,12 @@ input:focus {
   height: 50px;
 }
 
-.desc-icon {
+.desc-icon img {
   position: absolute;
   width: 120px;
   height: 120px;
   margin-right: 10px;
 }
-
-/* .img-box {
-  padding: 0px 50px;
-}
-
-.city-image {
-  width: 100%;
-  height: 100px;
-  overflow: hidden;
-  border-radius: 20px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #f7f8f2;
-}
-
-.city-name {
-  font-family: "GmarketB";
-  font-weight: 500;
-  font-size: larger;
-  color: #7d7d7b;
-}
-
-.city-name img {
-  width: auto;
-  height: auto;
-  max-width: 35px;
-  max-height: 35px;
-} */
 
 .map {
   display: flex;
@@ -240,5 +196,30 @@ input:focus {
   }
   #searchbar {
     width: 100%;
+  }
+  .media-middle-size {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .media-middle-size {
+    display: flex;
+    flex-direction: column;
+  }
+  .tmp {
+    font-size: 80px;
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+  }
+  .day {
+    justify-content: center;
+  }
+
+  .weatherdesc {
+    padding: 0px;
+    justify-content: center;
   }
 }

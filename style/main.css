@@ -21,11 +21,18 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    overflow: scroll;
+    overflow-x: hidden;
+    overflow-y: auto;
     padding-bottom: 10px;
   }
   .main-container {
-    height: 200vh;
+    height: 100%;
+    overflow: hidden;
+  }
+}
+@media screen and (max-width: 550px) {
+  .main-container {
+    overflow: hidden;
   }
 }
 
@@ -39,19 +46,6 @@
   align-items: center;
   /* padding: 0px; */
 }
-/* 
-.main-blob {
-  top: 30px;
-  position: absolute;
-  width: 280px;
-  height: 280px;
-  animation: wave 12s ease-in-out infinite;
-  background-color: #9ba9ff;
-  z-index: 11;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
 
 @keyframes wave {
   0%,

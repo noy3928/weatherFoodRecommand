@@ -5,6 +5,8 @@ var slides = $(".menu-img").toArray(), //객체를 배열로 만들어주는 매
   activePosition = 43;
 spacing = 410;
 let activeNumber = 0;
+let viewPort = window.matchMedia("(max-width:450px)").matches;
+console.log(viewPort);
 
 var positions = {
   ACTIVE: activePosition,
@@ -15,7 +17,7 @@ var positions = {
 };
 
 function setUpSlides() {
-	const slides = [...document.getElementsByClassName('menu-img')]
+  const slides = [...document.getElementsByClassName("menu-img")];
   TweenMax.set(slides, { left: positions.DOWN });
   TweenMax.set(slides[active], { left: positions.ACTIVE });
   TweenMax.set(slides[next], { left: positions.NEXT });
@@ -23,7 +25,7 @@ function setUpSlides() {
 }
 
 function animateSlides(isNext) {
-	const slides = [...document.getElementsByClassName('menu-img')]
+  const slides = [...document.getElementsByClassName("menu-img")];
   var onDeck,
     currentSlides = [];
 
@@ -50,26 +52,26 @@ function animateSlides(isNext) {
   }
 
   for (var i = 0; i < currentSlides.length; i++) {
-    var top;
+    var left;
 
     switch (i) {
       case 0:
-        top = isNext ? positions.UP : positions.DOWN;
+        left = isNext ? positions.UP : positions.DOWN;
         break;
       case 1:
-        top = isNext ? positions.PREV : positions.NEXT;
+        left = isNext ? positions.PREV : positions.NEXT;
         break;
       case 2:
-        top = positions.ACTIVE;
+        left = positions.ACTIVE;
         break;
       case 3:
-        top = isNext ? positions.NEXT : positions.PREV;
+        left = isNext ? positions.NEXT : positions.PREV;
         break;
       default:
         break;
     }
     TweenMax.to(currentSlides[i], 1, {
-      left: top,
+      left: left,
       // ease: Strong.easeInOut,
       ease: Quint.easeInOut,
       delay: i * 0.1,
@@ -102,12 +104,16 @@ function animateSlides(isNext) {
   moveCircle();
 }
 
-//setUpSlides();
-
 $(".button-left").on("click", function () {
+  // viewPort ? (activePosition = 43) : (activePosition = 15);
+  // console.log(activePosition);
   animateSlides(true);
 });
 
 $(".button-right").on("click", function () {
+  // viewPort ? (activePosition = 43) : (activePosition = 15);
+  // console.log(activePosition);
   animateSlides(false);
 });
+
+//setUpSlides();

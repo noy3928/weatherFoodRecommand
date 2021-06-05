@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-AU-compatible" content="ie=edge">
+    <meta http-equiv="X-AU-compatible" content="ie=edge" />
     <title>오늘 뭐먹지?</title>
     <link rel="stylesheet" href="./style/style.css" />
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
@@ -14,54 +14,67 @@
       integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
       crossorigin="anonymous"
     ></script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
-     <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
-     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=97cf6b9d942d05f21bee9ee745eeca55&libraries=services"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+    <script
+      type="text/javascript"
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=97cf6b9d942d05f21bee9ee745eeca55&libraries=services"
+    ></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
   </head>
   <body>
     <div class="main-container">
       <div class="main">
         <div class="dashboard">
           <div class="dashboard-real">
-          <div class="searchbar">
-            <form class="search" onsubmit="return false">
-              <input
-                type="text"
-                placeholder="Search for places.."
-                id="searchbar"
-                autocomplete="off"
-                name="name"
-              />
-              <i class="fas fa-search"></i>
-            </form>
-          </div>
-          <div class="weather-icon-box">
-          <div class="weathericon">
-            <img src="./style/image/nonAniIcon/800.png" class="weather-icon">
-          </div>
-        </div>
-          <div class="tmp">28°</div>
-          <div class="day-box">
-            <div class="day">일요일, 16:00</div>
-          </div>
-          <div class="divide-box">
-          <div class="divide-line"></div>
-        </div>
-          <div class="weatherdesc">
-            <div class="desc-icon-box">
-            <div class="desc-icon"></div>
-          </div>
-            <p>오늘의 날씨는 대체로 맑음 :)</p>
-          </div>
-          <div class="img-box">
-            <div class="map">
-              <div class="map-box">
-                <div class="kakao-map"></div>
+            <div class="searchbar">
+              <form class="search" onsubmit="return false">
+                <input
+                  type="text"
+                  placeholder="Search for places.."
+                  id="searchbar"
+                  autocomplete="off"
+                  name="name"
+                />
+                <i class="fas fa-search"></i>
+              </form>
+            </div>
+            <div class="media-middle-size">
+              <div class="weather-icon-box">
+                <div class="weathericon">
+                  <img
+                    src="./style/image/nonAniIcon/800.png"
+                    class="weather-icon"
+                  />
+                </div>
+              </div>
+              <div class="media-box-right">
+                <div class="tmp">28°</div>
+                <div class="day-box">
+                  <div class="day">일요일, 16:00</div>
+                </div>
+              </div>
+            </div>
+            <div class="divide-box">
+              <div class="divide-line"></div>
+            </div>
+            <div class="weatherdesc">
+              <div class="desc-icon-box">
+                <div class="desc-icon">
+                  <img src="./style/image/nonAniIcon/741.png" />
+                </div>
+              </div>
+              <p>오늘의 날씨는 대체로 맑음 :)</p>
+            </div>
+            <div class="img-box">
+              <div class="map">
+                <div class="map-box">
+                  <div class="kakao-map"></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="divide-weatherDashboard"></div>
+          <div class="divide-weatherDashboard"></div>
         </div>
 
         <div class="weatherview">
@@ -74,71 +87,103 @@
             <div class="weekly-weather-box sunday">
               <div class="weekly-day">일</div>
               <div class="weekly-icon-box">
-                <img src="./style/image/nonAniIcon/200.png" class="weekly-icon">
+                <img
+                  src="./style/image/nonAniIcon/200.png"
+                  class="weekly-icon"
+                />
               </div>
               <div class="weekly-tmp">28°</div>
             </div>
             <div class="weekly-weather-box monday">
               <div class="weekly-day">월</div>
               <div class="weekly-icon-box">
-                <img src="./style/image/nonAniIcon/800.png" class="weekly-icon">
+                <img
+                  src="./style/image/nonAniIcon/800.png"
+                  class="weekly-icon"
+                />
               </div>
               <div class="weekly-tmp">23°</div>
             </div>
             <div class="weekly-weather-box tuesday">
               <div class="weekly-day">화</div>
               <div class="weekly-icon-box">
-                <img src="./style/image/nonAniIcon/800.png" class="weekly-icon">
+                <img
+                  src="./style/image/nonAniIcon/800.png"
+                  class="weekly-icon"
+                />
               </div>
               <div class="weekly-tmp">28°</div>
             </div>
             <div class="weekly-weather-box Wednesday">
               <div class="weekly-day">수</div>
               <div class="weekly-icon-box">
-                <img src="./style/image/nonAniIcon/800.png" class="weekly-icon">
+                <img
+                  src="./style/image/nonAniIcon/800.png"
+                  class="weekly-icon"
+                />
               </div>
               <div class="weakly-tmp">22°</div>
             </div>
             <div class="weekly-weather-box thursday">
               <div class="weekly-day">목</div>
               <div class="weekly-icon-box">
-                <img src="./style/image/nonAniIcon/800.png" class="weekly-icon">
+                <img
+                  src="./style/image/nonAniIcon/800.png"
+                  class="weekly-icon"
+                />
               </div>
               <div class="weekly-tmp">24°</div>
             </div>
             <div class="weekly-weather-box friday">
               <div class="weekly-day">금</div>
               <div class="weekly-icon-box">
-                <img src="./style/image/nonAniIcon/800.png" class="weekly-icon">
+                <img
+                  src="./style/image/nonAniIcon/800.png"
+                  class="weekly-icon"
+                />
               </div>
               <div class="weekly-tmp">20°</div>
             </div>
             <div class="weekly-weather-box saturday">
               <div class="weekly-day">토</div>
               <div class="weekly-icon-box">
-                <img src="./style/image/nonAniIcon/800.png" class="weekly-icon">
+                <img
+                  src="./style/image/nonAniIcon/800.png"
+                  class="weekly-icon"
+                />
               </div>
               <div class="weekly-tmp">19°</div>
             </div>
           </div>
           <div class="food-recomandation">
-            <div class="rec-title">오늘의 추천메뉴</div>
+            <div class="phone-size-title">
+              <div class="rec-title">오늘의 추천메뉴</div>
+            </div>
             <div class="menus">
               <div class="button">
-                <div class="button-left"><img src="./style/image/play.svg" id="leftbutton"></div>
+                <div class="button-left">
+                  <img src="./style/image/play.svg" id="leftbutton" />
+                </div>
               </div>
               <div class="menu">
-                <div class="menu-one"  onclick="geturl()">
-				<!--
-                  <img src="./style/image/3x/rice, bowl, food, meal, dinner@3x.png" class="menu-img">
-                  <img src="./style/image/3x/egg, bacon, breakfast, plate, food, meal@3x.png" class="menu-img">
-                  <img src="./style/image/3x/noodles, spaghetti, fork, meal, dinner, plate@3x.png" class="menu-img">
-			  -->
+                <div class="menu-one" onclick="geturl()">
+                  <img
+                    src="./style/image/3x/rice, bowl, food, meal, dinner@3x.png"
+                    class="menu-img"
+                  />
+                  <img
+                    src="./style/image/3x/egg, bacon, breakfast, plate, food, meal@3x.png"
+                    class="menu-img"
+                  />
+                  <img
+                    src="./style/image/3x/noodles, spaghetti, fork, meal, dinner, plate@3x.png"
+                    class="menu-img"
+                  />
                 </div>
               </div>
               <div class="button">
                 <div class="button-right">
-                  <img src="./style/image/play.svg" alt="">
+                  <img src="./style/image/play.svg" id="rightbutton" />
                 </div>
               </div>
             </div>
@@ -152,34 +197,31 @@
           </div>
         </div>
       </div>
+      <div class="scene">
+        <div class="menu-bar">
+          <img src="./style/image/menu.svg" id="menu-bar" />
+        </div>
+        <div class="shape"></div>
+        <img src="./style/image/Choice of food 2020.png" class="person" />
+        <img src="./style/image/Pizza Deliveryman 2020.png" class="persen2" />
       </div>
-    </div>
-
-    <div class="scene">
-      <div class="menu-bar">
-        <img src="./style/image/menu.svg" id="menu-bar" />
-      </div>
-      <div class="shape"></div>
-      <img src="./style/image/Choice of food 2020.png" class="person" />
-      <img src="./style/image/Pizza Deliveryman 2020.png" class="persen2" />
     </div>
 
     <script src="./static/API/weather_api.js"></script>
     <script src="./static/JS/posToKor.js"></script>
     <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=97cf6b9d942d05f21bee9ee745eeca55"></script>
-	<script src="./static/assets/coordsToKor.js" charset="utf-8"></script>
-	<script src="./static/assets/posToKor.js" charset="utf-8"></script>
+    <script src="./static/assets/coordsToKor.js" charset="utf-8"></script>
+    <script src="./static/assets/posToKor.js" charset="utf-8"></script>
     <script src="./static/assets/showResult.js" charset="utf-8"></script>
-	<script src="./static/JS/showWeek.js"></script>
-	<script src="./static/JS/getCurrentLC.js"></script>
-	<script src="./static/JS/getWeather.js"></script>
-	<script src="./static/JS/foodSlide.js"></script>
-	<script src="./static/assets/korToCoords.js" charset="utf-8"></script>
-	<script src="./static/JS/kakaoMap.js" charset="utf-8"></script>
-	<script src="./static/assets/loadFoods.js" charset="utf-8"></script>
-	<script src="./static/assets/recommend.js" charset="utf-8"></script>
-	<script src="./static/JS/search.js" charset="utf-8"></script>
-	<script src="./static/JS/init.js" charset="utf-8"></script>
-
+    <script src="./static/JS/showWeek.js"></script>
+    <script src="./static/JS/getCurrentLC.js"></script>
+    <script src="./static/JS/getWeather.js"></script>
+    <script src="./static/JS/foodSlide.js"></script>
+    <script src="./static/assets/korToCoords.js" charset="utf-8"></script>
+    <script src="./static/JS/kakaoMap.js" charset="utf-8"></script>
+    <script src="./static/assets/loadFoods.js" charset="utf-8"></script>
+    <script src="./static/assets/recommend.js" charset="utf-8"></script>
+    <script src="./static/JS/search.js" charset="utf-8"></script>
+    <script src="./static/JS/init.js" charset="utf-8"></script>
   </body>
 </html>

@@ -16,7 +16,7 @@
 
 .shape {
   position: absolute;
-  bottom: -400px;
+  bottom: -200px;
   left: -250px;
   width: 900px;
   height: 900px;
@@ -24,16 +24,6 @@
   background-color: #fbe24c;
   transform: rotate(200deg);
 }
-
-/* .shape:nth-child(4) {
-  position: absolute;
-  top: 200px;
-  left: 1530px;
-  width: 50px;
-  height: 50px;
-  animation: wave 6s ease-in-out infinite;
-  background-color: #b9b5ff;
-} */
 
 .person {
   position: absolute;
