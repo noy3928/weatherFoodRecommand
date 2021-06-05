@@ -1,5 +1,5 @@
 .weatherview {
-  padding: 35px 55px;
+  padding: 35px 50px;
 }
 
 .page-change {
@@ -9,17 +9,21 @@
   margin-bottom: 30px;
 }
 
-.weather-change-button {
+.change-button {
   margin-right: 20px;
   opacity: 0.5;
   cursor: pointer;
   transition: ease-in-out 0.5s;
   padding: 15px;
   border-radius: 15px;
+  box-shadow: -10px -10px 7px rgba(255, 255, 255, 0.9),
+    10px 10px 10px rgba(70, 70, 70, 0.2);
 }
 
-.weather-change-button:hover {
-  box-shadow: inset -10px -10px 15px rgba(255, 255, 255, 0.7),
+.change-button:hover {
+  box-shadow: -10px -10px 7px rgba(255, 255, 255, 0),
+    10px 10px 10px rgba(70, 70, 70, 0),
+    inset -10px -10px 15px rgba(255, 255, 255, 0.7),
     inset 10px 10px 15px rgba(70, 70, 70, 0.4);
 }
 
@@ -185,7 +189,6 @@
   height: 30px;
   display: flex;
   justify-content: center;
-  display: none;
 }
 
 .show-circle {
@@ -226,6 +229,7 @@
   .weatherview {
     display: flex;
     flex-direction: column;
+    width: 100%;
   }
   .page-change {
     margin-top: 0px;
@@ -235,7 +239,7 @@
   }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 600px) {
   .weatherview {
     padding-top: 0px;
     margin-top: 0px;
@@ -299,6 +303,37 @@
     width: 15px;
     height: 15px;
   }
+
+  .weather-detail-box {
+    min-height: 400px;
+    display: grid;
+    grid-row-gap: 15px;
+    grid-column-gap: 15px;
+    color: #7d7d7b;
+    display: none;
+    margin-top: 0px;
+  }
+
+  .desc-title {
+    font-family: "GmarketB";
+  }
+
+  .detail-desc {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    font-size: 10px;
+  }
+
+  .detail-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  /* ------------------------------ */
 }
 
 .weather-detail-box {
@@ -310,6 +345,7 @@
   grid-column-gap: 15px;
   color: #7d7d7b;
   display: none;
+  margin-top: 47px;
 }
 
 .desc-title {
@@ -353,23 +389,4 @@
   position: absolute;
   width: 100%;
   height: 100%;
-}
-
-.weather-detail-box {
-  display: none;
-}
-
-.menus.none-display {
-  display: none;
-}
-.menus.display {
-  visibility: visible;
-}
-
-.weather-detail-box.none-display {
-  display: none;
-}
-
-.weather-detail-box.display {
-  visibility: visible;
 }

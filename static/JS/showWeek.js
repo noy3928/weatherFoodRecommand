@@ -126,14 +126,25 @@ function showCurrentTmpCon(weatherInfo) {
 
 function showDetailWeather(weatherDetailInfo) {}
 
-function changeFoodPage() {
-  const menusBox = document.querySelector(".menus");
-  weatherBox.classList.toggle("none-display");
-  menusBox.classList.toggle("display");
-}
-
-function changeWeatherPage() {
+let changeCheck = true; // true는 음식, false는 날씨
+function pageChange() {
   const weatherBox = document.querySelector(".weather-detail-box");
-  weatherBox.classList.toggle("display");
-  menusBox.classList.toggle("none-display");
+  const menusBox = document.querySelector(".menus");
+  const menusChange = document.querySelector(".show-change");
+  const viewTitle = document.querySelector(".rec-title");
+
+  if (changeCheck == true) {
+    weatherBox.style.display = "grid";
+    menusBox.style.display = "none";
+    menusChange.style.display = "none";
+    viewTitle.textContent = "오늘의 날씨";
+    changeCheck = false;
+  } else if (changeCheck == false) {
+    menusBox.style.display = "grid";
+    menusChange.style.display = "flex";
+    weatherBox.style.display = "none";
+    viewTitle.textContent = "오늘의 추천메뉴";
+    changeCheck = true;
+  }
+  console.log(changeCheck);
 }
