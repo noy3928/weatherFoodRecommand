@@ -40,3 +40,10 @@ function showResult (weather, foods) {
 	showTime()
 	return true
 }
+
+function setUpDefault() {
+	$imgList = [...document.getElementsByClassName('menu-one')]
+	$imgList.forEach($img => {
+		$img.setAttribute('src', './style/image/3x/question.svg')
+	})
+}
