@@ -11,10 +11,26 @@ function getWeatherInfo(lat, lon) {
       url: apiurl,
       data: {},
       success: function (response) {
-        let temp = response["main"]["temp"];
-        let id = response["weather"][0]["id"];
+        const temp = response["main"]["temp"];
+        const id = response["weather"][0]["id"];
+
+        const feelLike = response["main"]["feels_like"];
+        const tempMax = response["main"]["temp_max"];
+        const tempMin = response["main"]["temp_min"];
+        const humidity = response["main"]["humidity"];
+        const windSpeed = response["wind"]["speed"];
+        const windDer = response["wind"]["deg"];
 
         const weatherInfo = { temp, id };
+        const weatherDetailInfo = {
+          feelLike,
+          tempMax,
+          tempMin,
+          humidity,
+          windSpeed,
+          windDer,
+        };
+        console.log(weatherDetailInfo);
         console.log("현재기상", weatherInfo.id);
         showCurrentTmpCon(weatherInfo);
         return weatherInfo;

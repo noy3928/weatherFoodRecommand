@@ -16,6 +16,13 @@ window.addEventListener("resize", () => {
   }
 });
 
+// window.addEventListener('resize', function(){
+// 	clearTimeout(timer);
+// 	timer = setTimeout(function(){
+// 		console.log('resize event!');
+// 	}, delay);
+// });
+
 var positions = {
   ACTIVE: activePosition,
   PREV: activePosition - spacing,
