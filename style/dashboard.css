@@ -222,20 +222,57 @@ input:focus {
 }
 
 @media screen and (max-width: 550px) {
-  .media-middle-size {
-    display: flex;
-    flex-direction: column;
+  .divide-box {
+    padding-top: 10px;
   }
-  .tmp {
-    font-size: 80px;
+  .divide-box-media {
+    padding: 40px 70px 40px 70px;
+  }
+
+  .weather-icon-box {
     display: flex;
     justify-content: center;
     padding: 0px;
   }
-  .day {
-    justify-content: center;
+
+  .weathericon {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 30px;
+    position: relative;
+    padding-right: 20px;
   }
 
+  .weather-icon {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+  }
+
+  .tmp {
+    font-size: 50px;
+    display: flex;
+    justify-content: flex-start;
+    padding: 0px;
+  }
+  .day {
+    font-size: 20px;
+    justify-content: flex-start;
+  }
+  .day-box {
+    padding: 0px;
+  }
+  .media-box-right {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: flex-start;
+  }
   .weatherdesc {
     padding: 0px;
     justify-content: center;
