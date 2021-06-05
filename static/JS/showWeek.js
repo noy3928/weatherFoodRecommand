@@ -134,6 +134,6 @@ function changeFoodPage() {
 
 function changeWeatherPage() {
   const weatherBox = document.querySelector(".weather-detail-box");
-  // weatherBox.classList.toggle("display");
+  weatherBox.classList.toggle("display");
   menusBox.classList.toggle("none-display");
 }
