@@ -5,7 +5,7 @@ function showResult (weather, foods) {
 		console.log('랜덤으로 뽑힌 음식 재확인', foods)
 		const $imgList = $('.menu-one').children
 		foods.forEach((food, index) => {
-			$imgList[index].setAttribute('src', food.fileName)
+			$imgList[index].setAttribute('src', food.fileName + '.png')
 		})
 	}
 	function showWeather() {

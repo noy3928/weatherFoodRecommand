@@ -3,6 +3,7 @@
 function weekBox(weatherInfo) {
   const weeklyWeatherIcon = $(".weekly-icon").toArray();
   const weeklyWeatherTmp = $(".weekly-tmp").toArray();
+  console.log('showWeek test', weeklyWeatherTmp)
   const weeklyDay = $(".weekly-day").toArray();
   const weatherCoditions = weatherInfo.id;
   const weeklyTmp = weatherInfo.temp;
