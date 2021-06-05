@@ -118,10 +118,22 @@ function showCurrentTmpCon(weatherInfo) {
     hours < 7 || hours > 19
       ? (conEl.src = `./style/image/nonAniIcon/CLOUDY NIGHT.png`)
       : (conEl.src = `./style/image/nonAniIcon/${weatherId}.png`);
-    console.log(hours, weatherId);
+    console.log("현재 시간 테스트", hours, weatherId);
   } else {
     conEl.src = `./style/image/nonAniIcon/${weatherId}.png`;
   }
 }
 
 function showDetailWeather(weatherDetailInfo) {}
+
+function changeFoodPage() {
+  const menusBox = document.querySelector(".menus");
+  weatherBox.classList.toggle("none-display");
+  menusBox.classList.toggle("display");
+}
+
+function changeWeatherPage() {
+  const weatherBox = document.querySelector(".weather-detail-box");
+  // weatherBox.classList.toggle("display");
+  menusBox.classList.toggle("none-display");
+}

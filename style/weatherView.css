@@ -185,6 +185,7 @@
   height: 30px;
   display: flex;
   justify-content: center;
+  display: none;
 }
 
 .show-circle {
@@ -298,4 +299,76 @@
     width: 15px;
     height: 15px;
   }
+}
+
+.weather-detail-box {
+  min-height: 400px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-row-gap: 15px;
+  grid-column-gap: 15px;
+  color: #7d7d7b;
+}
+
+.desc-title {
+  font-family: "GmarketB";
+}
+
+.weather-detail {
+  background: #f5f6f2;
+  box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.7),
+    6px 6px 10px rgba(70, 70, 70, 0.12);
+  border-radius: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  transition: 0.5s ease-in-out;
+}
+
+.weather-detail:hover {
+  transform: translateY(-5px);
+}
+
+.detail-desc {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 20px;
+  /* line-height: 30px; */
+}
+
+.detail-icon {
+  width: 100px;
+  height: 100px;
+}
+
+.menu-image {
+  object-fit: cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.weather-detail-box {
+  display: none;
+}
+
+.menus.none-display {
+  display: none;
+}
+.menus.display {
+  visibility: visible;
+}
+
+.weather-detail-box.none-display {
+  display: none;
+}
+
+.weather-detail-box.display {
+  visibility: visible;
 }
