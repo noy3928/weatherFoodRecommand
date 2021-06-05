@@ -21,22 +21,30 @@ function showResult (weather, foods) {
 
 
 
-	function showTime() {
-		const $dayBox = document.querySelector('.day-box')
-		const $day = $('.day')
 
-		const daysKR = ['일', '월', '화', '수', '목', '금', '토']
-		const now = new Date()
-		const day = daysKR[now.getDay()] + '요일'
-		const hours = now.getHours() < 10 ? '0' + now.getHours() : now.getHours()
-		const minutes = now.getMinutes() < 10 ? '0' + now.getMinutes() : now.getMinutes()
-		const time = `${hours}:${minutes}`
-
-		$day.textContent = `${day}, ${time}`
-	}
 
 	showFoods(foods)
 	showWeather()
 	showTime()
 	return true
+}
+
+function setUpDefault() {
+	$imgList = [...document.getElementsByClassName('menu-one')]
+	$imgList.forEach($img => {
+		$img.setAttribute('src', './style/image/3x/question.svg')
+	})
+}
+function showTime() {
+	const $dayBox = document.querySelector('.day-box')
+	const $day = document.querySelector('.day')
+
+	const daysKR = ['일', '월', '화', '수', '목', '금', '토']
+	const now = new Date()
+	const day = daysKR[now.getDay()] + '요일'
+	const hours = now.getHours() < 10 ? '0' + now.getHours() : now.getHours()
+	const minutes = now.getMinutes() < 10 ? '0' + now.getMinutes() : now.getMinutes()
+	const time = `${hours}:${minutes}`
+
+	$day.textContent = `${day}, ${time}`
 }
