@@ -5,7 +5,7 @@ function showResult (weather, foods) {
 		console.log('랜덤으로 뽑힌 음식 재확인', foods)
 		const $imgList = $('.menu-one').children
 		foods.forEach((food, index) => {
-			$imgList[index].setAttribute('src', food.fileName + '.png')
+			$imgList[index].setAttribute('src', `./style/image/3x/${food.fileName}.png`)
 		})
 	}
 	function showWeather() {
@@ -40,19 +40,3 @@ function showResult (weather, foods) {
 	showTime()
 	return true
 }
-/*
-weather api test
-function test() {
-	const url = 'http://api.openweathermap.org/data/2.5/weather'
-	const latitude = 37.583328
-	const longtitude = 127.0
-	const key = 'b0641107a6d807bd0a87e9c615a68c99'
-	apiUrl = `${url}?lat=${latitude}&lon=${longtitude}&appid=${key}&units=metric`
-	fetch(apiUrl)
-	.then(response => response.json())
-	.then(data => {
-		console.table(data)
-		return data
-	})
-}
-*/
