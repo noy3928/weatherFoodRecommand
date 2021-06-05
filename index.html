@@ -77,8 +77,10 @@
         <div class="weatherview">
           <div class="divide-weatherDashboard-media"></div>
           <div class="page-change">
-            <p class="weather-change-button">Weather</p>
-            <p class="Food-change-button">Food</p>
+            <p class="weather-change-button" onclick="changeWeatherPage()">
+              Weather
+            </p>
+            <p class="Food-change-button" onclick="changeFoodPage()">Food</p>
           </div>
           <div class="week-weather">
             <div class="weekly-weather-box sunday">
@@ -155,6 +157,68 @@
           <div class="food-recomandation">
             <div class="phone-size-title">
               <div class="rec-title">오늘의 추천메뉴</div>
+            </div>
+            <div class="weather-detail-box">
+              <div class="weather-detail">
+                <img
+                  src="./style/image/nonAniIcon/THERMOMETER.png"
+                  class="detail-icon"
+                />
+                <div class="detail-desc">
+                  <span class="desc-title">최고온도:</span> <br />
+                  <span id="Max-tmp">23°</span>
+                </div>
+              </div>
+              <div class="weather-detail">
+                <img
+                  src="./style/image/nonAniIcon/THERMOMETER.png"
+                  class="detail-icon"
+                />
+                <div class="detail-desc">
+                  <span class="desc-title">최저온도:</span> <br />
+                  <span id="Min-tmp">23°</span>
+                </div>
+              </div>
+              <div class="weather-detail">
+                <img
+                  src="./style/image/nonAniIcon/WEATHER FORECASTER.png"
+                  class="detail-icon"
+                />
+                <div class="detail-desc">
+                  <span class="desc-title">체감온도:</span> <br />
+                  <span id="feel-like">23°</span>
+                </div>
+              </div>
+              <div class="weather-detail">
+                <img
+                  src="./style/image/nonAniIcon/WIND DIRECTION.png"
+                  class="detail-icon"
+                />
+                <div class="detail-desc">
+                  <span class="desc-title">바람방향:</span> <br />
+                  <span id="wind-der">23°</span>
+                </div>
+              </div>
+              <div class="weather-detail">
+                <img
+                  src="./style/image/nonAniIcon/WIND SPEED.png"
+                  class="detail-icon"
+                />
+                <div class="detail-desc">
+                  <span class="desc-title">바람속도:</span> <br />
+                  <span id="wind-spd">23°</span>
+                </div>
+              </div>
+              <div class="weather-detail">
+                <img
+                  src="./style/image/nonAniIcon/HUMIDITY.png"
+                  class="detail-icon"
+                />
+                <div class="detail-desc">
+                  <span class="desc-title">습도:</span><br />
+                  <span id="humidity">23°</span>
+                </div>
+              </div>
             </div>
             <div class="menus">
               <div class="button">
