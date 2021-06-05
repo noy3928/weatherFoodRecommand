@@ -5,8 +5,16 @@ var slides = $(".menu-img").toArray(), //객체를 배열로 만들어주는 매
   activePosition = 43;
 spacing = 410;
 let activeNumber = 0;
-let viewPort = window.matchMedia("(max-width:450px)").matches;
-console.log(viewPort);
+
+window.addEventListener("resize", () => {
+  if (window.matchMedia("screen and (max-width:450px)").mastches) {
+    activePosition = 43;
+    console.log(activePosition);
+  } else {
+    activePosition = 15;
+    console.log(activePosition);
+  }
+});
 
 var positions = {
   ACTIVE: activePosition,
@@ -105,14 +113,10 @@ function animateSlides(isNext) {
 }
 
 $(".button-left").on("click", function () {
-  // viewPort ? (activePosition = 43) : (activePosition = 15);
-  // console.log(activePosition);
   animateSlides(true);
 });
 
 $(".button-right").on("click", function () {
-  // viewPort ? (activePosition = 43) : (activePosition = 15);
-  // console.log(activePosition);
   animateSlides(false);
 });
 

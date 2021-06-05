@@ -15,6 +15,7 @@ function getWeatherInfo(lat, lon) {
         let id = response["weather"][0]["id"];
 
         const weatherInfo = { temp, id };
+        console.log("현재기상", weatherInfo.id);
         showCurrentTmpCon(weatherInfo);
         return weatherInfo;
       },
@@ -52,6 +53,7 @@ function getWeatherInfo(lat, lon) {
           id: [day1, day2, day3, day4, day5, day6, day7],
           temp: [temp1, temp2, temp3, temp4, temp5, temp6, temp7],
         };
+        console.log("토요일날씨", weatherInfo.id[0]);
         weekBox(weatherInfo);
       },
     });

@@ -227,7 +227,7 @@
     flex-direction: column;
   }
   .page-change {
-    margin-top: 50px;
+    margin-top: 0px;
   }
   .week-weather {
     margin: 0px 5px 50px 5px;
@@ -236,7 +236,7 @@
 
 @media screen and (max-width: 550px) {
   .weatherview {
-    margin-top: 50px;
+    margin-top: 0px;
   }
   .page-change {
     font-size: 20px;
