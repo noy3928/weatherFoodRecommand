@@ -2,26 +2,13 @@ var slides = $(".menu-img").toArray(), //객체를 배열로 만들어주는 매
   active = 0,
   next = 1,
   prev = slides.length - 1,
-  activePosition = 15;
+  activePosition = 43;
 spacing = 410;
 let activeNumber = 0;
 
-window.addEventListener("resize", () => {
-  if (window.matchMedia("screen and (max-width:450px)").mastches) {
-    activePosition = 43;
-    console.log(activePosition);
-  } else {
-    activePosition = 15;
-    console.log(activePosition);
-  }
-});
-
-// window.addEventListener('resize', function(){
-// 	clearTimeout(timer);
-// 	timer = setTimeout(function(){
-// 		console.log('resize event!');
-// 	}, delay);
-// });
+window.matchMedia("screen and (max-width:450px)").mastches
+  ? (activePosition = 15)
+  : (activePosition = 43);
 
 var positions = {
   ACTIVE: activePosition,
