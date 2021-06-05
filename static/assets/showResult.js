@@ -30,7 +30,7 @@ function showResult (weather, foods) {
 }
 
 function setUpDefault() {
-	$imgList = [...document.getElementsByClassName('menu-one')]
+	$imgList = [...document.getElementsByClassName('menu-one').children]
 	$imgList.forEach($img => {
 		$img.setAttribute('src', './style/image/3x/question.png')
 	})
