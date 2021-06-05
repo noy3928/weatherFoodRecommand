@@ -82,6 +82,9 @@
 }
 
 @media screen and (max-width: 1250px) {
+  .scene {
+    display: none;
+  }
   .person {
     visibility: hidden;
   }

@@ -236,22 +236,34 @@
 
 @media screen and (max-width: 550px) {
   .weatherview {
+    padding-top: 0px;
     margin-top: 0px;
+    height: 120%;
   }
   .page-change {
     font-size: 20px;
+    margin-bottom: 15px;
   }
 
   .weather-change-button {
     margin-right: 0px;
   }
 
+  .week-weather {
+    height: 110px;
+    margin-bottom: 30px;
+  }
+
+  .weekly-weather-box {
+    padding: 0px 3px;
+  }
+
   .weekly-day {
     font-size: 17px;
   }
   .weekly-icon-box {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
   }
   .phone-size-title {
     display: flex;
@@ -270,7 +282,7 @@
     height: 180px;
   }
   .menu {
-    padding: 30px 0px;
+    padding: 0px 0px 20px 0px;
   }
   .button-right,
   .button-left {
