@@ -37,7 +37,7 @@ function setUpDefault() {
 }
 function showTime() {
 	const $dayBox = document.querySelector('.day-box')
-	const $day = $('.day')
+	const $day = document.querySelector('.day')
 
 	const daysKR = ['일', '월', '화', '수', '목', '금', '토']
 	const now = new Date()
