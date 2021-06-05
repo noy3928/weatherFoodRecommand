@@ -116,4 +116,4 @@ $(".button-right").on("click", function () {
   animateSlides(false);
 });
 
-//setUpSlides();
+setUpSlides();

@@ -3,15 +3,10 @@ function showResult (weather, foods) {
 	// Commonly used DOM elements.
 	function showFoods(foods) {
 		console.log('랜덤으로 뽑힌 음식 재확인', foods)
-		const result = new DocumentFragment()
-		foods.forEach(food => {
-			const $img = document.createElement('img')
-			$img.setAttribute('class', 'menu-img')
-			$img.setAttribute('src', `./style/image/3x/${food.fileName}.png`)
-			result.appendChild($img)
+		const $imgList = $('.menu-one').children
+		foods.forEach((food, index) => {
+			$imgList[index].setAttribute('src', food.fileName)
 		})
-		$('.menu-one').appendChild(result)
-		setUpSlides()
 	}
 	function showWeather() {
 		// 1. Weather Icon Box
