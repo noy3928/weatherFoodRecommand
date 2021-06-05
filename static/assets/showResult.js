@@ -3,7 +3,7 @@ function showResult (weather, foods) {
 	// Commonly used DOM elements.
 	function showFoods(foods) {
 		console.log('랜덤으로 뽑힌 음식 재확인', foods)
-		const $imgList = $('.menu-one').children
+		const $imgList = [...document.querySelectorAll('.menu-img')]
 		foods.forEach((food, index) => {
 			$imgList[index].setAttribute('src', `./style/image/3x/${food.fileName}.png`)
 		})
