@@ -32,7 +32,7 @@ function showResult (weather, foods) {
 function setUpDefault() {
 	$imgList = [...document.getElementsByClassName('menu-one')]
 	$imgList.forEach($img => {
-		$img.setAttribute('src', './style/image/3x/question.svg')
+		$img.setAttribute('src', './style/image/3x/question.png')
 	})
 }
 function showTime() {
