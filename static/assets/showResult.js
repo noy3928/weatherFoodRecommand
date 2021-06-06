@@ -3,7 +3,7 @@ function showResult(weather, foods) {
   // Commonly used DOM elements.
   function showFoods(foods) {
     console.log("랜덤으로 뽑힌 음식 재확인", foods);
-    let $imgList = [...document.getElementsByClassName('menu-img')]
+    let $imgList = [...document.getElementsByClassName("menu-img")];
     foods.forEach((food, index) => {
       $imgList[index].setAttribute(
         "src",
@@ -12,10 +12,18 @@ function showResult(weather, foods) {
     });
   }
 
-  let foodNameIndex = 0;
+  const foodNames = foods.map((food) => food.name);
+  document
+    .querySelector(".menu-one")
+    .setAttribute("data-food-names", foodNames.join("/"));
+
   function changeFoodName(foods) {
     const foodList = [];
     const foodName = document.querySelector(".food-name");
+    const menuOne = document.querySelector(".menu-one");
+    let foodIndex = menuOne.getAttribute("data-food-index");
+
+    console.log(foodIndex);
 
     foods.forEach((a) => foodList.push(a.name));
 
@@ -33,11 +41,9 @@ function showResult(weather, foods) {
   }
 
   function leftbutton() {
-    foodNameIndex--;
     changeFoodName(foods);
   }
   function rightbutton() {
-    foodNameIndex++;
     changeFoodName(foods);
   }
 
