@@ -25,7 +25,7 @@
 	},
 	{
 		"name": "치킨",
-		"fileNmae": "chicken, turkey, meat, food, meal, dinner@3x"
+		"fileName": "chicken, turkey, meat, food, meal, dinner@3x"
 	},
 	{
 		"name": "초콜릿",
@@ -74,5 +74,13 @@
 	{
 		"name": "주먹밥",
 		"fileName": "food, meal, take out, sushi, dinner, asian@3x"
+	},
+	{
+		"name": "프렌치 프레스 커피",
+		"fileName": "french press, drink, beverage, coffee, kitchen@3x"
+	},
+	{
+		"name": "햄버거",
+		"fileName": "hamburger, burger, fast food, food, fries, junk food@3x"
 	}
 ]
