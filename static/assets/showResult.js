@@ -12,32 +12,34 @@ function showResult(weather, foods) {
     });
   }
 
-  //   let foodNameIndex = 0;
-  //   function changeFoodName(foods) {
-  //     const foodList = foods.name;
-  //     const foodName = document.querySelector(".food-name");
+  let foodNameIndex = 0;
+  function changeFoodName(foods) {
+    const foodList = [];
+    const foodName = document.querySelector(".food-name");
 
-  //     console.log("음식 배열입니다.", foodList);
-  //     if (foodNameIndex < 3) {
-  //       foodName.textContent = foodList[foodNameIndex];
-  //     } else if (foodNameIndex > 2) {
-  //       foodNameIndex = 0;
-  //       foodName.textContent = foodList[foodNameIndex];
-  //     } else if (foodNameIndex < 0) {
-  //       foodNameIndex = 2;
-  //       foodName.textContent = foodList[foodNameIndex];
-  //     }
-  //   }
+    foods.forEach((a) => foodList.push(a.name));
 
-  //   $(".button-left").on("click", function () {
-  //     foodNameIndex++;
-  //     changeFoodName(foods);
-  //   });
+    console.log("음식 배열입니다.", foodList);
 
-  //   $(".button-right").on("click", function () {
-  //     foodNameIndex--;
-  //     changeFoodName(foods);
-  //   });
+    if (foodNameIndex < 3) {
+      foodName.textContent = foodList[foodNameIndex];
+    } else if (foodNameIndex > 2) {
+      foodNameIndex = 0;
+      foodName.textContent = foodList[foodNameIndex];
+    } else if (foodNameIndex < 0) {
+      foodNameIndex = 2;
+      foodName.textContent = foodList[foodNameIndex];
+    }
+  }
+
+  function leftbutton() {
+    foodNameIndex--;
+    changeFoodName(foods);
+  }
+  function rightbutton() {
+    foodNameIndex++;
+    changeFoodName(foods);
+  }
 
   function showWeather() {
     // 1. Weather Icon Box
