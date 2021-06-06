@@ -28,12 +28,12 @@ function showResult(weather, foods) {
   return true;
 }
 
-function setUpDefault() {
-  $imgList = [...document.getElementsByClassName("menu-one").children];
-  $imgList.forEach(($img) => {
-    $img.setAttribute("src", "./style/image/3x/question.png");
-  });
-}
+// function setUpDefault() {
+//   $imgList = [...document.getElementsByClassName("menu-one").children];
+//   $imgList.forEach(($img) => {
+//     $img.setAttribute("src", "./style/image/3x/question.png");
+//   });
+// }
 function showTime() {
   const $dayBox = document.querySelector(".day-box");
   const $day = document.querySelector(".day");
