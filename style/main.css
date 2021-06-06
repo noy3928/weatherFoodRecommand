@@ -2,12 +2,14 @@
   position: absolute;
   width: 1280px;
   height: 900px;
-  background: #bbe9dd;
+  background: #f8f8f3;
   border-radius: 30px;
   z-index: 10;
   backdrop-filter: blur(25px);
   box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5),
     10px 10px 15px rgba(70, 70, 70, 0.12);
+  /* box-shadow: 5px 5px 15px rgba(70, 70, 70, 0.12),
+    -5px -5px 15px rgba(70, 70, 70, 0.12); */
   display: grid;
   grid-template-columns: 1fr 2fr;
   padding: 0px;
@@ -52,7 +54,7 @@
   position: absolute;
   width: 100%;
   height: 100vh;
-  background-color: #bbe9dd;
+  background-color: #f7f8f3;
   display: flex;
   justify-content: center;
   align-items: center;

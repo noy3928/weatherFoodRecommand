@@ -52,7 +52,7 @@
 }
 
 .weekly-weather-box {
-  background: #bbe9dd;
+  background: #f7f8f3;
   /* border-right: 1px solid rgba(255, 255, 255, 0.3);
   border-top: 1px solid rgba(255, 255, 255, 0.3); */
   border-radius: 10px;
@@ -112,7 +112,7 @@
 }
 
 .menu-one {
-  background: #bbe9dd;
+  background: #f8f8f3;
   box-shadow: -10px -10px 10px rgba(255, 255, 255, 0.5),
     10px 10px 15px rgba(70, 70, 70, 0.4);
   cursor: pointer;
@@ -200,7 +200,7 @@
 
 .button-right,
 .button-left {
-  background: #bbe9dd;
+  background: #f8f8f3;
   box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.7),
     6px 6px 10px rgba(70, 70, 70, 0.12);
   width: 50px;
@@ -281,7 +281,7 @@
 }
 
 .weather-detail {
-  background: #bbe9dd;
+  background: #f8f8f3;
   box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.7),
     6px 6px 10px rgba(70, 70, 70, 0.12);
   border-radius: 20px;
