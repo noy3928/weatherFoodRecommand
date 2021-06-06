@@ -10,6 +10,7 @@ async function korToCoords() {
     },
   });
   const firstResult = result["documents"][0];
+  console.log("키워드입력시 위치정보", result);
   const { x, y } = firstResult;
   const coords = { x, y };
   // panTo(coords);

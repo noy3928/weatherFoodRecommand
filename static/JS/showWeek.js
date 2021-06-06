@@ -124,7 +124,37 @@ function showCurrentTmpCon(weatherInfo) {
   }
 }
 
-function showDetailWeather(weatherDetailInfo) {}
+function showWeatherDesc(weatherInfo) {
+  const weatherDescription = {
+    800: "오늘의 날씨는 대체로 맑음 :)",
+    801: "오늘의 날씨는 약간의 구름 :)",
+    802: "오늘의 날씨는 구름 많음 :)",
+    200: "오늘의 날씨는 천둥번개",
+    300: "오늘의 날씨는 이슬비:)",
+    500: "오늘의 날씨는 비내림:)",
+    600: "오늘은 눈이 옵니다:)",
+    741: "오늘의 날씨는 미세먼지 혹음 흐림:("
+  }
+  const weatherDesc = document.querySelector(".weatherdesc");
+  
+  weatherDesc.textContent = weatherDescription[weatherInfo.id]
+}
+
+function showDetailWeather(weatherDetailInfo) {
+  const feelLike = String(weatherDetailInfo.feelLike) + "°";
+  const tempMax = String(weatherDetailInfo.tempMax) + "°";
+  const tempMin = String(weatherDetailInfo.tempMin) + "°";
+  const humidity = String(weatherDetailInfo.humidity) + "%";
+  const windSpeed = String(weatherDetailInfo.windSpeed) + "m/s";
+  const windDer = String(weatherDetailInfo.windDer) + "deg";
+
+  document.getElementById("feel-like").textContent = feelLike;
+  document.getElementById("Max-tmp").textContent = tempMax;
+  document.getElementById("Min-tmp").textContent = tempMin;
+  document.getElementById("wind-der").textContent = windDer;
+  document.getElementById("wind-spd").textContent = windSpeed;
+  document.getElementById("humidity").textContent = humidity;
+}
 
 let changeCheck = true; // true는 음식, false는 날씨
 function pageChange() {

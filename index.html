@@ -20,7 +20,10 @@
       type="text/javascript"
       src="//dapi.kakao.com/v2/maps/sdk.js?appkey=97cf6b9d942d05f21bee9ee745eeca55&libraries=services"
     ></script>
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, maximum-scale=1.0, minimum-scale=1, user-scalable=yes,initial-scale=1.0"
+    />
   </head>
   <body>
     <div class="main-container">
@@ -58,9 +61,7 @@
             <div class="divide-box">
               <div class="divide-line"></div>
             </div>
-            <div class="weatherdesc">
-              <p>오늘의 날씨는 대체로 맑음 :)</p>
-            </div>
+            <div class="weatherdesc">오늘의 날씨는 대체로 맑음 :)</div>
 
             <div class="map">
               <div class="map-box">
@@ -225,9 +226,10 @@
               </div>
               <div class="menu">
                 <div class="menu-one" onclick="geturl()">
-                  <img src="./style/image/3x/question.png" class="menu-img" />
-                  <img src="./style/image/3x/question.png" class="menu-img" />
-                  <img src="./style/image/3x/question.png" class="menu-img" />
+                  <div class="food-name">꼬치</div>
+                  <img src="" class="menu-img" />
+                  <img src="" class="menu-img" />
+                  <img src="" class="menu-img" />
                 </div>
               </div>
               <div class="button">
@@ -248,15 +250,16 @@
       </div>
 
       <div class="scene">
-        <div class="menu-bar">
+        <!-- <div class="menu-bar">
           <img src="./style/image/menu.svg" id="menu-bar" />
         </div>
         <div class="shape"></div>
         <img src="./style/image/Choice of food 2020.png" class="person" />
-        <img src="./style/image/Pizza Deliveryman 2020.png" class="persen2" />
+        <img src="./style/image/Pizza Deliveryman 2020.png" class="persen2" /> -->
       </div>
     </div>
 
+    <script src="./static/JS/background.js"></script>
     <script src="./static/API/weather_api.js"></script>
     <script src="./static/JS/posToKor.js"></script>
     <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=97cf6b9d942d05f21bee9ee745eeca55"></script>

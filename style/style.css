@@ -25,3 +25,10 @@ body {
   overflow: hidden;
   font-family: "GmarketL";
 }
+
+:root {
+  --background-color: #f7f8f3;
+  --font-color: #7d7d7b;
+  --box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.8),
+    10px 10px 15px rgba(70, 70, 70, 0.12);
+}
