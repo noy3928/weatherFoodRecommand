@@ -444,17 +444,19 @@
 
   .food-name {
     top: 15px;
-    left: -800px;
+    left: -1500px;
     font-size: 20px;
     color: var(--font-color);
     font-family: "GmarketB";
     opacity: 0.8;
     z-index: 10;
     transition: 0.5s ease-in-out;
+    visibility: hidden;
   }
 
   .menu-one:hover .food-name {
     transform: translateX(135px);
+    visibility: visible;
   }
 
   /* ------------------------------ */
