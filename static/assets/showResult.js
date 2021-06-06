@@ -61,6 +61,7 @@ function rightbutton() {
   document.querySelector(".menu-one").setAttribute("data-food-index", index--);
   changeFoodName(index);
   console.log(document.querySelector(".menu-one"));
+  console.log("지금 업데이트 된다");
 }
 function leftbutton() {
   //data-food-index의 값을 증가시키기
