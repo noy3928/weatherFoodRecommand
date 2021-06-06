@@ -115,12 +115,10 @@ function foodSlide() {
   setUpSlides();
 
   $(".button-left").on("click", function () {
-    foodNameIndex++;
     animateSlides(true);
   });
 
   $(".button-right").on("click", function () {
-    foodNameIndex--;
     animateSlides(false);
   });
 }
