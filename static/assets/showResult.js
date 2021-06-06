@@ -45,7 +45,7 @@ function changeFoodName(index) {
 
   if (index < 3) {
     foodName.textContent = foodList[index];
-  } else if (foodNameIndex > 2) {
+  } else if (index > 2) {
     index = 0;
     foodName.textContent = foodList[index];
   } else if (index < 0) {
