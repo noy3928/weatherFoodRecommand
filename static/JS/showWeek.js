@@ -124,6 +124,22 @@ function showCurrentTmpCon(weatherInfo) {
   }
 }
 
+function showWeatherDesc(weatherInfo) {
+  const weatherDescription = {
+    800: "오늘의 날씨는 대체로 맑음 :)",
+    801: "오늘의 날씨는 약간의 구름 :)",
+    802: "오늘의 날씨는 구름 많음 :)",
+    200: "오늘의 날씨는 천둥번개",
+    300: "오늘의 날씨는 이슬비:)",
+    500: "오늘의 날씨는 비내림:)",
+    600: "오늘은 눈이 옵니다:)",
+    741: "오늘의 날씨는 미세먼지 혹음 흐림:("
+  }
+  const weatherDesc = document.querySelector(".weatherdesc");
+  
+  weatherDesc.textContent = weatherDescription[weatherInfo.id]
+}
+
 function showDetailWeather(weatherDetailInfo) {
   const feelLike = String(weatherDetailInfo.feelLike) + "°";
   const tempMax = String(weatherDetailInfo.tempMax) + "°";
