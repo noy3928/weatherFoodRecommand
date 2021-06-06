@@ -55,7 +55,7 @@ function changeFoodName(index) {
   document.querySelector(".menu-one").setAttribute("data-food-index", index);
 }
 
-function leftbutton() {
+function rightbutton() {
   //data-food-index의 값을 감소시키기
   let index = Number(
     document.querySelector(".menu-one").getAttribute("data-food-index")
@@ -63,7 +63,7 @@ function leftbutton() {
   document.querySelector(".menu-one").setAttribute("data-food-index", index--);
   changeFoodName(index);
 }
-function rightbutton() {
+function leftbutton() {
   //data-food-index의 값을 증가시키기
   let index = Number(
     document.querySelector(".menu-one").getAttribute("data-food-index")
