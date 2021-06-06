@@ -82,5 +82,9 @@
 	{
 		"name": "햄버거",
 		"fileName": "hamburger, burger, fast food, food, fries, junk food@3x"
+	},
+	{
+		"name": "꿀",
+		"fileName": "honey, jar, sweet, candy, dessert@3x"
 	}
 ]
