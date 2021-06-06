@@ -43,15 +43,12 @@ function changeFoodName(index) {
 
   console.log("음식 배열입니다.", foodList);
 
-  if (index < 3) {
-    foodName.textContent = foodList[index];
-  } else if (index > 2) {
+  if (index > 2) {
     index = 0;
-    foodName.textContent = foodList[index];
   } else if (index < 0) {
     index = 2;
-    foodName.textContent = foodList[index];
   }
+  foodName.textContent = foodList[index];
   document.querySelector(".menu-one").setAttribute("data-food-index", index);
 }
 
