@@ -10,6 +10,10 @@ async function korToCoords() {
     },
   });
   const firstResult = result["documents"][0];
+  if(!firstResult) {
+	  alert('더 자세한 장소를 입력해주세요!!!')
+	  location.reload()
+  }
   console.log("키워드입력시 위치정보", result);
   const { x, y } = firstResult;
   const coords = { x, y };
