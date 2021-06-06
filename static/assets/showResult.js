@@ -20,8 +20,12 @@ function showResult(weather, foods) {
     console.log("음식 배열입니다.", foodList);
     if (foodNameIndex < 3) {
       foodName.textContent = foodList[foodNameIndex];
-    } else if (foodNameIndex > 2 || foodNameIndex < 0) {
+    } else if (foodNameIndex > 2) {
       foodNameIndex = 0;
+      foodName.textContent = foodList[foodNameIndex];
+    } else if (foodNameIndex < 0) {
+      foodNameIndex = 2;
+      foodName.textContent = foodList[foodNameIndex];
     }
   }
 
