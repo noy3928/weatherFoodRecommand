@@ -17,36 +17,6 @@ function showResult(weather, foods) {
     .querySelector(".menu-one")
     .setAttribute("data-food-names", foodNames.join("/"));
 
-  function changeFoodName(foods) {
-    const foodList = [];
-    const foodName = document.querySelector(".food-name");
-    const menuOne = document.querySelector(".menu-one");
-    let foodIndex = menuOne.getAttribute("data-food-index");
-
-    console.log(foodIndex);
-
-    foods.forEach((a) => foodList.push(a.name));
-
-    console.log("음식 배열입니다.", foodList);
-
-    if (foodNameIndex < 3) {
-      foodName.textContent = foodList[foodNameIndex];
-    } else if (foodNameIndex > 2) {
-      foodNameIndex = 0;
-      foodName.textContent = foodList[foodNameIndex];
-    } else if (foodNameIndex < 0) {
-      foodNameIndex = 2;
-      foodName.textContent = foodList[foodNameIndex];
-    }
-  }
-
-  function leftbutton() {
-    changeFoodName(foods);
-  }
-  function rightbutton() {
-    changeFoodName(foods);
-  }
-
   function showWeather() {
     // 1. Weather Icon Box
 
@@ -62,6 +32,44 @@ function showResult(weather, foods) {
   showWeather();
   showTime();
   return true;
+}
+
+function changeFoodName(index) {
+  const foodList = document
+    .querySelector(".menu-one")
+    .getAttribute("data-food-names")
+    .split("/");
+  const foodName = document.querySelector(".food-name");
+
+  console.log("음식 배열입니다.", foodList);
+
+  if (index < 3) {
+    foodName.textContent = foodList[index];
+  } else if (foodNameIndex > 2) {
+    index = 0;
+    foodName.textContent = foodList[index];
+  } else if (index < 0) {
+    index = 2;
+    foodName.textContent = foodList[index];
+  }
+  document.querySelector(".menu-one").setAttribute("data-food-index", index);
+}
+
+function leftbutton() {
+  //data-food-index의 값을 감소시키기
+  let index = Number(
+    document.querySelector(".menu-one").getAttribute("data-food-index")
+  );
+  document.querySelector(".menu-one").setAttribute("data-food-index", index--);
+  changeFoodName(index);
+}
+function rightbutton() {
+  //data-food-index의 값을 증가시키기
+  let index = Number(
+    document.querySelector(".menu-one").getAttribute("data-food-index")
+  );
+  document.querySelector(".menu-one").setAttribute("data-food-index", index++);
+  changeFoodName(index);
 }
 
 // function setUpDefault() {
