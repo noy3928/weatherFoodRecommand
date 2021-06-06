@@ -113,6 +113,7 @@ function foodSlide() {
     moveCircle();
   }
   setUpSlides();
+
   $(".button-left").on("click", function () {
     animateSlides(true);
   });

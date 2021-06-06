@@ -11,6 +11,34 @@ function showResult(weather, foods) {
       );
     });
   }
+
+  //   let foodNameIndex = 0;
+  //   function changeFoodName(foods) {
+  //     const foodList = foods.name;
+  //     const foodName = document.querySelector(".food-name");
+
+  //     console.log("음식 배열입니다.", foodList);
+  //     if (foodNameIndex < 3) {
+  //       foodName.textContent = foodList[foodNameIndex];
+  //     } else if (foodNameIndex > 2) {
+  //       foodNameIndex = 0;
+  //       foodName.textContent = foodList[foodNameIndex];
+  //     } else if (foodNameIndex < 0) {
+  //       foodNameIndex = 2;
+  //       foodName.textContent = foodList[foodNameIndex];
+  //     }
+  //   }
+
+  //   $(".button-left").on("click", function () {
+  //     foodNameIndex++;
+  //     changeFoodName(foods);
+  //   });
+
+  //   $(".button-right").on("click", function () {
+  //     foodNameIndex--;
+  //     changeFoodName(foods);
+  //   });
+
   function showWeather() {
     // 1. Weather Icon Box
 
