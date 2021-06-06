@@ -1,3 +1,5 @@
+let foodNameIndex = 0;
+
 function showResult(weather, foods) {
   const $ = document.querySelector.bind(document);
   // Commonly used DOM elements.
@@ -11,6 +13,14 @@ function showResult(weather, foods) {
       );
     });
   }
+
+  function changeFoodName(foods) {
+    const foodList = foods.name;
+    const foodName = document.querySelector(".food-name");
+    foodName.textContent = foodList[foodNameIndex];
+    console.log("음식 배열입니다.", foodList);
+  }
+
   function showWeather() {
     // 1. Weather Icon Box
 
@@ -22,6 +32,7 @@ function showResult(weather, foods) {
     $weekWeather = $("week-weather");
   }
 
+  changeFoodName(foods);
   showFoods(foods);
   showWeather();
   showTime();
