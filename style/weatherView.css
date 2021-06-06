@@ -103,7 +103,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
-  display: none;
 }
 
 .menu {
@@ -228,7 +227,7 @@
   grid-row-gap: 15px;
   grid-column-gap: 15px;
   color: #7d7d7b;
-  /* display: none; */
+  display: none;
   margin-top: 47px;
 }
 
