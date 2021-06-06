@@ -32,6 +32,7 @@ function getWeatherInfo(lat, lon) {
         };
         console.log(weatherDetailInfo);
         console.log("현재기상", weatherInfo);
+        showDetailWeather(weatherDetailInfo);
         showCurrentTmpCon(weatherInfo);
         return weatherInfo;
       },

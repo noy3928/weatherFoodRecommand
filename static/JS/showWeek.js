@@ -124,7 +124,21 @@ function showCurrentTmpCon(weatherInfo) {
   }
 }
 
-function showDetailWeather(weatherDetailInfo) {}
+function showDetailWeather(weatherDetailInfo) {
+  const feelLike = String(weatherDetailInfo.feelLike) + "°";
+  const tempMax = String(weatherDetailInfo.tempMax) + "°";
+  const tempMin = String(weatherDetailInfo.tempMin) + "°";
+  const humidity = String(weatherDetailInfo.humidity) + "%";
+  const windSpeed = String(weatherDetailInfo.windSpeed) + "m/s";
+  const windDer = String(weatherDetailInfo.windDer) + "deg";
+
+  document.getElementById("feel-like").textContent = feelLike;
+  document.getElementById("Max-tmp").textContent = tempMax;
+  document.getElementById("Min-tmp").textContent = tempMin;
+  document.getElementById("wind-der").textContent = windDer;
+  document.getElementById("wind-spd").textContent = windSpeed;
+  document.getElementById("humidity").textContent = humidity;
+}
 
 let changeCheck = true; // true는 음식, false는 날씨
 function pageChange() {
