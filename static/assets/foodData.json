@@ -86,5 +86,17 @@
 	{
 		"name": "꿀",
 		"fileName": "honey, jar, sweet, candy, dessert@3x"
+	},
+	{
+		"name": "핫도그",
+		"fileName": "hotdog, sandwich, sausage, food, meal, fast food, junk food@3x"
+	},
+	{
+		"name": "타코야끼",
+		"fileName": "ice cream, balls, bowl, dessert, pastry, food@3x"
+	},
+	{
+		"name": "아이스크",
+		"fileName": "ice cream, bowl, cherry, dessert, sweets, food@3x"
 	}
 ]
