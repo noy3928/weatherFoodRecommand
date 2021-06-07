@@ -1,7 +1,7 @@
 .food-name {
   position: absolute;
   top: 30px;
-  left: -1000px;
+  left: -300px;
   font-size: 40px;
   color: var(--font-color);
   font-family: "GmarketB";

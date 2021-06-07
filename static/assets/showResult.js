@@ -34,7 +34,7 @@ function showResult(weather, foods) {
   return true;
 }
 
-function changeFoodName(place, index) {
+function changeFoodName(index) {
   const foodList = document
     .querySelector(".menu-one")
     .getAttribute("data-food-names")
@@ -50,8 +50,14 @@ function changeFoodName(place, index) {
   }
   foodName.textContent = foodList[index];
   document.querySelector(".menu-one").setAttribute("data-food-index", index);
+}
 
-  function geturl() {
+function geturl() {
+  const foodList = document
+    .querySelector(".menu-one")
+    .getAttribute("data-food-names")
+    .split("/");
+  function openUrl() {
     const features =
       "menubar=yes,location=yes,resizable=yes,scrollbars=yes,status=yes";
     // let plc = $("#searchbar").val();
@@ -59,6 +65,7 @@ function changeFoodName(place, index) {
     let url = `https://www.google.com/maps/search/${place}+${foodList[index]}`;
     let other = window.open(url, "_blank", features);
   }
+  document.querySelector(".menu-one").addEventListener("click", openUrl());
 }
 
 function rightbutton() {
