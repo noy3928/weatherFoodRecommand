@@ -1,0 +1,17 @@
+.food-name {
+  position: absolute;
+  top: 30px;
+  left: -1000px;
+  font-size: 40px;
+  color: var(--font-color);
+  font-family: "GmarketB";
+  opacity: 0.8;
+  z-index: 10;
+  transition: 0.3s ease-in-out;
+  visibility: hidden;
+}
+
+.menu-one:hover .food-name {
+  transform: translateX(150px);
+  visibility: visible;
+}
