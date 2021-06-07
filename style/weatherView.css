@@ -142,53 +142,6 @@
   position: absolute;
 }
 
-.food-name {
-  position: absolute;
-  top: 30px;
-  left: -800px;
-  font-size: 40px;
-  color: var(--font-color);
-  font-family: "GmarketB";
-  opacity: 0.8;
-  z-index: 10;
-  transition: 0.3s ease-in-out;
-  visibility: hidden;
-}
-
-.menu-one:hover .food-name {
-  transform: translateX(150px);
-  visibility: visible;
-}
-
-/* .food-bubble {
-  width: 200px;
-  height: 100px;
-  position: absolute;
-  background: #f5f6f2;
-  border-radius: 0.4em;
-  bottom: 480px;
-  right: 30px;
-  box-shadow: -10px -10px 10px rgba(255, 255, 255, 0.7),
-    10px 10px 15px rgba(70, 70, 70, 0.4);
-}
-
-.food-bubble:after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 50%;
-  width: 0;
-  height: 0;
-  border: 46px solid transparent;
-  border-right-color: #f5f6f2;
-  border-left: 0;
-  border-bottom: 0;
-  margin-top: -23px;
-  margin-left: -46px;
-  box-shadow: -10px -10px 10px rgba(255, 255, 255, 0.7),
-    10px 10px 15px rgba(70, 70, 70, 0.4);
-} */
-
 .button {
   /* border: 1px solid black; */
 

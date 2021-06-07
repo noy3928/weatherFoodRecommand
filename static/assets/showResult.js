@@ -34,7 +34,7 @@ function showResult(weather, foods) {
   return true;
 }
 
-function changeFoodName(index) {
+function changeFoodName(place, index) {
   const foodList = document
     .querySelector(".menu-one")
     .getAttribute("data-food-names")
@@ -50,6 +50,15 @@ function changeFoodName(index) {
   }
   foodName.textContent = foodList[index];
   document.querySelector(".menu-one").setAttribute("data-food-index", index);
+
+  function geturl() {
+    const features =
+      "menubar=yes,location=yes,resizable=yes,scrollbars=yes,status=yes";
+    // let plc = $("#searchbar").val();
+    // let url = `https://www.google.com/maps/search/${place}+${food}/@37.5037201,127.0150586,14z/data=!3m1!4b1`;
+    let url = `https://www.google.com/maps/search/${place}+${foodList[index]}`;
+    let other = window.open(url, "_blank", features);
+  }
 }
 
 function rightbutton() {
@@ -63,6 +72,7 @@ function rightbutton() {
   console.log(document.querySelector(".menu-one"));
   console.log("지금 업데이트 된다");
 }
+
 function leftbutton() {
   //data-food-index의 값을 증가시키기
   let index = Number(

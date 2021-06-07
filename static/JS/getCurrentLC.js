@@ -24,12 +24,3 @@ function getCurrentCoords() {
   }
   return loadCoords();
 }
-
-function geturl(place, food) {
-  const features =
-    "menubar=yes,location=yes,resizable=yes,scrollbars=yes,status=yes";
-  // let plc = $("#searchbar").val();
-  // let url = `https://www.google.com/maps/search/${place}+${food}/@37.5037201,127.0150586,14z/data=!3m1!4b1`;
-  let url = `https://www.google.com/maps/search/${place}+${food.name}`;
-  let other = window.open(url, "_blank", features);
-}
