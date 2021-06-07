@@ -96,7 +96,19 @@
 		"fileName": "ice cream, balls, bowl, dessert, pastry, food@3x"
 	},
 	{
-		"name": "아이스크",
+		"name": "아이스크림",
 		"fileName": "ice cream, bowl, cherry, dessert, sweets, food@3x"
+	},
+	{
+		"name": "콘 아이스크림",
+		"fileName": "ice cream, cone, dessert, sweets, food@3x"
+	},
+	{
+		"name": "바 아이스크림",
+		"fileName": "ice cream, stick, food, dessert, sweets@3x"
+	},
+	{
+		"name": "딸기잼",
+		"fileName": "jam, jar, berries, food, taste, organic, healthy@3x"
 	}
 ]
