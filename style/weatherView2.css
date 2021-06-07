@@ -12,6 +12,6 @@
 }
 
 .menu-one:hover .food-name {
-  transform: translateX(150px);
+  transform: translateX(350px);
   visibility: visible;
 }
