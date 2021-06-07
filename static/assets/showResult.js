@@ -34,7 +34,7 @@ function showResult(weather, foods) {
   return true;
 }
 
-function changeFoodName(index) {
+function changeFoodName(place, index) {
   const foodList = document
     .querySelector(".menu-one")
     .getAttribute("data-food-names")
