@@ -1,7 +1,7 @@
 .food-name {
   position: absolute;
   top: 30px;
-  left: -300px;
+  left: -600px;
   font-size: 40px;
   color: var(--font-color);
   font-family: "GmarketB";
@@ -12,6 +12,6 @@
 }
 
 .menu-one:hover .food-name {
-  transform: translateX(350px);
+  transform: translateX(630px);
   visibility: visible;
 }
