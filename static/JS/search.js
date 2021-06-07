@@ -8,8 +8,8 @@ async function search(e) {
   await getWeatherInfo(coords.latitude, coords.longitude);
   await createKakaoMap(coords.latitude, coords.longitude);
 
-  const place = await coordsToKor(coords);
-  await console.log("현재 위치입니다.", place);
+  const place = await sol(coords)
+  await console.log('현재 위치입니다.', place)
   const weather = await getWeather(coords);
   await console.log("현재 날씨입니다.", weather);
 
