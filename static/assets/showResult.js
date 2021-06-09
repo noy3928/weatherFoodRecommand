@@ -31,7 +31,7 @@ function showResult(weather, foods) {
   showFoods(foods);
   showWeather();
   showTime();
-  geturl()
+  geturl(foods)
   return true;
 }
 
@@ -53,17 +53,19 @@ function changeFoodName(index) {
   document.querySelector(".menu-one").setAttribute("data-food-index", index);
 }
 
-function geturl() {
+function geturl(foods) {
+	/*
   const foodList = document
     .querySelector(".menu-one")
     .getAttribute("data-food-names")
     .split("/");
+	*/
   function openUrl() {
     const features =
       "menubar=yes,location=yes,resizable=yes,scrollbars=yes,status=yes";
     // let plc = $("#searchbar").val();
     // let url = `https://www.google.com/maps/search/${place}+${food}/@37.5037201,127.0150586,14z/data=!3m1!4b1`;
-    let url = `https://www.google.com/maps/search/${place}+${foodList[index]}`;
+    let url = `https://www.google.com/maps/search/압구정+${foods[index]}`;
     let other = window.open(url, "_blank", features);
   }
   document.querySelector('.menu-one').removeEventListener('click', openUrl)
