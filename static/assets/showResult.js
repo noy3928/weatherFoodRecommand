@@ -61,11 +61,11 @@ function geturl(foods) {
     .split("/");
 	*/
   function openUrl() {
-    const features =Number(
-      document.querySelector(".menu-one").getAttribute("data-food-index")
-    )
+    const features =
       "menubar=yes,location=yes,resizable=yes,scrollbars=yes,status=yes";
-	  const index =
+	  const index = Number(
+	    document.querySelector(".menu-one").getAttribute("data-food-index")
+	  )
     // let plc = $("#searchbar").val();
     // let url = `https://www.google.com/maps/search/${place}+${food}/@37.5037201,127.0150586,14z/data=!3m1!4b1`;
     let url = `https://www.google.com/maps/search/압구정+${foods[index]}`;
