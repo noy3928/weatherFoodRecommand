@@ -22,7 +22,7 @@ async function search(e) {
   await console.table(selectedFoods);
 
   await console.log("showResult 함수를 호출합니다.");
-  await showResult(weather, selectedFoods);
+  await showResult(weather, selectedFoods, place);
   await changeFoodName(0);
 
   await console.log("function search ends");
