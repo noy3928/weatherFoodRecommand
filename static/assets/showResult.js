@@ -27,7 +27,7 @@ function showResult(weather, foods) {
     // 4. Week Weather
     $weekWeather = $("week-weather");
   }
-
+	console.log('foods를 showResult에서 보기', foods)
   showFoods(foods);
   showWeather();
   showTime();
@@ -54,6 +54,7 @@ function changeFoodName(index) {
 }
 
 function geturl(foods) {
+	console.log('foods를 geturl에서 보기', foods)
 	/*
   const foodList = document
     .querySelector(".menu-one")
