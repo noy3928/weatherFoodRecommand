@@ -31,6 +31,7 @@ function showResult(weather, foods) {
   showFoods(foods);
   showWeather();
   showTime();
+  geturl()
   return true;
 }
 
@@ -65,7 +66,8 @@ function geturl() {
     let url = `https://www.google.com/maps/search/${place}+${foodList[index]}`;
     let other = window.open(url, "_blank", features);
   }
-  document.querySelector(".menu-one").addEventListener("click", openUrl());
+  document.querySelector('.menu-one').removeEventListener('click', openUrl)
+  document.querySelector(".menu-one").addEventListener("click", openUrl)
 }
 
 function rightbutton() {
