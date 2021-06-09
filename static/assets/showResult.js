@@ -1,4 +1,5 @@
-function showResult(weather, foods) {
+function showResult(weather, foods, place) {
+	console.log('search 함수에서 받아온 장소명입니다', place)
   const $ = document.querySelector.bind(document);
   // Commonly used DOM elements.
   function showFoods(foods) {
