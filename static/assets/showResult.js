@@ -31,7 +31,7 @@ function showResult(weather, foods) {
   showFoods(foods);
   showWeather();
   showTime();
-  geturl()
+  geturl(foods)
   return true;
 }
 
@@ -53,11 +53,13 @@ function changeFoodName(index) {
   document.querySelector(".menu-one").setAttribute("data-food-index", index);
 }
 
-function geturl() {
+function geturl(foods) {
+	/*
   const foodList = document
     .querySelector(".menu-one")
     .getAttribute("data-food-names")
     .split("/");
+	*/
   function openUrl() {
     const features =
       "menubar=yes,location=yes,resizable=yes,scrollbars=yes,status=yes";
