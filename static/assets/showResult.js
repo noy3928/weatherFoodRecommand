@@ -1,5 +1,7 @@
 function showResult(weather, foods, place) {
 	console.log('search 함수에서 받아온 장소명입니다', place)
+    console.log(place['documents'][0]['address'])
+  //todo region_2depth_name 만 뽑아내기
   const $ = document.querySelector.bind(document);
   // Commonly used DOM elements.
   function showFoods(foods) {
