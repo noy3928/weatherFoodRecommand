@@ -48,6 +48,7 @@ function moveTocurrentLc() {
     navigator.geolocation.getCurrentPosition(function (position) {
       lat = position.coords.latitude;
       lng = position.coords.longitude;
+      console.log(lat, lng);
     });
   } else {
     alert("GPS를 지원하지 않습니다");
