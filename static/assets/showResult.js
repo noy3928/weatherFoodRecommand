@@ -1,6 +1,6 @@
 function showResult(weather, foods, place) {
-	console.log('search 함수에서 받아온 장소명입니다', place)
-    console.log(place['documents'][0]['address'])
+  const regionName =place['documents'][0]['address']['region_2depth_name']
+  console.log(regionName)
   //todo region_2depth_name 만 뽑아내기
   const $ = document.querySelector.bind(document);
   // Commonly used DOM elements.
@@ -72,7 +72,7 @@ function geturl(foods) {
 	  )
     // let plc = $("#searchbar").val();
     // let url = `https://www.google.com/maps/search/${place}+${food}/@37.5037201,127.0150586,14z/data=!3m1!4b1`;
-    let url = `https://www.google.com/maps/search/압구정+${foods[index]}`;
+    let url = `https://www.google.com/maps/search/${regionName}+${foods[index]}`;
     let other = window.open(url, "_blank", features);
   }
   document.querySelector('.menu-one').removeEventListener('click', openUrl)

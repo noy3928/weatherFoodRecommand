@@ -110,5 +110,33 @@
 	{
 		"name": "딸기잼",
 		"fileName": "jam, jar, berries, food, taste, organic, healthy@3x"
+	},
+	{
+		"name": "젤리",
+		"fileName": "jelly, dessert, food, sweet, sweets, chocolate@3x"
+	},
+	{
+		"name": "롤리팝",
+		"filename": "lollipop, candy, sweets, food, dessert@3x"
+	},
+	{
+		"name": "스테이크",
+		"fileName": "meat, steak, plate, meal, dinner, food@3x"
+	},
+	{
+		"name": "우유",
+		"fileName": "milk, drink, carton, glass, beverage, juice@3x"
+	},
+	{
+		"name": "밀크쉐이크",
+		"filename": "milkshake, container, drink, beverage, junk food, fast food@3x"
+	},
+	{
+		"name": "라면",
+		"fileName": "noodles, bowl, kitchen, chopsticks, food, meal@3x"
+	},
+	{
+		"name": "스파게티",
+		"fileName": "noodles, spaghetti, fork, meal, dinner, plate@3x"
 	}
 ]
