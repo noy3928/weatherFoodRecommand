@@ -34,7 +34,7 @@ function showResult(weather, foods, place) {
   showFoods(foods);
   showWeather();
   showTime();
-  geturl(foods)
+  geturl(foods, regionName)
   return true;
 }
 
@@ -56,7 +56,7 @@ function changeFoodName(index) {
   document.querySelector(".menu-one").setAttribute("data-food-index", index);
 }
 
-function geturl(foods) {
+function geturl(foods, regionName) {
 	console.log('foods를 geturl에서 보기', foods)
 	/*
   const foodList = document
@@ -107,7 +107,7 @@ function leftbutton() {
 //   });
 // }
 function showTime() {
-  const $dayBox = document.querySelector(".day-box");
+  //const $dayBox = document.querySelector(".day-box");
   const $day = document.querySelector(".day");
 
   const daysKR = ["일", "월", "화", "수", "목", "금", "토"];
