@@ -3,7 +3,6 @@
 function weekBox(weatherInfo) {
   const weeklyWeatherIcon = $(".weekly-icon").toArray();
   const weeklyWeatherTmp = $(".weekly-tmp").toArray();
-  console.log("showWeek test", weeklyWeatherTmp);
   const weeklyDay = $(".weekly-day").toArray();
   const weatherCoditions = weatherInfo.id;
   const weeklyTmp = weatherInfo.temp;
@@ -113,7 +112,6 @@ function showCurrentTmpCon(weatherInfo) {
     hours < 7 || hours > 19
       ? (conEl.src = `./style/image/nonAniIcon/MOON.png`)
       : (conEl.src = `./style/image/nonAniIcon/${weatherId}.png`);
-    console.log(hours, weatherId);
   } else if (weatherId == 801) {
     hours < 7 || hours > 19
       ? (conEl.src = `./style/image/nonAniIcon/CLOUDY NIGHT.png`)
