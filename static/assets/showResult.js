@@ -1,7 +1,5 @@
 function showResult(weather, foods, place) {
   const regionName =place['documents'][0]['address']['region_2depth_name']
-  console.log(regionName)
-  //todo region_2depth_name 만 뽑아내기
   const $ = document.querySelector.bind(document);
   // Commonly used DOM elements.
   function showFoods(foods) {
