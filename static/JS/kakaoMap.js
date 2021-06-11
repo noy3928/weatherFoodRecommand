@@ -39,3 +39,37 @@ function panTo(coords) {
   // 만약 이동할 거리가 지도 화면보다 크면 부드러운 효과 없이 이동합니다
   map.panTo(moveLatLon);
 }
+
+function moveTocurrentLc() {
+  let lat = 0;
+  let lng = 0;
+  if (navigator.geolocation) {
+    // GPS를 지원하면
+    navigator.geolocation.getCurrentPosition(function (position) {
+      lat = position.coords.latitude;
+      lng = position.coords.longitude;
+    });
+  } else {
+    alert("GPS를 지원하지 않습니다");
+  }
+
+  function moveTo(x, y) {
+    // let mapContainer = document.querySelector(".kakao-map"), // 지도를 표시할 div
+    //   mapOption = {
+    //     center: new kakao.maps.LatLng(x, y), // 지도의 중심좌표
+    //     level: 3, // 지도의 확대 레벨
+    //     mapTypeId: kakao.maps.MapTypeId.ROADMAP, // 지도종류
+    //   };
+
+    // // 지도를 생성한다
+    // var map = new kakao.maps.Map(mapContainer, mapOption);
+
+    var moveLatLon = new kakao.maps.LatLng(y, x);
+    console.log(moveLatLon);
+    // 지도 중심을 부드럽게 이동시킵니다
+    // 만약 이동할 거리가 지도 화면보다 크면 부드러운 효과 없이 이동합니다
+    map.panTo(moveLatLon);
+  }
+
+  moveTo(lat, lng);
+}
