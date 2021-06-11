@@ -16,7 +16,6 @@ function checkWindowWth() {
 }
 
 function foodSlide() {
-  console.log("foodslide 안에서 activePosition", activePosition);
   var positions = {
     ACTIVE: activePosition,
     PREV: activePosition - spacing,
