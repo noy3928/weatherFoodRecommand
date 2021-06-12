@@ -25,6 +25,6 @@ function getCurrentCoords() {
   return loadCoords();
 }
 
-window.addEventListener("beforeunload", (event) => {
-  localStorage.removeItem("coords");
-});
+// window.addEventListener("beforeunload", (event) => {
+//   localStorage.removeItem("coords");
+// });
