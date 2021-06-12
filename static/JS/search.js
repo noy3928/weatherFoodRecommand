@@ -15,7 +15,6 @@ async function search(e) {
   const selectedFoods = await selectRandom(foods, 3);
 
 
-  await console.log("showResult 함수를 호출합니다.");
   await showResult(weather, selectedFoods, place);
   await changeFoodName(0);
 
